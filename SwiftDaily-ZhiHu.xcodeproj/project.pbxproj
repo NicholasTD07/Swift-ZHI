@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0A389DAAB55F3647D6BFE826 /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = A615071A3E0E29FA76A7A18F /* LaunchScreen.xib */; };
-		1F31A8D3AC3FEE6E5836E903 /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = F0D7BC1176731D82A6C6201D /* Main.storyboard */; };
 		68FBDF8F3F03DD46EC42052C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 53A7F3169D139FADE41A36DC /* Settings.bundle */; };
 		75319DB91B185B78002C7AFF /* SwiftDailyAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75319DB81B185B78002C7AFF /* SwiftDailyAPI.framework */; };
 		75319DC01B185CCC002C7AFF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75319DBC1B185CCC002C7AFF /* Alamofire.framework */; };
 		75319DC11B185CCC002C7AFF /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75319DBD1B185CCC002C7AFF /* Argo.framework */; };
 		75319DC21B185CCC002C7AFF /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75319DBE1B185CCC002C7AFF /* Box.framework */; };
 		75319DC31B185CCC002C7AFF /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75319DBF1B185CCC002C7AFF /* Runes.framework */; };
+		75319DC61B186129002C7AFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75319DC51B186129002C7AFF /* Main.storyboard */; };
+		75319DC81B1862B3002C7AFF /* DailyNewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75319DC71B1862B3002C7AFF /* DailyNewsTableViewController.swift */; };
 		804DE10931FA5CF660E03B97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2825127A607282C39E0F1BC /* Foundation.framework */; };
 		AA19C7BC16CC67DCFC66C942 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F08D643C6E97F049401D001 /* Images.xcassets */; };
 		F5EE18F0364EB2271006B8EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B8F550C63E1DA40B057990 /* AppDelegate.swift */; };
@@ -40,12 +41,13 @@
 		75319DBD1B185CCC002C7AFF /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
 		75319DBE1B185CCC002C7AFF /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Carthage/Build/iOS/Box.framework; sourceTree = "<group>"; };
 		75319DBF1B185CCC002C7AFF /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
+		75319DC51B186129002C7AFF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		75319DC71B1862B3002C7AFF /* DailyNewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyNewsTableViewController.swift; sourceTree = "<group>"; };
 		77B8F550C63E1DA40B057990 /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2825127A607282C39E0F1BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		A615071A3E0E29FA76A7A18F /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		EC30B3D99F0E82B348ECD582 /* Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		EE5B14BBAFDC2260E84045E0 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F0D7BC1176731D82A6C6201D /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +77,7 @@
 		03E9D182DF964597BC512808 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				F0D7BC1176731D82A6C6201D /* Main.storyboard */,
+				75319DC51B186129002C7AFF /* Main.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				77B8F550C63E1DA40B057990 /* AppDelegate.swift */,
+				75319DC71B1862B3002C7AFF /* DailyNewsTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75319DC61B186129002C7AFF /* Main.storyboard in Resources */,
 				AA19C7BC16CC67DCFC66C942 /* Images.xcassets in Resources */,
 				68FBDF8F3F03DD46EC42052C /* Settings.bundle in Resources */,
 			);
@@ -391,8 +395,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75319DC81B1862B3002C7AFF /* DailyNewsTableViewController.swift in Sources */,
 				F5EE18F0364EB2271006B8EE /* AppDelegate.swift in Sources */,
-				1F31A8D3AC3FEE6E5836E903 /* Main.storyboard in Sources */,
 				0A389DAAB55F3647D6BFE826 /* LaunchScreen.xib in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
