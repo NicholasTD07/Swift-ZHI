@@ -1,0 +1,5 @@
+github "Alamofire/Alamofire" "1.2.2"
+github "robrix/Box" "1.2.2"
+github "thoughtbot/Runes" "v2.0.0"
+github "thoughtbot/Argo" "v1.0.3"
+github "NicholasTD07/SwiftDailyAPI" "0.1"

@@ -10,6 +10,11 @@
 		0A389DAAB55F3647D6BFE826 /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = A615071A3E0E29FA76A7A18F /* LaunchScreen.xib */; };
 		1F31A8D3AC3FEE6E5836E903 /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = F0D7BC1176731D82A6C6201D /* Main.storyboard */; };
 		68FBDF8F3F03DD46EC42052C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 53A7F3169D139FADE41A36DC /* Settings.bundle */; };
+		75319DB91B185B78002C7AFF /* SwiftDailyAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75319DB81B185B78002C7AFF /* SwiftDailyAPI.framework */; };
+		75319DC01B185CCC002C7AFF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75319DBC1B185CCC002C7AFF /* Alamofire.framework */; };
+		75319DC11B185CCC002C7AFF /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75319DBD1B185CCC002C7AFF /* Argo.framework */; };
+		75319DC21B185CCC002C7AFF /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75319DBE1B185CCC002C7AFF /* Box.framework */; };
+		75319DC31B185CCC002C7AFF /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75319DBF1B185CCC002C7AFF /* Runes.framework */; };
 		804DE10931FA5CF660E03B97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2825127A607282C39E0F1BC /* Foundation.framework */; };
 		AA19C7BC16CC67DCFC66C942 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F08D643C6E97F049401D001 /* Images.xcassets */; };
 		F5EE18F0364EB2271006B8EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B8F550C63E1DA40B057990 /* AppDelegate.swift */; };
@@ -30,6 +35,11 @@
 		4F08D643C6E97F049401D001 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		52C9FA22CE00F500FA5C320C /* SwiftDaily-ZhiHu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftDaily-ZhiHu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A7F3169D139FADE41A36DC /* Settings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		75319DB81B185B78002C7AFF /* SwiftDailyAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDailyAPI.framework; path = Carthage/Build/iOS/SwiftDailyAPI.framework; sourceTree = "<group>"; };
+		75319DBC1B185CCC002C7AFF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		75319DBD1B185CCC002C7AFF /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
+		75319DBE1B185CCC002C7AFF /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Carthage/Build/iOS/Box.framework; sourceTree = "<group>"; };
+		75319DBF1B185CCC002C7AFF /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		77B8F550C63E1DA40B057990 /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2825127A607282C39E0F1BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		A615071A3E0E29FA76A7A18F /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -43,6 +53,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75319DC01B185CCC002C7AFF /* Alamofire.framework in Frameworks */,
+				75319DC11B185CCC002C7AFF /* Argo.framework in Frameworks */,
+				75319DC21B185CCC002C7AFF /* Box.framework in Frameworks */,
+				75319DC31B185CCC002C7AFF /* Runes.framework in Frameworks */,
+				75319DB91B185B78002C7AFF /* SwiftDailyAPI.framework in Frameworks */,
 				804DE10931FA5CF660E03B97 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +238,11 @@
 		E49DF56F2BC794B49520D378 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				75319DBC1B185CCC002C7AFF /* Alamofire.framework */,
+				75319DBD1B185CCC002C7AFF /* Argo.framework */,
+				75319DBE1B185CCC002C7AFF /* Box.framework */,
+				75319DBF1B185CCC002C7AFF /* Runes.framework */,
+				75319DB81B185B78002C7AFF /* SwiftDailyAPI.framework */,
 				5B9FA86DFF8CF015C0856958 /* iOS */,
 			);
 			name = Frameworks;
@@ -240,6 +260,7 @@
 				DFBCA3D860BBEE6AEF8D3C61 /* Resources */,
 				D826765707DA550C75E3BBF5 /* Warn for TODO and FIXME comments */,
 				1C4889639ABA730816AD2D98 /* Set version number */,
+				75319DC41B185CFB002C7AFF /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -330,6 +351,25 @@
 			shellPath = /bin/sh;
 			shellScript = "git=$(sh /etc/profile; which git)\ngit_release_version=$(\"$git\" describe --tags --always --abbrev=0)\nnumber_of_commits=$(\"$git\" rev-list master | wc -l | tr -d ' ')\ntarget_plist=\"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\ndsym_plist=\"$DWARF_DSYM_FOLDER_PATH/$DWARF_DSYM_FILE_NAME/Contents/Info.plist\"\n\nfor plist in \"$target_plist\" \"$dsym_plist\"; do\n  if [ -f \"$plist\" ]; then\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $number_of_commits\" \"$plist\"\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString ${git_release_version#*v}\" \"$plist\"\n  fi\ndone\n";
 		};
+		75319DC41B185CFB002C7AFF /* Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Box.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftDailyAPI.framework",
+			);
+			name = "Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		D826765707DA550C75E3BBF5 /* Warn for TODO and FIXME comments */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -381,6 +421,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/xcodeproj.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -391,6 +435,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "SwiftDaily-ZhiHu/Resources/Other-Sources/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
@@ -524,10 +569,15 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "SwiftDaily-ZhiHu/Resources/Other-Sources/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
