@@ -10,6 +10,7 @@ import UIKit
 import SwiftDailyAPI
 
 class DailyTableViewController: UITableViewController {
+    // MARK: Store
     private let store = DailyInMemoryStore()
     private var dailyNewsMeta: [NewsMeta] {
         get {
@@ -23,14 +24,21 @@ class DailyTableViewController: UITableViewController {
             self.tableView.reloadData()
         }
     }
+
+    // MARK: UI vars
+    var firstAppeared = false
 }
 
-// MARK: UI
+// MARK: UI methods
 extension DailyTableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
-        beginRefreshing()
+        if !firstAppeared {
+            beginRefreshing()
+            firstAppeared = true
+        }
+
         loadLatestDaily()
     }
 
