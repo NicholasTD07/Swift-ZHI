@@ -12,7 +12,6 @@
 		75319DB91B185B78002C7AFF /* SwiftDailyAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75319DB81B185B78002C7AFF /* SwiftDailyAPI.framework */; };
 		75319DC01B185CCC002C7AFF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75319DBC1B185CCC002C7AFF /* Alamofire.framework */; };
 		75319DC11B185CCC002C7AFF /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75319DBD1B185CCC002C7AFF /* Argo.framework */; };
-		75319DC21B185CCC002C7AFF /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75319DBE1B185CCC002C7AFF /* Box.framework */; };
 		75319DC31B185CCC002C7AFF /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75319DBF1B185CCC002C7AFF /* Runes.framework */; };
 		75319DC61B186129002C7AFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75319DC51B186129002C7AFF /* Main.storyboard */; };
 		75319DC81B1862B3002C7AFF /* DailyNewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75319DC71B1862B3002C7AFF /* DailyNewsTableViewController.swift */; };
@@ -57,7 +56,6 @@
 			files = (
 				75319DC01B185CCC002C7AFF /* Alamofire.framework in Frameworks */,
 				75319DC11B185CCC002C7AFF /* Argo.framework in Frameworks */,
-				75319DC21B185CCC002C7AFF /* Box.framework in Frameworks */,
 				75319DC31B185CCC002C7AFF /* Runes.framework in Frameworks */,
 				75319DB91B185B78002C7AFF /* SwiftDailyAPI.framework in Frameworks */,
 				804DE10931FA5CF660E03B97 /* Foundation.framework in Frameworks */,
