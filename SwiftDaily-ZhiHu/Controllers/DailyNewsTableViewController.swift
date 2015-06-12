@@ -9,7 +9,7 @@
 import UIKit
 import SwiftDailyAPI
 
-class DailyNewsTableViewController: UITableViewController {
+class DailyTableViewController: UITableViewController {
     private let api = DailyInMemoryStore()
     private var dailyNewsMeta = [NewsMeta]()
 
