@@ -10,7 +10,7 @@ import UIKit
 import SwiftDailyAPI
 
 class DailyNewsTableViewController: UITableViewController {
-    private let api = DailyAPI()
+    private let api = DailyInMemoryStore()
     private var dailyNewsMeta = [NewsMeta]()
 
     override func viewDidLoad() {
@@ -25,13 +25,10 @@ class DailyNewsTableViewController: UITableViewController {
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         api.latestDaily { latestDaily in
-            if let latestDaily = latestDaily {
-                println("got back daily news at date: " + latestDaily.date.description)
-                self.dailyNewsMeta.extend(latestDaily.news)
-                self.tableView.reloadData()
-            }
+            self.dailyNewsMeta.extend(latestDaily.news)
+            self.tableView.reloadData()
         }
     }
 
@@ -55,7 +52,7 @@ class DailyNewsTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("NewsMetaCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("NewsMetaCell", forIndexPath: indexPath)
 
         let newsMeta = dailyNewsMeta[indexPath.row]
         cell.textLabel?.text = newsMeta.title
