@@ -10,10 +10,10 @@ import UIKit
 import SwiftDailyAPI
 
 class DailyTableViewController: UITableViewController {
-    private let api = DailyInMemoryStore()
+    private let store = DailyInMemoryStore()
     private var dailyNewsMeta: [NewsMeta] {
         get {
-            return [Daily](api.dailies.values).flatMap { $0.news }
+            return [Daily](store.dailies.values).flatMap { $0.news }
         }
     }
 
@@ -39,7 +39,7 @@ class DailyTableViewController: UITableViewController {
 
 extension DailyTableViewController {
     private func loadLatestDaily() {
-        api.latestDaily { latestDaily in
+        store.latestDaily { latestDaily in
             self.refreshControl?.endRefreshing()
             self.tableView.reloadData()
         }
