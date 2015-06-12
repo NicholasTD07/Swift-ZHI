@@ -17,10 +17,24 @@ class DailyTableViewController: UITableViewController {
         }
     }
 
+    private func loadLatestDaily() {
+        store.latestDaily { latestDaily in
+            self.refreshControl?.endRefreshing()
+            self.tableView.reloadData()
+        }
+    }
+}
+
+// MARK: UI
+extension DailyTableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
         beginRefreshing()
+        loadLatestDaily()
+    }
+
+    @IBAction func refreshLatestDaily() {
         loadLatestDaily()
     }
 
@@ -31,19 +45,6 @@ class DailyTableViewController: UITableViewController {
         refreshControl.beginRefreshing()
     }
 
-    @IBAction func refreshLatestDaily() {
-        loadLatestDaily()
-    }
-}
-
-
-extension DailyTableViewController {
-    private func loadLatestDaily() {
-        store.latestDaily { latestDaily in
-            self.refreshControl?.endRefreshing()
-            self.tableView.reloadData()
-        }
-    }
 }
 
 // MARK: Data Source and Delegate
