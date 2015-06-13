@@ -22,12 +22,27 @@ class NewsViewController: UIViewController {
 
 // MARK: UI
 extension NewsViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let panGestureRecognizer = UIScreenEdgePanGestureRecognizer()
+        panGestureRecognizer.edges = .Left
+        panGestureRecognizer.addTarget(self, action: "goBackToDailyView")
+
+        view.addGestureRecognizer(panGestureRecognizer)
+    }
+
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
         activityIndicator.startAnimating()
 
         loadNews()
+    }
+
+
+    func goBackToDailyView() {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
     private func loadNews() {
