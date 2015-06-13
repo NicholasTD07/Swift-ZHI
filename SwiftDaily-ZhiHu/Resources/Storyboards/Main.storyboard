@@ -78,30 +78,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zda-Pc-byA">
-                                <rect key="frame" x="290" y="300" width="20" height="20"/>
-                                <animations/>
-                            </activityIndicatorView>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mwr-WS-Zbp">
-                                <rect key="frame" x="-2" y="20" width="604" height="580"/>
+                                <rect key="frame" x="-2" y="0.0" width="604" height="600"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="SHv-3R-ZvQ">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                                <animations/>
+                            </activityIndicatorView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zda-Pc-byA" firstAttribute="centerX" secondItem="Mwr-WS-Zbp" secondAttribute="centerX" id="0vl-1y-DHb"/>
-                            <constraint firstItem="Mwr-WS-Zbp" firstAttribute="top" secondItem="Jd2-lG-Za1" secondAttribute="bottom" constant="-44" id="7v7-Is-4AA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Mwr-WS-Zbp" secondAttribute="trailing" id="Bw2-y0-w2h"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="Mwr-WS-Zbp" secondAttribute="leading" id="FfX-UI-e3A"/>
+                            <constraint firstItem="Mwr-WS-Zbp" firstAttribute="top" secondItem="Jd2-lG-Za1" secondAttribute="bottom" constant="-64" id="7v7-Is-4AA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mwr-WS-Zbp" secondAttribute="trailing" constant="-22" id="Bw2-y0-w2h"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Mwr-WS-Zbp" secondAttribute="leading" constant="22" id="FfX-UI-e3A"/>
+                            <constraint firstItem="SHv-3R-ZvQ" firstAttribute="centerY" secondItem="Mwr-WS-Zbp" secondAttribute="centerY" id="Ii9-Vt-6dq"/>
+                            <constraint firstItem="SHv-3R-ZvQ" firstAttribute="centerX" secondItem="Mwr-WS-Zbp" secondAttribute="centerX" id="Keg-Bp-QXq"/>
                             <constraint firstItem="H2F-yb-wzp" firstAttribute="top" secondItem="Mwr-WS-Zbp" secondAttribute="bottom" id="sCU-ff-GmR"/>
-                            <constraint firstItem="zda-Pc-byA" firstAttribute="centerY" secondItem="Mwr-WS-Zbp" secondAttribute="centerY" id="yTp-Dh-507"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CS2-77-Jh1"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="zda-Pc-byA" id="s1K-h7-hZ1"/>
+                        <outlet property="activityIndicator" destination="SHv-3R-ZvQ" id="Qxe-Lh-UrE"/>
                         <outlet property="webView" destination="Mwr-WS-Zbp" id="m7Q-yL-xmD"/>
                     </connections>
                 </viewController>
