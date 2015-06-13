@@ -9,7 +9,7 @@
 import UIKit
 import SwiftDailyAPI
 
-class DailyTableViewController: UITableViewController {
+class DailyTableViewController: UIViewController {
     // MARK: Store
     private let store = DailyInMemoryStore()
     private var dailyNewsMeta: [NewsMeta] {
@@ -31,6 +31,8 @@ class DailyTableViewController: UITableViewController {
 
     // MARK: UI vars
     var firstAppeared = false
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var refreshControl: UIRefreshControl!
 }
 
 // MARK: UI methods
@@ -69,16 +71,16 @@ extension DailyTableViewController {
 }
 
 // MARK: Data Source and Delegate
-extension DailyTableViewController {
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+extension DailyTableViewController: UITableViewDataSource, UITableViewDelegate {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dailyNewsMeta.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NewsMetaCell", forIndexPath: indexPath)
 
         let newsMeta = newsMetaAtIndexPath(indexPath)
@@ -87,7 +89,7 @@ extension DailyTableViewController {
         return cell
     }
 
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
 }
