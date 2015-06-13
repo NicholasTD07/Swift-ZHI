@@ -34,6 +34,10 @@
                                     </subviews>
                                     <animations/>
                                 </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <segue destination="5nZ-RO-tSE" kind="show" identifier="showNews" id="3JZ-zN-kQn"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -42,10 +46,68 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="SwiftDaily" id="fAj-Na-fQ9"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Udl-Q8-oLN">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <attributedString key="attributedTitle">
+                            <fragment content="Loading the latest daily...">
+                                <attributes>
+                                    <font key="NSFont" metaFont="smallSystem"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <connections>
+                            <action selector="refreshLatestDaily:" destination="5bC-IS-cuc" eventType="valueChanged" id="HNq-Pe-FmC"/>
+                        </connections>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6vK-86-Jof" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1723" y="510"/>
+            <point key="canvasLocation" x="1579" y="-262"/>
+        </scene>
+        <!--News View Controller-->
+        <scene sceneID="NGw-Ri-uSR">
+            <objects>
+                <viewController id="5nZ-RO-tSE" customClass="NewsViewController" customModule="SwiftDaily_ZhiHu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jd2-lG-Za1"/>
+                        <viewControllerLayoutGuide type="bottom" id="H2F-yb-wzp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OzF-uu-ZBq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zda-Pc-byA">
+                                <rect key="frame" x="290" y="300" width="20" height="20"/>
+                                <animations/>
+                            </activityIndicatorView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mwr-WS-Zbp">
+                                <rect key="frame" x="-2" y="20" width="604" height="580"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zda-Pc-byA" firstAttribute="centerX" secondItem="Mwr-WS-Zbp" secondAttribute="centerX" id="0vl-1y-DHb"/>
+                            <constraint firstItem="Mwr-WS-Zbp" firstAttribute="top" secondItem="Jd2-lG-Za1" secondAttribute="bottom" constant="-44" id="7v7-Is-4AA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mwr-WS-Zbp" secondAttribute="trailing" id="Bw2-y0-w2h"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Mwr-WS-Zbp" secondAttribute="leading" id="FfX-UI-e3A"/>
+                            <constraint firstItem="H2F-yb-wzp" firstAttribute="top" secondItem="Mwr-WS-Zbp" secondAttribute="bottom" id="sCU-ff-GmR"/>
+                            <constraint firstItem="zda-Pc-byA" firstAttribute="centerY" secondItem="Mwr-WS-Zbp" secondAttribute="centerY" id="yTp-Dh-507"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="CS2-77-Jh1"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="zda-Pc-byA" id="s1K-h7-hZ1"/>
+                        <outlet property="webView" destination="Mwr-WS-Zbp" id="m7Q-yL-xmD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2A0-LZ-sCa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2371" y="-262"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mlR-D9-v6i">
@@ -64,7 +126,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AkX-wZ-gWf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="911" y="510"/>
+            <point key="canvasLocation" x="767" y="-262"/>
         </scene>
     </scenes>
 </document>

@@ -25,6 +25,10 @@ class DailyTableViewController: UITableViewController {
         }
     }
 
+    private func newsMetaAtIndexPath(indexPath: NSIndexPath) -> NewsMeta {
+        return dailyNewsMeta[indexPath.row]
+    }
+
     // MARK: UI vars
     var firstAppeared = false
 }
@@ -40,6 +44,15 @@ extension DailyTableViewController {
         }
 
         loadLatestDaily()
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        guard segue.identifier == "showNews" else { return }
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+
+        let newsVC = segue.destinationViewController as! NewsViewController
+        newsVC.store = store
+        newsVC.newsId = newsMetaAtIndexPath(indexPath).newsId
     }
 
     @IBAction func refreshLatestDaily() {
@@ -68,7 +81,7 @@ extension DailyTableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NewsMetaCell", forIndexPath: indexPath)
 
-        let newsMeta = dailyNewsMeta[indexPath.row]
+        let newsMeta = newsMetaAtIndexPath(indexPath)
         cell.textLabel?.text = newsMeta.title
 
         return cell
