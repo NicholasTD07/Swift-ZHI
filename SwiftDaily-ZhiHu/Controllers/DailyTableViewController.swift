@@ -72,8 +72,8 @@ extension DailyTableViewController {
 
 }
 
-// MARK: Data Source and Delegate
-extension DailyTableViewController: UITableViewDataSource, UITableViewDelegate {
+// MARK: Data Source
+extension DailyTableViewController: UITableViewDataSource {
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return store.dailies.count
     }
@@ -82,6 +82,12 @@ extension DailyTableViewController: UITableViewDataSource, UITableViewDelegate {
         return dailyAtSection(section)?.news.count ?? 1
     }
 
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+}
+
+extension DailyTableViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let newsMeta = newsMetaAtIndexPath(indexPath) {
             let cell = tableView.dequeueReusableCellWithIdentifier("NewsMetaCell", forIndexPath: indexPath)
@@ -94,7 +100,7 @@ extension DailyTableViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
 
-    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return store.dailies.endIndex.advancedBy(-section + -1).date.toString(format: "yyyy MM dd")
     }
 }
