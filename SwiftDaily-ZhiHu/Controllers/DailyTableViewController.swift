@@ -100,6 +100,17 @@ extension DailyTableViewController: UITableViewDelegate {
         }
     }
 
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        guard let _ = cell as? LoadingCell else { return }
+
+        // TODO: move this into SwiftDailyAPI.TimelineCollection
+        let date = store.dailies.endIndex.advancedBy(-indexPath.section + -1).date
+
+        store.daily(forDate: date) { daily in
+            self.tableView.reloadData()
+        }
+    }
+
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return store.dailies.endIndex.advancedBy(-section + -1).date.toString(format: "yyyy MM dd")
     }
