@@ -16,6 +16,7 @@
 		75319DC61B186129002C7AFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75319DC51B186129002C7AFF /* Main.storyboard */; };
 		75319DC81B1862B3002C7AFF /* DailyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75319DC71B1862B3002C7AFF /* DailyTableViewController.swift */; };
 		75750ECF1B2B00F800E5A61C /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75750ECE1B2B00F800E5A61C /* NewsViewController.swift */; };
+		75E30C341B31970E00FD19A1 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E30C331B31970E00FD19A1 /* LoadingCell.swift */; };
 		804DE10931FA5CF660E03B97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2825127A607282C39E0F1BC /* Foundation.framework */; };
 		AA19C7BC16CC67DCFC66C942 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F08D643C6E97F049401D001 /* Images.xcassets */; };
 		F5EE18F0364EB2271006B8EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B8F550C63E1DA40B057990 /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 		75319DC51B186129002C7AFF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		75319DC71B1862B3002C7AFF /* DailyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTableViewController.swift; sourceTree = "<group>"; };
 		75750ECE1B2B00F800E5A61C /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		75E30C331B31970E00FD19A1 /* LoadingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; tabWidth = 4; };
 		77B8F550C63E1DA40B057990 /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2825127A607282C39E0F1BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		A615071A3E0E29FA76A7A18F /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		783EA261191609EFD4E88B63 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				75E30C331B31970E00FD19A1 /* LoadingCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				F5EE18F0364EB2271006B8EE /* AppDelegate.swift in Sources */,
 				0A389DAAB55F3647D6BFE826 /* LaunchScreen.xib in Sources */,
 				75750ECF1B2B00F800E5A61C /* NewsViewController.swift in Sources */,
+				75E30C341B31970E00FD19A1 /* LoadingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

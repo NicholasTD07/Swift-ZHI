@@ -12,11 +12,6 @@ import SwiftDailyAPI
 class DailyTableViewController: UIViewController {
     // MARK: Store
     private let store = DailyInMemoryStore()
-    private var dailyNewsMeta: [NewsMeta] {
-        get {
-            return [Daily](store.dailies.values).flatMap { $0.news }
-        }
-    }
 
     private func loadLatestDaily() {
         store.latestDaily { latestDaily in
@@ -25,8 +20,14 @@ class DailyTableViewController: UIViewController {
         }
     }
 
-    private func newsMetaAtIndexPath(indexPath: NSIndexPath) -> NewsMeta {
-        return dailyNewsMeta[indexPath.row]
+    private func dailyAtSection(section: Int) -> Daily? {
+        return store.dailies[section]
+    }
+
+    private func newsMetaAtIndexPath(indexPath: NSIndexPath) -> NewsMeta? {
+        guard let daily = dailyAtSection(indexPath.section) else { return nil }
+
+        return daily.news[indexPath.row]
     }
 
     // MARK: UI vars
@@ -51,10 +52,11 @@ extension DailyTableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         guard segue.identifier == "showNews" else { return }
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        guard let newsMeta = newsMetaAtIndexPath(indexPath) else { return }
 
         let newsVC = segue.destinationViewController as! NewsViewController
         newsVC.store = store
-        newsVC.newsId = newsMetaAtIndexPath(indexPath).newsId
+        newsVC.newsId = newsMeta.newsId
     }
 
     @IBAction func refreshLatestDaily() {
@@ -73,20 +75,23 @@ extension DailyTableViewController {
 // MARK: Data Source and Delegate
 extension DailyTableViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return store.dailies.count
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dailyNewsMeta.count
+        return dailyAtSection(section)?.news.count ?? 1
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("NewsMetaCell", forIndexPath: indexPath)
-
-        let newsMeta = newsMetaAtIndexPath(indexPath)
-        cell.textLabel?.text = newsMeta.title
-
-        return cell
+        if let newsMeta = newsMetaAtIndexPath(indexPath) {
+            let cell = tableView.dequeueReusableCellWithIdentifier("NewsMetaCell", forIndexPath: indexPath)
+            cell.textLabel?.text = newsMeta.title
+            return cell
+        } else {
+            let loadingCell = tableView.dequeueReusableCellWithIdentifier("LoadingCell", forIndexPath: indexPath) as! LoadingCell
+            loadingCell.activityIndicator.startAnimating()
+            return loadingCell
+        }
     }
 
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
