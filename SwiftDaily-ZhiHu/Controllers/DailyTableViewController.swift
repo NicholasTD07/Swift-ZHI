@@ -38,6 +38,16 @@ class DailyTableViewController: UIViewController {
 
 // MARK: UI methods
 extension DailyTableViewController {
+    func loadDailyIntoTableView(daily: Daily) {
+        let tableView = self.tableView
+        let sectionIndex = store.dailies.indexAtDate(daily.date)
+        tableView.beginUpdates()
+        tableView.deleteSections(NSIndexSet(index: sectionIndex), withRowAnimation:
+            UITableViewRowAnimation.Automatic)
+        tableView.insertSections(NSIndexSet(index: sectionIndex), withRowAnimation: UITableViewRowAnimation.Automatic)
+        tableView.endUpdates()
+    }
+
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
@@ -106,9 +116,7 @@ extension DailyTableViewController: UITableViewDelegate {
         // TODO: move this into SwiftDailyAPI.TimelineCollection
         let date = store.dailies.endIndex.advancedBy(-indexPath.section + -1).date
 
-        store.daily(forDate: date) { daily in
-            self.tableView.reloadData()
-        }
+        store.daily(forDate: date) { self.loadDailyIntoTableView($0) }
     }
 
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
