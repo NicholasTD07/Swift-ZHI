@@ -34,6 +34,7 @@ class DailyTableViewController: UIViewController {
     var firstAppeared = false
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var refreshControl: UIRefreshControl!
+
 }
 
 // MARK: UI methods
@@ -54,9 +55,12 @@ extension DailyTableViewController {
         if !firstAppeared {
             beginRefreshing()
             firstAppeared = true
+            loadLatestDaily()
         }
 
-        loadLatestDaily()
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
