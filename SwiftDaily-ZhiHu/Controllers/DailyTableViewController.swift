@@ -135,7 +135,6 @@ extension DailyTableViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         guard let _ = cell as? LoadingCell else { return }
 
-        // TODO: move this into SwiftDailyAPI.TimelineCollection
         let date = store.dailies.dateIndexAtIndex(indexPath.section).date
 
         store.daily(forDate: date) { self.loadDailyIntoTableView($0) }
