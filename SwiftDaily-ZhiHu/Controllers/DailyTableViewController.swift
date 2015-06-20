@@ -38,7 +38,7 @@ class DailyTableViewController: UIViewController {
 
 // MARK: UI methods
 extension DailyTableViewController {
-    func loadDailyIntoTableView(daily: Daily) {
+    private func loadDailyIntoTableView(daily: Daily) {
         let tableView = self.tableView
         let sectionIndex = store.dailies.indexAtDate(daily.date)
         tableView.beginUpdates()
