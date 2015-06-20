@@ -31,10 +31,15 @@ class DailyTableViewController: UIViewController {
     }
 
     // MARK: UI vars
-    var firstAppeared = false
+    private var firstAppeared = false
+    private let dateFormatter: NSDateFormatter = {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        return dateFormatter
+    }()
+
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var refreshControl: UIRefreshControl!
-
 }
 
 // MARK: UI methods
@@ -124,6 +129,6 @@ extension DailyTableViewController: UITableViewDelegate {
     }
 
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return store.dailies.endIndex.advancedBy(-section + -1).date.toString(format: "yyyy MM dd")
+        return dateFormatter.stringFromDate(store.dailies.dateIndexAtIndex(section).date)
     }
 }
