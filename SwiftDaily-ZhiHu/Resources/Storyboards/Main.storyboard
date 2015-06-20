@@ -80,8 +80,12 @@
                                 </attributes>
                             </fragment>
                         </attributedString>
+                        <connections>
+                            <action selector="refreshLatestDaily" destination="5bC-IS-cuc" eventType="valueChanged" id="0WC-vo-1TT"/>
+                        </connections>
                     </refreshControl>
                     <connections>
+                        <outlet property="refreshControl" destination="Udl-Q8-oLN" id="c5m-dj-ghf"/>
                         <outlet property="tableView" destination="wyZ-7L-zf3" id="MSf-Ct-FzR"/>
                     </connections>
                 </tableViewController>

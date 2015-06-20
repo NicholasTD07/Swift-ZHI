@@ -15,7 +15,7 @@ class DailyTableViewController: UIViewController {
 
     private func loadLatestDaily() {
         store.latestDaily { latestDaily in
-            self.refreshControl?.endRefreshing()
+            self.refreshControl.endRefreshing()
             self.tableView.reloadData()
         }
     }
@@ -83,8 +83,6 @@ extension DailyTableViewController {
     }
 
     private func beginRefreshing() {
-        guard let refreshControl = refreshControl else { return }
-
         tableView.setContentOffset(CGPoint(x: 0, y: -refreshControl.frame.size.height), animated: true)
         refreshControl.beginRefreshing()
     }
