@@ -102,6 +102,9 @@ extension DailyTableViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
+
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    }
 }
 
 extension DailyTableViewController: UITableViewDelegate {
@@ -117,11 +120,23 @@ extension DailyTableViewController: UITableViewDelegate {
         }
     }
 
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let save = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Save") { (_, indexPath) in
+            self.tableView.setEditing(false, animated: true)
+
+            guard let newsMeta = self.newsMetaAtIndexPath(indexPath) else { return }
+            // TODO: should notify user successful fetching and decoding
+            self.store.news(newsMeta.newsId, newsHandler: nil)
+        }
+        save.backgroundColor = UIColor(hue: 0.353, saturation: 0.635, brightness: 0.765, alpha: 1)
+        return [save]
+    }
+
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         guard let _ = cell as? LoadingCell else { return }
 
         // TODO: move this into SwiftDailyAPI.TimelineCollection
-        let date = store.dailies.endIndex.advancedBy(-indexPath.section + -1).date
+        let date = store.dailies.dateIndexAtIndex(indexPath.section).date
 
         store.daily(forDate: date) { self.loadDailyIntoTableView($0) }
     }
