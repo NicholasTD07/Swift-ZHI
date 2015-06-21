@@ -9,6 +9,8 @@
 import UIKit
 import SwiftDailyAPI
 
+// TODO: think about all the `self`s in closures
+
 class DailyTableViewController: UIViewController {
     // MARK: Store
     private let store = DailyInMemoryStore()
@@ -109,15 +111,23 @@ extension DailyTableViewController: UITableViewDataSource {
 
 extension DailyTableViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if let newsMeta = newsMetaAtIndexPath(indexPath) {
-            let cell = tableView.dequeueReusableCellWithIdentifier("NewsMetaCell", forIndexPath: indexPath)
-            cell.textLabel?.text = newsMeta.title
-            return cell
-        } else {
+        guard let newsMeta = newsMetaAtIndexPath(indexPath) else {
             let loadingCell = tableView.dequeueReusableCellWithIdentifier("LoadingCell", forIndexPath: indexPath) as! LoadingCell
             loadingCell.activityIndicator.startAnimating()
             return loadingCell
         }
+
+        let cell = tableView.dequeueReusableCellWithIdentifier("NewsMetaCell", forIndexPath: indexPath)
+
+        cell.textLabel?.text = newsMeta.title
+
+        if let _ = store.news[newsMeta.newsId] {
+            cell.accessoryType = .Checkmark
+        } else {
+            cell.accessoryType = .None
+        }
+
+        return cell
     }
 
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
@@ -125,8 +135,11 @@ extension DailyTableViewController: UITableViewDelegate {
             self.tableView.setEditing(false, animated: true)
 
             guard let newsMeta = self.newsMetaAtIndexPath(indexPath) else { return }
+
             // TODO: should notify user successful fetching and decoding
-            self.store.news(newsMeta.newsId, newsHandler: nil)
+            self.store.news(newsMeta.newsId) { (news) in
+                self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            }
         }
         save.backgroundColor = UIColor(hue: 0.353, saturation: 0.635, brightness: 0.765, alpha: 1)
         return [save]
