@@ -25,8 +25,6 @@ extension NewsViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
-        activityIndicator.startAnimating()
-
         loadNews()
     }
 
@@ -36,19 +34,29 @@ extension NewsViewController {
     }
 
     private func loadNews() {
-        store.news(newsId) {[weak self] news in
-            guard let i = self else { return }
+        if let news = store.news[newsId] {
+            loadNews(news)
+            return
+        } else {
+            activityIndicator.startAnimating()
+            store.news(newsId) {[weak self] news in
+                guard let i = self else { return }
 
-            i.stopIndicator()
-
-            // TODO: consider move this into model extension
-            let css = news.cssURLs.map { "<link rel='stylesheet' type='text/css' href='\($0.absoluteString)'>" }
-            i.newsBody = css.reduce(news.body) { $0 + $1 }
-            // hide 200px #div.img-place-holder in css
-            i.newsBody.extend("<style>.headline .img-place-holder {\n height: 0px;\n}</style>")
-
-            i.webView.loadHTMLString(i.newsBody, baseURL: nil)
+                i.stopIndicator()
+                i.loadNews(news)
+            }
         }
+    }
+
+    private func loadNews(news: News) {
+        // TODO: consider move this into model extension
+        let css = news.cssURLs.map { "<link rel='stylesheet' type='text/css' href='\($0.absoluteString)'>" }
+        newsBody = css.reduce(news.body) { $0 + $1 }
+        // hide 200px #div.img-place-holder in css
+        newsBody.extend("<style>.headline .img-place-holder {\n height: 0px;\n}</style>")
+
+        webView.loadHTMLString(newsBody, baseURL: nil)
+
     }
 
     private func stopIndicator() {
