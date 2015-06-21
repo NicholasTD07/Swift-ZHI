@@ -14,8 +14,6 @@ class NewsViewController: UIViewController {
     var newsId: Int!
 
     // MARK: UI
-    var newsBody: String!
-
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var webView: UIWebView!
 }
@@ -51,7 +49,7 @@ extension NewsViewController {
     private func loadNews(news: News) {
         // TODO: consider move this into model extension
         let css = news.cssURLs.map { "<link rel='stylesheet' type='text/css' href='\($0.absoluteString)'>" }
-        newsBody = css.reduce(news.body) { $0 + $1 }
+        var newsBody = css.reduce(news.body) { $0 + $1 }
         // hide 200px #div.img-place-holder in css
         newsBody.extend("<style>.headline .img-place-holder {\n height: 0px;\n}</style>")
 
