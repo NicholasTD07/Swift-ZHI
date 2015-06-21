@@ -41,7 +41,7 @@ class DailyTableViewController: UIViewController {
     }()
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var refreshControl: UIRefreshControl!
+    private let refreshControl: UIRefreshControl = UIRefreshControl()
 }
 
 // MARK: UI methods
@@ -54,6 +54,13 @@ extension DailyTableViewController {
             UITableViewRowAnimation.Automatic)
         tableView.insertSections(NSIndexSet(index: sectionIndex), withRowAnimation: UITableViewRowAnimation.Automatic)
         tableView.endUpdates()
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        refreshControl.addTarget(self, action: "refreshLatestDaily", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.addSubview(refreshControl)
     }
 
     override func viewWillAppear(animated: Bool) {
