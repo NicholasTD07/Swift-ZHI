@@ -21,6 +21,21 @@ class NewsViewController: UIViewController {
 
 // MARK: UI
 extension NewsViewController {
+    override func viewWillDisappear(animated: Bool) {
+        saveReadingProgress()
+
+        super.viewWillDisappear(animated)
+    }
+
+    private func saveReadingProgress() {
+        let offset = webView.scrollView.contentOffset.y
+        let height = webView.scrollView.contentSize.height
+        let percentage = Double(offset/height)
+        print("height: \(height), offset: \(offset), \(percentage*100)% read")
+
+        // TODO: Actually save the percentage
+    }
+
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
