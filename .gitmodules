@@ -10,3 +10,6 @@
 [submodule "Carthage/Checkouts/SwiftDailyAPI"]
 	path = Carthage/Checkouts/SwiftDailyAPI
 	url = ssh://git@github.com/NicholasTD07/SwiftDailyAPI.git
+[submodule "Carthage/Checkouts/AMScrollingNavbar"]
+	path = Carthage/Checkouts/AMScrollingNavbar
+	url = ssh://git@github.com/NicholasTD07/AMScrollingNavbar.git

@@ -1,4 +1,5 @@
-github "Alamofire/Alamofire" "e1045f0e7713938320dbb5fef05166f7d6ef829a"
-github "thoughtbot/Runes" "v2.0.0"
-github "thoughtbot/Argo" "651568ba61b58fa9112746a887e2887afd39a205"
+github "NicholasTD07/AMScrollingNavbar" "2e6960295ac2db3c1b4dbba35c5eade7cff61deb"
+github "Alamofire/Alamofire" "fd71afb3a0af2042b9f05a6b9f29317ad4903703"
+github "thoughtbot/Runes" "3a46bd92d78061c76c08a0b2baf6ee214dba77e9"
+github "thoughtbot/Argo" "19b1b3a38f3da567f34d2179e07e3d1092c61f95"
 github "NicholasTD07/SwiftDailyAPI" "1b309f6558f6e12526aefac74ab873f81870745a"
