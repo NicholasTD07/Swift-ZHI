@@ -106,7 +106,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mwr-WS-Zbp">
-                                <rect key="frame" x="-2" y="0.0" width="604" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
@@ -120,8 +120,8 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Mwr-WS-Zbp" firstAttribute="top" secondItem="Jd2-lG-Za1" secondAttribute="bottom" id="7v7-Is-4AA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Mwr-WS-Zbp" secondAttribute="trailing" constant="-22" id="Bw2-y0-w2h"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="Mwr-WS-Zbp" secondAttribute="leading" constant="22" id="FfX-UI-e3A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mwr-WS-Zbp" secondAttribute="trailing" constant="-20" id="Bw2-y0-w2h"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Mwr-WS-Zbp" secondAttribute="leading" constant="20" id="FfX-UI-e3A"/>
                             <constraint firstItem="SHv-3R-ZvQ" firstAttribute="centerY" secondItem="Mwr-WS-Zbp" secondAttribute="centerY" id="Ii9-Vt-6dq"/>
                             <constraint firstItem="SHv-3R-ZvQ" firstAttribute="centerX" secondItem="Mwr-WS-Zbp" secondAttribute="centerX" id="Keg-Bp-QXq"/>
                             <constraint firstItem="H2F-yb-wzp" firstAttribute="top" secondItem="Mwr-WS-Zbp" secondAttribute="bottom" id="sCU-ff-GmR"/>
@@ -153,19 +153,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="54" sectionHeaderHeight="44" sectionFooterHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="Uj9-q3-aUI">
-                                <rect key="frame" x="-2" y="0.0" width="604" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsMetaCell" textLabel="WdN-Kq-epo" style="IBUITableViewCellStyleDefault" id="6po-NU-wUX">
-                                        <rect key="frame" x="0.0" y="44" width="604" height="54"/>
+                                        <rect key="frame" x="0.0" y="44" width="600" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6po-NU-wUX" id="62T-2H-HXr">
-                                            <rect key="frame" x="0.0" y="0.0" width="604" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WdN-Kq-epo">
-                                                    <rect key="frame" x="15" y="0.0" width="574" height="54"/>
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="54"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -181,14 +181,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoadingCell" id="O3g-uL-OZ5" customClass="LoadingCell" customModule="SwiftDaily_ZhiHu" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="98" width="604" height="54"/>
+                                        <rect key="frame" x="0.0" y="98" width="600" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O3g-uL-OZ5" id="jCx-Y2-oLY">
-                                            <rect key="frame" x="0.0" y="0.0" width="604" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mQk-8B-5t6">
-                                                    <rect key="frame" x="292" y="17" width="20" height="20"/>
+                                                    <rect key="frame" x="290" y="17" width="20" height="20"/>
                                                     <animations/>
                                                 </activityIndicatorView>
                                             </subviews>
@@ -213,8 +213,8 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Uj9-q3-aUI" firstAttribute="leading" secondItem="SKO-7C-6NF" secondAttribute="leadingMargin" constant="-22" id="4Cw-kQ-kgh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Uj9-q3-aUI" secondAttribute="trailing" constant="-22" id="Tdi-5R-i2h"/>
+                            <constraint firstItem="Uj9-q3-aUI" firstAttribute="leading" secondItem="SKO-7C-6NF" secondAttribute="leadingMargin" constant="-20" id="4Cw-kQ-kgh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uj9-q3-aUI" secondAttribute="trailing" constant="-20" id="Tdi-5R-i2h"/>
                             <constraint firstItem="1Vz-z8-wqo" firstAttribute="top" secondItem="Uj9-q3-aUI" secondAttribute="bottom" id="oix-uR-MbH"/>
                             <constraint firstItem="Uj9-q3-aUI" firstAttribute="top" secondItem="5jz-KJ-lVe" secondAttribute="bottom" id="wtz-Ds-ELH"/>
                         </constraints>
