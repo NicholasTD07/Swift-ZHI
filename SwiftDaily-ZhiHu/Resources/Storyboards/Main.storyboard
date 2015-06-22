@@ -6,93 +6,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--SwiftDaily-->
-        <scene sceneID="A6F-at-3lt">
-            <objects>
-                <tableViewController id="5bC-IS-cuc" customClass="DailyTableViewController" customModule="SwiftDaily_ZhiHu" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wyZ-7L-zf3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NewsMetaCell" textLabel="Kwo-xt-ekg" style="IBUITableViewCellStyleDefault" id="Pqn-83-Zwh">
-                                <rect key="frame" x="0.0" y="86" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pqn-83-Zwh" id="eD7-Bc-W3t">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kwo-xt-ekg">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <animations/>
-                                </tableViewCellContentView>
-                                <animations/>
-                                <connections>
-                                    <segue destination="5nZ-RO-tSE" kind="show" identifier="showNews" id="uLD-2v-39j"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoadingCell" id="bE9-dG-0EO" customClass="LoadingCell" customModule="SwiftDaily_ZhiHu" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="130" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bE9-dG-0EO" id="Y85-SY-kiM">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="g67-aH-fSu">
-                                            <rect key="frame" x="292" y="12" width="20" height="20"/>
-                                            <animations/>
-                                        </activityIndicatorView>
-                                    </subviews>
-                                    <animations/>
-                                    <constraints>
-                                        <constraint firstItem="g67-aH-fSu" firstAttribute="centerX" secondItem="Y85-SY-kiM" secondAttribute="centerX" id="tSJ-YB-9Sa"/>
-                                        <constraint firstItem="g67-aH-fSu" firstAttribute="centerY" secondItem="Y85-SY-kiM" secondAttribute="centerY" id="uh1-xK-aHF"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <animations/>
-                                <connections>
-                                    <outlet property="activityIndicator" destination="g67-aH-fSu" id="gI9-8Z-tbZ"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="5bC-IS-cuc" id="ZVK-j1-D1v"/>
-                            <outlet property="delegate" destination="5bC-IS-cuc" id="f4K-Bi-l1C"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="SwiftDaily" id="fAj-Na-fQ9"/>
-                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Udl-Q8-oLN">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                        <attributedString key="attributedTitle">
-                            <fragment content="Loading the latest daily...">
-                                <attributes>
-                                    <font key="NSFont" metaFont="smallSystem"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
-                        <connections>
-                            <action selector="refreshLatestDaily" destination="5bC-IS-cuc" eventType="valueChanged" id="0WC-vo-1TT"/>
-                        </connections>
-                    </refreshControl>
-                    <connections>
-                        <outlet property="refreshControl" destination="Udl-Q8-oLN" id="c5m-dj-ghf"/>
-                        <outlet property="tableView" destination="wyZ-7L-zf3" id="MSf-Ct-FzR"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6vK-86-Jof" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1579" y="-262"/>
-        </scene>
         <!--News View Controller-->
         <scene sceneID="NGw-Ri-uSR">
             <objects>
@@ -138,7 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2A0-LZ-sCa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2435" y="106"/>
+            <point key="canvasLocation" x="2392" y="519"/>
         </scene>
         <!--SwiftDaily-->
         <scene sceneID="LJu-CX-obO">
@@ -230,25 +143,6 @@
             <point key="canvasLocation" x="1579" y="519"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="mlR-D9-v6i">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NQ8-dU-laY" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KpV-a6-hvS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="5bC-IS-cuc" kind="relationship" relationship="rootViewController" id="6k9-o9-VZp"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AkX-wZ-gWf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="767" y="-262"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="f7Q-pa-Twl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5xU-lb-gwB" sceneMemberID="viewController">
@@ -273,7 +167,4 @@
             <point key="canvasLocation" x="767" y="519"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="jik-lp-Bq7"/>
-    </inferredMetricsTieBreakers>
 </document>
