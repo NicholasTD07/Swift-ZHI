@@ -10,6 +10,8 @@
 		0A389DAAB55F3647D6BFE826 /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = A615071A3E0E29FA76A7A18F /* LaunchScreen.xib */; };
 		68FBDF8F3F03DD46EC42052C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 53A7F3169D139FADE41A36DC /* Settings.bundle */; };
 		750808E91B37D43800EE370E /* AMScrollingNavbar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750808E81B37D43800EE370E /* AMScrollingNavbar.framework */; };
+		750808EF1B37E4F600EE370E /* DailySectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 750808EE1B37E4F600EE370E /* DailySectionHeaderView.xib */; };
+		750808F11B37E5FE00EE370E /* DailySectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750808F01B37E5FE00EE370E /* DailySectionHeaderView.swift */; };
 		750808F31B37F49000EE370E /* HidesHairLineUnderNavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750808F21B37F49000EE370E /* HidesHairLineUnderNavBarViewController.swift */; };
 		75319DB91B185B78002C7AFF /* SwiftDailyAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75319DB81B185B78002C7AFF /* SwiftDailyAPI.framework */; };
 		75319DC01B185CCC002C7AFF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75319DBC1B185CCC002C7AFF /* Alamofire.framework */; };
@@ -40,6 +42,8 @@
 		52C9FA22CE00F500FA5C320C /* SwiftDaily-ZhiHu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftDaily-ZhiHu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A7F3169D139FADE41A36DC /* Settings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		750808E81B37D43800EE370E /* AMScrollingNavbar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMScrollingNavbar.framework; path = Carthage/Build/iOS/AMScrollingNavbar.framework; sourceTree = "<group>"; };
+		750808EE1B37E4F600EE370E /* DailySectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DailySectionHeaderView.xib; sourceTree = "<group>"; };
+		750808F01B37E5FE00EE370E /* DailySectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailySectionHeaderView.swift; sourceTree = "<group>"; };
 		750808F21B37F49000EE370E /* HidesHairLineUnderNavBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HidesHairLineUnderNavBarViewController.swift; sourceTree = "<group>"; };
 		75319DB81B185B78002C7AFF /* SwiftDailyAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDailyAPI.framework; path = Carthage/Build/iOS/SwiftDailyAPI.framework; sourceTree = "<group>"; };
 		75319DBC1B185CCC002C7AFF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				75E30C331B31970E00FD19A1 /* LoadingCell.swift */,
+				750808F01B37E5FE00EE370E /* DailySectionHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				A615071A3E0E29FA76A7A18F /* LaunchScreen.xib */,
+				750808EE1B37E4F600EE370E /* DailySectionHeaderView.xib */,
 			);
 			path = Nibs;
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 				75319DC61B186129002C7AFF /* Main.storyboard in Resources */,
 				AA19C7BC16CC67DCFC66C942 /* Images.xcassets in Resources */,
 				68FBDF8F3F03DD46EC42052C /* Settings.bundle in Resources */,
+				750808EF1B37E4F600EE370E /* DailySectionHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +417,7 @@
 				75319DC81B1862B3002C7AFF /* DailyTableViewController.swift in Sources */,
 				F5EE18F0364EB2271006B8EE /* AppDelegate.swift in Sources */,
 				0A389DAAB55F3647D6BFE826 /* LaunchScreen.xib in Sources */,
+				750808F11B37E5FE00EE370E /* DailySectionHeaderView.swift in Sources */,
 				750808F31B37F49000EE370E /* HidesHairLineUnderNavBarViewController.swift in Sources */,
 				75750ECF1B2B00F800E5A61C /* NewsViewController.swift in Sources */,
 				75E30C341B31970E00FD19A1 /* LoadingCell.swift in Sources */,
