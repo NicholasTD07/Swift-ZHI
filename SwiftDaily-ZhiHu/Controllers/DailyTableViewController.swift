@@ -66,6 +66,8 @@ extension DailyTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.registerNib(UINib(nibName: "DailySectionHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "DailySectionHeaderView")
+
         refreshControl.addTarget(self, action: "refreshLatestDaily", forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(refreshControl)
 
@@ -174,7 +176,18 @@ extension DailyTableViewController: UITableViewDelegate {
         store.daily(forDate: date) { self.loadDailyIntoTableView($0) }
     }
 
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return dateFormatter.stringFromDate(store.dailies.dateIndexAtIndex(section).date)
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let header = tableView.dequeueReusableHeaderFooterViewWithIdentifier("DailySectionHeaderView") as? DailySectionHeaderView else { return nil }
+
+        header.backgroundView = {
+            let view = UIView(frame: header.bounds)
+            // HACK: To put color in Storyboard, not in code
+            view.backgroundColor = header.titleLabel.highlightedTextColor
+            return view
+            }()
+        header.titleLabel.text = dateFormatter.stringFromDate(store.dailies.dateIndexAtIndex(section).date)
+
+        return header
     }
+
 }
