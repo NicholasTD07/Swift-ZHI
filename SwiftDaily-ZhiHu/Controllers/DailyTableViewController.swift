@@ -12,7 +12,7 @@ import SwiftDailyAPI
 
 // TODO: think about all the `self`s in closures
 
-class DailyTableViewController: UIViewController {
+class DailyTableViewController: HidesHairLineUnderNavBarViewController {
     // MARK: Store
     private let store = DailyInMemoryStore()
 
