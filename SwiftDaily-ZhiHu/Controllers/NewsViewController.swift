@@ -21,8 +21,8 @@ class NewsViewController: UIViewController {
 
 // MARK: UI
 extension NewsViewController {
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
 
         loadNews()
         followScrollView(webView, usingTopConstraint: webViewTopConstraint)
