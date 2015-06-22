@@ -28,11 +28,6 @@ extension NewsViewController {
         followScrollView(webView, usingTopConstraint: webViewTopConstraint)
     }
 
-
-    func goBackToDailyView() {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-
     private func loadNews() {
         if let news = store.news[newsId] {
             loadNews(news)
