@@ -16,6 +16,7 @@ class NewsViewController: UIViewController {
     // MARK: UI
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var webViewTopConstraint: NSLayoutConstraint!
 }
 
 // MARK: UI
@@ -24,6 +25,7 @@ extension NewsViewController {
         super.viewDidAppear(animated)
 
         loadNews()
+        followScrollView(webView, usingTopConstraint: webViewTopConstraint)
     }
 
 

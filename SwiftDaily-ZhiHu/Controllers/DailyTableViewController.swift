@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AMScrollingNavbar
 import SwiftDailyAPI
 
 // TODO: think about all the `self`s in closures
@@ -32,7 +33,7 @@ class DailyTableViewController: UIViewController {
         return daily.news[indexPath.row]
     }
 
-    // MARK: UI vars
+    // MARK: UI
     private var firstAppeared = false
     private let dateFormatter: NSDateFormatter = {
         let dateFormatter = NSDateFormatter()
@@ -40,8 +41,14 @@ class DailyTableViewController: UIViewController {
         return dateFormatter
     }()
 
+    @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     private let refreshControl: UIRefreshControl = UIRefreshControl()
+
+
+    deinit {
+        stopFollowingScrollView()
+    }
 }
 
 // MARK: UI methods
@@ -61,6 +68,8 @@ extension DailyTableViewController {
 
         refreshControl.addTarget(self, action: "refreshLatestDaily", forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(refreshControl)
+
+        followScrollView(tableView, usingTopConstraint: tableViewTopConstraint)
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -96,6 +105,11 @@ extension DailyTableViewController {
         refreshControl.beginRefreshing()
     }
 
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        showNavBarAnimated(false)
+    }
 }
 
 // MARK: Data Source
