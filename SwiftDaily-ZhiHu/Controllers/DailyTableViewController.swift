@@ -14,7 +14,7 @@ import SwiftDailyAPI
 
 class DailyTableViewController: HidesHairLineUnderNavBarViewController {
     // MARK: Store
-    private let store = DailyInMemoryStore()
+    private let store = DailyInMemoryStore(completionQueue: dispatch_get_main_queue())
 
     private func loadLatestDaily() {
         store.latestDaily { latestDaily in
@@ -132,6 +132,7 @@ extension DailyTableViewController: UITableViewDataSource {
     }
 }
 
+// MARK: Delegate
 extension DailyTableViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         guard let newsMeta = newsMetaAtIndexPath(indexPath) else {
