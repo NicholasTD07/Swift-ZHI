@@ -17,11 +17,17 @@ class NewsViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var webViewTopConstraint: NSLayoutConstraint!
+
+    deinit {
+        stopFollowingScrollView()
+    }
 }
 
 // MARK: UI
 extension NewsViewController {
     override func viewWillDisappear(animated: Bool) {
+        showNavBarAnimated(false)
+
         saveReadingProgress()
 
         super.viewWillDisappear(animated)

@@ -18,8 +18,9 @@ class DailyTableViewController: HidesHairLineUnderNavBarViewController {
 
     private func loadLatestDaily() {
         store.latestDaily { latestDaily in
-            self.refreshControl.endRefreshing()
             self.tableView.reloadData()
+            self.refreshControl.endRefreshing()
+            self.showNavBarAnimated(true)
         }
     }
 
@@ -45,7 +46,6 @@ class DailyTableViewController: HidesHairLineUnderNavBarViewController {
     @IBOutlet weak var tableView: UITableView!
     private let refreshControl: UIRefreshControl = UIRefreshControl()
 
-
     deinit {
         stopFollowingScrollView()
     }
@@ -70,8 +70,6 @@ extension DailyTableViewController {
 
         refreshControl.addTarget(self, action: "refreshLatestDaily", forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(refreshControl)
-
-        followScrollView(tableView, usingTopConstraint: tableViewTopConstraint)
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -86,6 +84,8 @@ extension DailyTableViewController {
         if let indexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
+
+        followScrollView(tableView, usingTopConstraint: tableViewTopConstraint)
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
