@@ -48,7 +48,6 @@
 		75319DB81B185B78002C7AFF /* SwiftDailyAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDailyAPI.framework; path = Carthage/Build/iOS/SwiftDailyAPI.framework; sourceTree = "<group>"; };
 		75319DBC1B185CCC002C7AFF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		75319DBD1B185CCC002C7AFF /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
-		75319DBE1B185CCC002C7AFF /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Carthage/Build/iOS/Box.framework; sourceTree = "<group>"; };
 		75319DBF1B185CCC002C7AFF /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		75319DC51B186129002C7AFF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		75319DC71B1862B3002C7AFF /* DailyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTableViewController.swift; sourceTree = "<group>"; };
@@ -260,7 +259,6 @@
 				750808E81B37D43800EE370E /* AMScrollingNavbar.framework */,
 				75319DBC1B185CCC002C7AFF /* Alamofire.framework */,
 				75319DBD1B185CCC002C7AFF /* Argo.framework */,
-				75319DBE1B185CCC002C7AFF /* Box.framework */,
 				75319DBF1B185CCC002C7AFF /* Runes.framework */,
 				75319DB81B185B78002C7AFF /* SwiftDailyAPI.framework */,
 				5B9FA86DFF8CF015C0856958 /* iOS */,
