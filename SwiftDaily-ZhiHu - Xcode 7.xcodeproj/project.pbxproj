@@ -1,0 +1,687 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		757FEB891B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEB881B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift */; };
+		757FEB941B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEB931B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift */; };
+		757FEBC91B3ACFE200B4F327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA51B3ACFE100B4F327 /* AppDelegate.swift */; };
+		757FEBCA1B3ACFE200B4F327 /* DailyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA61B3ACFE100B4F327 /* DailyTableViewController.swift */; };
+		757FEBCB1B3ACFE200B4F327 /* HidesHairLineUnderNavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA71B3ACFE100B4F327 /* HidesHairLineUnderNavBarViewController.swift */; };
+		757FEBCC1B3ACFE200B4F327 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA81B3ACFE100B4F327 /* NewsViewController.swift */; };
+		757FEBCD1B3ACFE200B4F327 /* RealmDailyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA91B3ACFE100B4F327 /* RealmDailyTableViewController.swift */; };
+		757FEBD11B3ACFE200B4F327 /* RealmModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBB01B3ACFE100B4F327 /* RealmModels.swift */; };
+		757FEBD41B3ACFE200B4F327 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBB51B3ACFE100B4F327 /* Images.xcassets */; };
+		757FEBD61B3ACFE200B4F327 /* DailySectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBB81B3ACFE200B4F327 /* DailySectionHeaderView.xib */; };
+		757FEBD71B3ACFE200B4F327 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBB91B3ACFE200B4F327 /* LaunchScreen.xib */; };
+		757FEBD91B3ACFE200B4F327 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBBC1B3ACFE200B4F327 /* Info.plist */; };
+		757FEBDA1B3ACFE200B4F327 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBBD1B3ACFE200B4F327 /* Settings.bundle */; };
+		757FEBDC1B3ACFE200B4F327 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBC01B3ACFE200B4F327 /* Main.storyboard */; };
+		757FEBDF1B3ACFE200B4F327 /* DailySectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBC51B3ACFE200B4F327 /* DailySectionHeaderView.swift */; };
+		757FEBE01B3ACFE200B4F327 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBC61B3ACFE200B4F327 /* LoadingCell.swift */; };
+		757FEBE61B3AD0C800B4F327 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBE11B3AD0C800B4F327 /* Alamofire.framework */; };
+		757FEBE71B3AD0C800B4F327 /* AMScrollingNavbar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBE21B3AD0C800B4F327 /* AMScrollingNavbar.framework */; };
+		757FEBE81B3AD0C800B4F327 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBE31B3AD0C800B4F327 /* Argo.framework */; };
+		757FEBE91B3AD0C800B4F327 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBE41B3AD0C800B4F327 /* Runes.framework */; };
+		757FEBEA1B3AD0C800B4F327 /* SwiftDailyAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBE51B3AD0C800B4F327 /* SwiftDailyAPI.framework */; };
+		757FEBED1B3AD16C00B4F327 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBE11B3AD0C800B4F327 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		757FEBEE1B3AD16C00B4F327 /* AMScrollingNavbar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBE21B3AD0C800B4F327 /* AMScrollingNavbar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		757FEBEF1B3AD16C00B4F327 /* Argo.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBE31B3AD0C800B4F327 /* Argo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		757FEBF01B3AD16C00B4F327 /* Runes.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBE41B3AD0C800B4F327 /* Runes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		757FEBF11B3AD16D00B4F327 /* SwiftDailyAPI.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBE51B3AD0C800B4F327 /* SwiftDailyAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		757FEBF41B3AD1D400B4F327 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBF21B3AD1D400B4F327 /* Realm.framework */; };
+		757FEBF51B3AD1D400B4F327 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBF31B3AD1D400B4F327 /* RealmSwift.framework */; };
+		757FEBF61B3AD1E400B4F327 /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBF21B3AD1D400B4F327 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		757FEBF71B3AD1E400B4F327 /* RealmSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBF31B3AD1D400B4F327 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		757FEB851B3ACF5600B4F327 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 757FEB681B3ACF5600B4F327 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 757FEB6F1B3ACF5600B4F327;
+			remoteInfo = "SwiftDaily-ZhiHu";
+		};
+		757FEB901B3ACF5600B4F327 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 757FEB681B3ACF5600B4F327 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 757FEB6F1B3ACF5600B4F327;
+			remoteInfo = "SwiftDaily-ZhiHu";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		757FEBEC1B3AD15F00B4F327 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				757FEBF61B3AD1E400B4F327 /* Realm.framework in CopyFiles */,
+				757FEBF71B3AD1E400B4F327 /* RealmSwift.framework in CopyFiles */,
+				757FEBED1B3AD16C00B4F327 /* Alamofire.framework in CopyFiles */,
+				757FEBEE1B3AD16C00B4F327 /* AMScrollingNavbar.framework in CopyFiles */,
+				757FEBEF1B3AD16C00B4F327 /* Argo.framework in CopyFiles */,
+				757FEBF01B3AD16C00B4F327 /* Runes.framework in CopyFiles */,
+				757FEBF11B3AD16D00B4F327 /* SwiftDailyAPI.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		757FEB701B3ACF5600B4F327 /* SwiftDaily-ZhiHu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftDaily-ZhiHu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		757FEB841B3ACF5600B4F327 /* SwiftDaily-ZhiHuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftDaily-ZhiHuTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		757FEB881B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDaily_ZhiHuTests.swift; sourceTree = "<group>"; };
+		757FEB8A1B3ACF5600B4F327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		757FEB8F1B3ACF5600B4F327 /* SwiftDaily-ZhiHuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftDaily-ZhiHuUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		757FEB931B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDaily_ZhiHuUITests.swift; sourceTree = "<group>"; };
+		757FEB951B3ACF5600B4F327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		757FEBA51B3ACFE100B4F327 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		757FEBA61B3ACFE100B4F327 /* DailyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTableViewController.swift; sourceTree = "<group>"; };
+		757FEBA71B3ACFE100B4F327 /* HidesHairLineUnderNavBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HidesHairLineUnderNavBarViewController.swift; sourceTree = "<group>"; };
+		757FEBA81B3ACFE100B4F327 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		757FEBA91B3ACFE100B4F327 /* RealmDailyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDailyTableViewController.swift; sourceTree = "<group>"; };
+		757FEBB01B3ACFE100B4F327 /* RealmModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmModels.swift; sourceTree = "<group>"; };
+		757FEBB51B3ACFE100B4F327 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		757FEBB81B3ACFE200B4F327 /* DailySectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DailySectionHeaderView.xib; sourceTree = "<group>"; };
+		757FEBB91B3ACFE200B4F327 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		757FEBBC1B3ACFE200B4F327 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		757FEBBD1B3ACFE200B4F327 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		757FEBC01B3ACFE200B4F327 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		757FEBC51B3ACFE200B4F327 /* DailySectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailySectionHeaderView.swift; sourceTree = "<group>"; };
+		757FEBC61B3ACFE200B4F327 /* LoadingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
+		757FEBE11B3AD0C800B4F327 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		757FEBE21B3AD0C800B4F327 /* AMScrollingNavbar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMScrollingNavbar.framework; path = Carthage/Build/iOS/AMScrollingNavbar.framework; sourceTree = "<group>"; };
+		757FEBE31B3AD0C800B4F327 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
+		757FEBE41B3AD0C800B4F327 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
+		757FEBE51B3AD0C800B4F327 /* SwiftDailyAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDailyAPI.framework; path = Carthage/Build/iOS/SwiftDailyAPI.framework; sourceTree = "<group>"; };
+		757FEBF21B3AD1D400B4F327 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Carthage/Checkouts/realm-cocoa/build/ios/swift/Realm.framework"; sourceTree = "<group>"; };
+		757FEBF31B3AD1D400B4F327 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Carthage/Checkouts/realm-cocoa/build/ios/swift/RealmSwift.framework"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		757FEB6D1B3ACF5600B4F327 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				757FEBF41B3AD1D400B4F327 /* Realm.framework in Frameworks */,
+				757FEBF51B3AD1D400B4F327 /* RealmSwift.framework in Frameworks */,
+				757FEBE61B3AD0C800B4F327 /* Alamofire.framework in Frameworks */,
+				757FEBE71B3AD0C800B4F327 /* AMScrollingNavbar.framework in Frameworks */,
+				757FEBE81B3AD0C800B4F327 /* Argo.framework in Frameworks */,
+				757FEBE91B3AD0C800B4F327 /* Runes.framework in Frameworks */,
+				757FEBEA1B3AD0C800B4F327 /* SwiftDailyAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		757FEB811B3ACF5600B4F327 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		757FEB8C1B3ACF5600B4F327 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		757FEB671B3ACF5600B4F327 = {
+			isa = PBXGroup;
+			children = (
+				757FEBA11B3ACFE100B4F327 /* SwiftDaily-ZhiHu */,
+				757FEB871B3ACF5600B4F327 /* SwiftDaily-ZhiHuTests */,
+				757FEB921B3ACF5600B4F327 /* SwiftDaily-ZhiHuUITests */,
+				757FEBEB1B3AD0D300B4F327 /* Frameworks */,
+				757FEB711B3ACF5600B4F327 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		757FEB711B3ACF5600B4F327 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				757FEB701B3ACF5600B4F327 /* SwiftDaily-ZhiHu.app */,
+				757FEB841B3ACF5600B4F327 /* SwiftDaily-ZhiHuTests.xctest */,
+				757FEB8F1B3ACF5600B4F327 /* SwiftDaily-ZhiHuUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		757FEB871B3ACF5600B4F327 /* SwiftDaily-ZhiHuTests */ = {
+			isa = PBXGroup;
+			children = (
+				757FEB881B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift */,
+				757FEB8A1B3ACF5600B4F327 /* Info.plist */,
+			);
+			path = "SwiftDaily-ZhiHuTests";
+			sourceTree = "<group>";
+		};
+		757FEB921B3ACF5600B4F327 /* SwiftDaily-ZhiHuUITests */ = {
+			isa = PBXGroup;
+			children = (
+				757FEB931B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift */,
+				757FEB951B3ACF5600B4F327 /* Info.plist */,
+			);
+			path = "SwiftDaily-ZhiHuUITests";
+			sourceTree = "<group>";
+		};
+		757FEBA11B3ACFE100B4F327 /* SwiftDaily-ZhiHu */ = {
+			isa = PBXGroup;
+			children = (
+				757FEBA31B3ACFE100B4F327 /* Controllers */,
+				757FEBAA1B3ACFE100B4F327 /* Extensions */,
+				757FEBAC1B3ACFE100B4F327 /* Helpers */,
+				757FEBAE1B3ACFE100B4F327 /* Models */,
+				757FEBB11B3ACFE100B4F327 /* Protocols */,
+				757FEBB31B3ACFE100B4F327 /* Resources */,
+				757FEBC11B3ACFE200B4F327 /* ViewModels */,
+				757FEBC31B3ACFE200B4F327 /* Views */,
+			);
+			path = "SwiftDaily-ZhiHu";
+			sourceTree = "<group>";
+		};
+		757FEBA31B3ACFE100B4F327 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				757FEBA51B3ACFE100B4F327 /* AppDelegate.swift */,
+				757FEBA61B3ACFE100B4F327 /* DailyTableViewController.swift */,
+				757FEBA71B3ACFE100B4F327 /* HidesHairLineUnderNavBarViewController.swift */,
+				757FEBA81B3ACFE100B4F327 /* NewsViewController.swift */,
+				757FEBA91B3ACFE100B4F327 /* RealmDailyTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		757FEBAA1B3ACFE100B4F327 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		757FEBAC1B3ACFE100B4F327 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		757FEBAE1B3ACFE100B4F327 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				757FEBB01B3ACFE100B4F327 /* RealmModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		757FEBB11B3ACFE100B4F327 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		757FEBB31B3ACFE100B4F327 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				757FEBB51B3ACFE100B4F327 /* Images.xcassets */,
+				757FEBB61B3ACFE100B4F327 /* Nibs */,
+				757FEBBA1B3ACFE200B4F327 /* Other-Sources */,
+				757FEBBD1B3ACFE200B4F327 /* Settings.bundle */,
+				757FEBBE1B3ACFE200B4F327 /* Storyboards */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		757FEBB61B3ACFE100B4F327 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				757FEBB81B3ACFE200B4F327 /* DailySectionHeaderView.xib */,
+				757FEBB91B3ACFE200B4F327 /* LaunchScreen.xib */,
+			);
+			path = Nibs;
+			sourceTree = "<group>";
+		};
+		757FEBBA1B3ACFE200B4F327 /* Other-Sources */ = {
+			isa = PBXGroup;
+			children = (
+				757FEBBC1B3ACFE200B4F327 /* Info.plist */,
+			);
+			path = "Other-Sources";
+			sourceTree = "<group>";
+		};
+		757FEBBE1B3ACFE200B4F327 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				757FEBC01B3ACFE200B4F327 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		757FEBC11B3ACFE200B4F327 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		757FEBC31B3ACFE200B4F327 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				757FEBC51B3ACFE200B4F327 /* DailySectionHeaderView.swift */,
+				757FEBC61B3ACFE200B4F327 /* LoadingCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		757FEBEB1B3AD0D300B4F327 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				757FEBF21B3AD1D400B4F327 /* Realm.framework */,
+				757FEBF31B3AD1D400B4F327 /* RealmSwift.framework */,
+				757FEBE11B3AD0C800B4F327 /* Alamofire.framework */,
+				757FEBE21B3AD0C800B4F327 /* AMScrollingNavbar.framework */,
+				757FEBE31B3AD0C800B4F327 /* Argo.framework */,
+				757FEBE41B3AD0C800B4F327 /* Runes.framework */,
+				757FEBE51B3AD0C800B4F327 /* SwiftDailyAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		757FEB6F1B3ACF5600B4F327 /* SwiftDaily-ZhiHu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 757FEB981B3ACF5600B4F327 /* Build configuration list for PBXNativeTarget "SwiftDaily-ZhiHu" */;
+			buildPhases = (
+				757FEB6C1B3ACF5600B4F327 /* Sources */,
+				757FEB6D1B3ACF5600B4F327 /* Frameworks */,
+				757FEB6E1B3ACF5600B4F327 /* Resources */,
+				757FEBEC1B3AD15F00B4F327 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftDaily-ZhiHu";
+			productName = "SwiftDaily-ZhiHu";
+			productReference = 757FEB701B3ACF5600B4F327 /* SwiftDaily-ZhiHu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		757FEB831B3ACF5600B4F327 /* SwiftDaily-ZhiHuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 757FEB9B1B3ACF5600B4F327 /* Build configuration list for PBXNativeTarget "SwiftDaily-ZhiHuTests" */;
+			buildPhases = (
+				757FEB801B3ACF5600B4F327 /* Sources */,
+				757FEB811B3ACF5600B4F327 /* Frameworks */,
+				757FEB821B3ACF5600B4F327 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				757FEB861B3ACF5600B4F327 /* PBXTargetDependency */,
+			);
+			name = "SwiftDaily-ZhiHuTests";
+			productName = "SwiftDaily-ZhiHuTests";
+			productReference = 757FEB841B3ACF5600B4F327 /* SwiftDaily-ZhiHuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		757FEB8E1B3ACF5600B4F327 /* SwiftDaily-ZhiHuUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 757FEB9E1B3ACF5600B4F327 /* Build configuration list for PBXNativeTarget "SwiftDaily-ZhiHuUITests" */;
+			buildPhases = (
+				757FEB8B1B3ACF5600B4F327 /* Sources */,
+				757FEB8C1B3ACF5600B4F327 /* Frameworks */,
+				757FEB8D1B3ACF5600B4F327 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				757FEB911B3ACF5600B4F327 /* PBXTargetDependency */,
+			);
+			name = "SwiftDaily-ZhiHuUITests";
+			productName = "SwiftDaily-ZhiHuUITests";
+			productReference = 757FEB8F1B3ACF5600B4F327 /* SwiftDaily-ZhiHuUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		757FEB681B3ACF5600B4F327 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = nickTD;
+				TargetAttributes = {
+					757FEB6F1B3ACF5600B4F327 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					757FEB831B3ACF5600B4F327 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 757FEB6F1B3ACF5600B4F327;
+					};
+					757FEB8E1B3ACF5600B4F327 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 757FEB6F1B3ACF5600B4F327;
+					};
+				};
+			};
+			buildConfigurationList = 757FEB6B1B3ACF5600B4F327 /* Build configuration list for PBXProject "SwiftDaily-ZhiHu - Xcode 7" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 757FEB671B3ACF5600B4F327;
+			productRefGroup = 757FEB711B3ACF5600B4F327 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				757FEB6F1B3ACF5600B4F327 /* SwiftDaily-ZhiHu */,
+				757FEB831B3ACF5600B4F327 /* SwiftDaily-ZhiHuTests */,
+				757FEB8E1B3ACF5600B4F327 /* SwiftDaily-ZhiHuUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		757FEB6E1B3ACF5600B4F327 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				757FEBD41B3ACFE200B4F327 /* Images.xcassets in Resources */,
+				757FEBDA1B3ACFE200B4F327 /* Settings.bundle in Resources */,
+				757FEBDC1B3ACFE200B4F327 /* Main.storyboard in Resources */,
+				757FEBD71B3ACFE200B4F327 /* LaunchScreen.xib in Resources */,
+				757FEBD61B3ACFE200B4F327 /* DailySectionHeaderView.xib in Resources */,
+				757FEBD91B3ACFE200B4F327 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		757FEB821B3ACF5600B4F327 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		757FEB8D1B3ACF5600B4F327 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		757FEB6C1B3ACF5600B4F327 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				757FEBCD1B3ACFE200B4F327 /* RealmDailyTableViewController.swift in Sources */,
+				757FEBCB1B3ACFE200B4F327 /* HidesHairLineUnderNavBarViewController.swift in Sources */,
+				757FEBE01B3ACFE200B4F327 /* LoadingCell.swift in Sources */,
+				757FEBC91B3ACFE200B4F327 /* AppDelegate.swift in Sources */,
+				757FEBD11B3ACFE200B4F327 /* RealmModels.swift in Sources */,
+				757FEBCA1B3ACFE200B4F327 /* DailyTableViewController.swift in Sources */,
+				757FEBCC1B3ACFE200B4F327 /* NewsViewController.swift in Sources */,
+				757FEBDF1B3ACFE200B4F327 /* DailySectionHeaderView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		757FEB801B3ACF5600B4F327 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				757FEB891B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		757FEB8B1B3ACF5600B4F327 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				757FEB941B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		757FEB861B3ACF5600B4F327 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 757FEB6F1B3ACF5600B4F327 /* SwiftDaily-ZhiHu */;
+			targetProxy = 757FEB851B3ACF5600B4F327 /* PBXContainerItemProxy */;
+		};
+		757FEB911B3ACF5600B4F327 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 757FEB6F1B3ACF5600B4F327 /* SwiftDaily-ZhiHu */;
+			targetProxy = 757FEB901B3ACF5600B4F327 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		757FEB961B3ACF5600B4F327 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS/";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		757FEB971B3ACF5600B4F327 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS/";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		757FEB991B3ACF5600B4F327 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Carthage/Build/iOS/",
+					"$(PROJECT_DIR)/Carthage/Checkouts/realm-cocoa/build/ios/swift/",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/SwiftDaily-ZhiHu/Resources/Other-Sources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nickTD.SwiftDaily-ZhiHu";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		757FEB9A1B3ACF5600B4F327 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Carthage/Build/iOS/",
+					"$(PROJECT_DIR)/Carthage/Checkouts/realm-cocoa/build/ios/swift/",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/SwiftDaily-ZhiHu/Resources/Other-Sources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nickTD.SwiftDaily-ZhiHu";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		757FEB9C1B3ACF5600B4F327 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "SwiftDaily-ZhiHuTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nickTD.SwiftDaily-ZhiHuTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftDaily-ZhiHu.app/SwiftDaily-ZhiHu";
+			};
+			name = Debug;
+		};
+		757FEB9D1B3ACF5600B4F327 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "SwiftDaily-ZhiHuTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nickTD.SwiftDaily-ZhiHuTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftDaily-ZhiHu.app/SwiftDaily-ZhiHu";
+			};
+			name = Release;
+		};
+		757FEB9F1B3ACF5600B4F327 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "SwiftDaily-ZhiHuUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nickTD.SwiftDaily-ZhiHuUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "SwiftDaily-ZhiHu";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		757FEBA01B3ACF5600B4F327 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "SwiftDaily-ZhiHuUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nickTD.SwiftDaily-ZhiHuUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "SwiftDaily-ZhiHu";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		757FEB6B1B3ACF5600B4F327 /* Build configuration list for PBXProject "SwiftDaily-ZhiHu - Xcode 7" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				757FEB961B3ACF5600B4F327 /* Debug */,
+				757FEB971B3ACF5600B4F327 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		757FEB981B3ACF5600B4F327 /* Build configuration list for PBXNativeTarget "SwiftDaily-ZhiHu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				757FEB991B3ACF5600B4F327 /* Debug */,
+				757FEB9A1B3ACF5600B4F327 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		757FEB9B1B3ACF5600B4F327 /* Build configuration list for PBXNativeTarget "SwiftDaily-ZhiHuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				757FEB9C1B3ACF5600B4F327 /* Debug */,
+				757FEB9D1B3ACF5600B4F327 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		757FEB9E1B3ACF5600B4F327 /* Build configuration list for PBXNativeTarget "SwiftDaily-ZhiHuUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				757FEB9F1B3ACF5600B4F327 /* Debug */,
+				757FEBA01B3ACF5600B4F327 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 757FEB681B3ACF5600B4F327 /* Project object */;
+}
