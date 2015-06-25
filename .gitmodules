@@ -12,7 +12,7 @@
 	url = ssh://git@github.com/NicholasTD07/SwiftDailyAPI.git
 [submodule "Carthage/Checkouts/AMScrollingNavbar"]
 	path = Carthage/Checkouts/AMScrollingNavbar
-	url = ssh://git@github.com/NicholasTD07/AMScrollingNavbar.git
+	url = ssh://git@github.com/andreamazz/AMScrollingNavbar.git
 [submodule "Carthage/Checkouts/realm-cocoa"]
 	path = Carthage/Checkouts/realm-cocoa
-	url = git@github.com:realm/realm-cocoa.git
+	url = ssh://git@github.com/realm/realm-cocoa.git
