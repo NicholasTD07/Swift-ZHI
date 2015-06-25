@@ -10,10 +10,17 @@ import UIKit
 import RealmSwift
 import SwiftDailyAPI
 
+private func realmInMemory() -> Realm {
+    return try! Realm(inMemoryIdentifier: "DailyTestGround")
+}
+
 class RealmDailyTableViewController: UIViewController {
-    private let realm = try! Realm()
     private let api = DailyAPI()
-//    var token: NotificationToken?
+
+    private let realm = realmInMemory()
+    private var token: NotificationToken?
+
+    private let dailies = realmInMemory().objects(RLMDaily).sorted("date")
 
     // MARK: UI
     private var firstAppeared = false
@@ -22,15 +29,24 @@ class RealmDailyTableViewController: UIViewController {
 
 // MARK: UI methods
 extension RealmDailyTableViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        token = realm.addNotificationBlock { (_, _) in
+            self.tableView.reloadData()
+            print(self.dailies)
+            print(self.realm.objects(RLMDaily))
+        }
+    }
+
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-
-        let token = realm.addNotificationBlock { (n, m) in self.tableView.reloadData() }
 
         if !firstAppeared {
             api.latestDaily { latestDaily in
                 autoreleasepool {
-                    let realm = try! Realm()
+                    let realm = realmInMemory()
                     let daily = RLMDaily()
                     let news = latestDaily.news.map { (newsMeta: NewsMeta) -> RLMNewsMeta in
                         // TODO: Put this into RLMNewsMeta
@@ -41,8 +57,7 @@ extension RealmDailyTableViewController {
                     }
                     daily.news.extend(news)
                     daily.date = latestDaily.date
-
-                    print(daily)
+                    daily.dateHash = daily.date.hashValue
 
                     realm.write {
                         realm.add(daily)
@@ -54,9 +69,24 @@ extension RealmDailyTableViewController {
 }
 
 // MARK: Data Source
-//extension RealmDailyTableViewController: UITableViewDataSource {
-//
-//}
+extension RealmDailyTableViewController: UITableViewDataSource {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return dailies.count
+    }
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dailies[section].news.count
+    }
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("NewsMetaCell", forIndexPath: indexPath)
+        let newsMeta = dailies[indexPath.section].news[indexPath.row]
+
+        cell.textLabel?.text = newsMeta.title
+
+        return cell
+    }
+}
 
 extension RealmDailyTableViewController: UITableViewDelegate {
 
