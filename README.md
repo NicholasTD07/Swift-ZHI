@@ -2,27 +2,23 @@
 
 iOS ZhiHuDaily client, implemented in Swift.
 
+<img src="https://dl.dropboxusercontent.com/u/212792226/SwiftDaily-ZhiHu-1.2.0.gif" alt="Showcase GIF" width="320">
+
 ## Features
 
-Right now it only shows a list of daily titles in a table view with the help of [SwiftDailyAPI].
-
-See a screenshot of the [previous version](#previous-version).
-
-### Planned
-
-#### Basics
+### Basics
 
 Basic functionality that the official App offers.
 
-* show a list of latest daily news from Zhihu's API
+* show a list of latest daily news from Zhihu's API - DailyView
  * infinite scrolling
-* show news content in a detail view
- * show contributors(author + recommenders)
+* show news content in a detail view - NewsView
 
-#### More
+### Planned
 
 Features I would like to add:
 
+* show contributors(author + recommenders) in NewsView
 * offline storage/cache
  * news list items
  * news content
@@ -41,6 +37,8 @@ bin/setup
 
 ## Frameworks
 
+* [Realm]     - Offline storage
+
 ### [SwiftDailyAPI]
 
 Framework I write to help myself building this App and possibly an Mac version
@@ -53,10 +51,6 @@ of this App, also to help people who may want to build one themselves.
 * [Quick]     - Testing
 * [Nimble]    - Matcher
 
-#### Planned
-
- * [Realm](https://realm.io) - Database
-
 ## Documentation
 
 * [Use Protocol as Function Parameter in Swift](http://dev.nicktd.com/tldr/2015/06/08/use-protocol-in-swift-as-function-parameter.html)
@@ -67,14 +61,14 @@ of this App, also to help people who may want to build one themselves.
 * How to use mitmproxy to reverse engineer an App's API
 * Using Core Data with Swift and Protocol
 
-
 ## Q&A
 
 ### About the branch model for `git`
 
-Since I am working on the project alone, until first release, or other people
-developing on this project, I will be developing on the `master` branch mainly
-while I may also develop/experiment on `feature/` branches.
+* master        - stable release
+* develop       - mainly developing on this branch
+* experiment/   - testing things I am not sure whether it will work out or not
+* feature/      - building features
 
 ### There is already an official ZhihuDaily App. Why another?
 
@@ -106,4 +100,4 @@ Screeshot:
 [Quick]: https://github.com/Quick/Quick
 [Nimble]: https://github.com/Quick/Nimble
 [SwiftDailyAPI]: https://github.com/NicholasTD07/SwiftDailyAPI
-
+[Realm]: https://realm.io
