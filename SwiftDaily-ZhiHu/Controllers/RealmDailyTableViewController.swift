@@ -10,10 +10,6 @@ import UIKit
 import RealmSwift
 import SwiftDailyAPI
 
-private func realmInMemory() -> Realm {
-    return try! Realm(inMemoryIdentifier: "DailyTestGround")
-}
-
 class RealmDailyTableViewController: UIViewController {
     private let api = DailyAPI()
 

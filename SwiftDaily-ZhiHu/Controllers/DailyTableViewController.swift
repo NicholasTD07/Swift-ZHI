@@ -49,6 +49,7 @@ class DailyTableViewController: HidesHairLineUnderNavBarViewController {
     deinit {
         stopFollowingScrollView()
     }
+
 }
 
 // MARK: UI methods
@@ -133,6 +134,7 @@ extension DailyTableViewController: UITableViewDataSource {
 }
 
 // MARK: Delegate
+
 extension DailyTableViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         guard let newsMeta = newsMetaAtIndexPath(indexPath) else {

@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import SwiftDailyAPI
 
 class RLMNewsMeta: Object {
     dynamic var newsId: Int = 0

@@ -37,6 +37,8 @@
 		757FEBF51B3AD1D400B4F327 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBF31B3AD1D400B4F327 /* RealmSwift.framework */; };
 		757FEBF61B3AD1E400B4F327 /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBF21B3AD1D400B4F327 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		757FEBF71B3AD1E400B4F327 /* RealmSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBF31B3AD1D400B4F327 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		75CDD20C1B3BBB4A00343CAA /* DailyRealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CDD20B1B3BBB4A00343CAA /* DailyRealmStore.swift */; };
+		75CDD20E1B3BBD3900343CAA /* RealmHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CDD20D1B3BBD3900343CAA /* RealmHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		757FEBE51B3AD0C800B4F327 /* SwiftDailyAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDailyAPI.framework; path = Carthage/Build/iOS/SwiftDailyAPI.framework; sourceTree = "<group>"; };
 		757FEBF21B3AD1D400B4F327 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Carthage/Checkouts/realm-cocoa/build/ios/swift/Realm.framework"; sourceTree = "<group>"; };
 		757FEBF31B3AD1D400B4F327 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Carthage/Checkouts/realm-cocoa/build/ios/swift/RealmSwift.framework"; sourceTree = "<group>"; };
+		75CDD20B1B3BBB4A00343CAA /* DailyRealmStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyRealmStore.swift; sourceTree = "<group>"; };
+		75CDD20D1B3BBD3900343CAA /* RealmHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +218,7 @@
 		757FEBAC1B3ACFE100B4F327 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				75CDD20D1B3BBD3900343CAA /* RealmHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				757FEBB01B3ACFE100B4F327 /* RealmModels.swift */,
+				75CDD20B1B3BBB4A00343CAA /* DailyRealmStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -379,7 +385,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 757FEB6B1B3ACF5600B4F327 /* Build configuration list for PBXProject "SwiftDaily-ZhiHu - Xcode 7" */;
+			buildConfigurationList = 757FEB6B1B3ACF5600B4F327 /* Build configuration list for PBXProject "SwiftDaily-ZhiHu" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -437,7 +443,9 @@
 				757FEBCD1B3ACFE200B4F327 /* RealmDailyTableViewController.swift in Sources */,
 				757FEBCB1B3ACFE200B4F327 /* HidesHairLineUnderNavBarViewController.swift in Sources */,
 				757FEBE01B3ACFE200B4F327 /* LoadingCell.swift in Sources */,
+				75CDD20C1B3BBB4A00343CAA /* DailyRealmStore.swift in Sources */,
 				757FEBC91B3ACFE200B4F327 /* AppDelegate.swift in Sources */,
+				75CDD20E1B3BBD3900343CAA /* RealmHelpers.swift in Sources */,
 				757FEBD11B3ACFE200B4F327 /* RealmModels.swift in Sources */,
 				757FEBCA1B3ACFE200B4F327 /* DailyTableViewController.swift in Sources */,
 				757FEBCC1B3ACFE200B4F327 /* NewsViewController.swift in Sources */,
@@ -645,7 +653,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		757FEB6B1B3ACF5600B4F327 /* Build configuration list for PBXProject "SwiftDaily-ZhiHu - Xcode 7" */ = {
+		757FEB6B1B3ACF5600B4F327 /* Build configuration list for PBXProject "SwiftDaily-ZhiHu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				757FEB961B3ACF5600B4F327 /* Debug */,
