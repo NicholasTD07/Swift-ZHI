@@ -12,9 +12,18 @@ import RealmSwift
 class RLMNewsMeta: Object {
     dynamic var newsId: Int = 0
     dynamic var title: String = ""
+
+    override static func primaryKey() -> String? {
+        return "newsId"
+    }
 }
 
 class RLMDaily: Object {
+    dynamic var dateHash: Int = 0
     dynamic var date: NSDate = NSDate()
     let news = List<RLMNewsMeta>()
+
+    override static func primaryKey() -> String? {
+        return "dateHash"
+    }
 }
