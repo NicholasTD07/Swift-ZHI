@@ -46,6 +46,12 @@ extension DailyInMemoryTableViewController {
         return dateFormatter.stringFromDate(date)
     }
 
+    override func loadDailyAtIndexPath(indexPath: NSIndexPath) {
+        let date = store.dailies.dateIndexAtIndex(indexPath.section).date
+
+        store.daily(forDate: date) { self.loadDailyIntoTableView($0) }
+    }
+
     override func cellAtIndexPath(indexPath: NSIndexPath) -> UITableViewCell {
         let newsMeta = newsMetaAtIndexPath(indexPath)!
         let cell = tableView.dequeueReusableCellWithIdentifier("NewsMetaCell", forIndexPath: indexPath)
@@ -142,13 +148,5 @@ extension DailyInMemoryTableViewController: UITableViewDelegate {
         }
         save.backgroundColor = UIColor(hue: 0.353, saturation: 0.635, brightness: 0.765, alpha: 1)
         return [save]
-    }
-
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        guard let _ = cell as? LoadingCell else { return }
-
-        let date = store.dailies.dateIndexAtIndex(indexPath.section).date
-
-        store.daily(forDate: date) { self.loadDailyIntoTableView($0) }
     }
 }

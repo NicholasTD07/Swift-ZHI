@@ -42,6 +42,10 @@ extension RealmDailyTableViewController {
         return dateFormatter.stringFromDate(date)
     }
 
+    override func loadDailyAtIndexPath(indexPath: NSIndexPath) {
+        store.daily(forDate: dailyDates.dateAtIndex(indexPath.section))
+    }
+
     override func cellAtIndexPath(indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NewsMetaCell", forIndexPath: indexPath)
         let newsMeta = newsMetaAtIndexPath(indexPath)!

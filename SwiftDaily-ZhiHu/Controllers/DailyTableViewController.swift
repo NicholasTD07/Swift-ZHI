@@ -35,6 +35,9 @@ extension DailyTableViewController {
         fatalError()
     }
 
+    func loadDailyAtIndexPath(indexPath: NSIndexPath) {
+    }
+
     func cellAtIndexPath(indexPath: NSIndexPath) -> UITableViewCell {
         fatalError()
     }
@@ -88,5 +91,11 @@ extension DailyTableViewController {
         header.titleLabel.text = self.dateStringAtSection(section)
 
         return header
+    }
+
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        guard let _ = cell as? LoadingCell else { return }
+
+        loadDailyAtIndexPath(indexPath)
     }
 }

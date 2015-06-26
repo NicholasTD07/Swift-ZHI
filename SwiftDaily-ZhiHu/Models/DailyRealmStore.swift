@@ -40,7 +40,8 @@ public class DailyRealmStore {
     }
 
     private func addObject(object: Object, toRealm realm: Realm = defaultRealm()) {
-        realm.write { realm.add(object) }
+        realm.write {
+        }
     }
 
     public func news(newsId: Int) {
