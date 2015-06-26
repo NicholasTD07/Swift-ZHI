@@ -9,6 +9,8 @@
 import Foundation
 import RealmSwift
 
-func realmInMemory() -> Realm {
+func defautRealm() -> Realm {
+    // TODO: Until next release, use in memroy realm
+    // NOTE: So there's no need to migrate XD until a stable model
     return Realm(inMemoryIdentifier: "DailyTestGround")
 }

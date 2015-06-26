@@ -17,7 +17,7 @@ public class DailyRealmStore {
     }
 
     let dailyAPI: DailyAPI
-    let realm = realmInMemory()
+    let realm = defautRealm()
     private static let dailyStartDate = NSDate.dateAt(year: 2013, month: 05, day: 19)!
 
     public init(completionQueue: dispatch_queue_t? = nil)

@@ -13,10 +13,10 @@ import SwiftDailyAPI
 class RealmDailyTableViewController: UIViewController {
     private let api = DailyAPI()
 
-    private let realm = realmInMemory()
+    private let realm = defautRealm()
     private var token: NotificationToken?
 
-    private let dailies = realmInMemory().objects(RLMDaily).sorted("date")
+    private let dailies = defautRealm().objects(RLMDaily).sorted("date")
 
     // MARK: UI
     private var firstAppeared = false
@@ -42,7 +42,7 @@ extension RealmDailyTableViewController {
         if !firstAppeared {
             api.latestDaily { latestDaily in
                 autoreleasepool {
-                    let realm = realmInMemory()
+                    let realm = defautRealm()
                     let daily = RLMDaily()
                     let news = latestDaily.news.map { (newsMeta: NewsMeta) -> RLMNewsMeta in
                         // TODO: Put this into RLMNewsMeta
