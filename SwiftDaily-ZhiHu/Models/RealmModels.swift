@@ -38,9 +38,14 @@ class DailyObject: Object {
         return "dateHash"
     }
 
+    override static func indexedProperties() -> [String] {
+        return ["date"]
+    }
+
     convenience init(date: NSDate, news: [NewsMeta]) {
         self.init()
         self.date = date
+        self.dateHash = date.hash
         self.news.extend(news.map { NewsMetaObject.from($0) })
     }
 
