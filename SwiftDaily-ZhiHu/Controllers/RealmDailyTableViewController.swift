@@ -38,11 +38,7 @@ class RealmDailyTableViewController: DailyTableViewController {
         let date = dailyDates.dateAtIndex(section)
         return dateFormatter.stringFromDate(date)
     }
-}
 
-
-// MARK: UI methods
-extension RealmDailyTableViewController {
     override func cellAtIndexPath(indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NewsMetaCell", forIndexPath: indexPath)
         let newsMeta = newsMetaAtIndexPath(indexPath)!
@@ -51,7 +47,11 @@ extension RealmDailyTableViewController {
 
         return cell
     }
+}
 
+
+// MARK: UI methods
+extension RealmDailyTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 

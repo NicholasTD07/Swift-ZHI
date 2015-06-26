@@ -57,13 +57,6 @@ class DailyInMemoryTableViewController: DailyTableViewController {
 
         return cell
     }
-
-    // MARK: UI
-    @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
-    deinit {
-        stopFollowingScrollView()
-    }
-
 }
 
 // MARK: UI methods
@@ -90,8 +83,6 @@ extension DailyInMemoryTableViewController {
         if let indexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
-
-        followScrollView(tableView, usingTopConstraint: tableViewTopConstraint)
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -111,12 +102,6 @@ extension DailyInMemoryTableViewController {
     private func beginRefreshing() {
         tableView.setContentOffset(CGPoint(x: 0, y: -refreshControl.frame.size.height), animated: true)
         refreshControl.beginRefreshing()
-    }
-
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-
-        showNavBarAnimated(false)
     }
 }
 

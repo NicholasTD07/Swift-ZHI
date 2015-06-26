@@ -221,6 +221,7 @@
                     <navigationItem key="navigationItem" title="SwiftDaily" id="6iy-EE-vdL"/>
                     <connections>
                         <outlet property="tableView" destination="27G-5C-Lwn" id="7DA-l0-Q79"/>
+                        <outlet property="tableViewTopConstraint" destination="xV8-1R-d4X" id="rA7-ec-1M6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nd2-J1-d47" userLabel="First Responder" sceneMemberID="firstResponder"/>

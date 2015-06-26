@@ -24,6 +24,7 @@ class DailyTableViewController: HidesHairLineUnderNavBarViewController {
 
     // MARK: UI
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
     let refreshControl: UIRefreshControl = UIRefreshControl()
 
     var firstAppeared = false
@@ -32,6 +33,10 @@ class DailyTableViewController: HidesHairLineUnderNavBarViewController {
         dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
         return dateFormatter
         }()
+
+    deinit {
+        stopFollowingScrollView()
+    }
 }
 
 // MARK: UI methods
@@ -47,6 +52,14 @@ extension DailyTableViewController {
 
         refreshControl.addTarget(self, action: "refreshLatestDaily", forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(refreshControl)
+
+        followScrollView(tableView, usingTopConstraint: tableViewTopConstraint)
+    }
+
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        showNavBarAnimated(false)
     }
 }
 
@@ -61,8 +74,6 @@ extension DailyTableViewController {
         return cellAtIndexPath(indexPath)
     }
 
-
-    // TODO: clean up
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let header = tableView.dequeueReusableHeaderFooterViewWithIdentifier("DailySectionHeaderView") as? DailySectionHeaderView else { return nil }
 
