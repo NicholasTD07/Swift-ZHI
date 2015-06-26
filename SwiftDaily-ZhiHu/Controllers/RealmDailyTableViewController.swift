@@ -29,7 +29,10 @@ class RealmDailyTableViewController: DailyTableViewController {
 
         return daily.news[indexPath.row]
     }
+}
 
+// MARK: Concrete methods
+extension RealmDailyTableViewController {
     override func hasNewsMetaAtIndexPath(indexPath: NSIndexPath) -> Bool {
         return newsMetaAtIndexPath(indexPath) != nil
     }

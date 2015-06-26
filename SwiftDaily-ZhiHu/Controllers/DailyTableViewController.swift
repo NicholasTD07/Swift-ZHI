@@ -9,19 +9,6 @@
 import UIKit
 
 class DailyTableViewController: HidesHairLineUnderNavBarViewController {
-
-    func hasNewsMetaAtIndexPath(indexPath: NSIndexPath) -> Bool {
-        fatalError()
-    }
-
-    func dateStringAtSection(section: Int) -> String {
-        fatalError()
-    }
-
-    func cellAtIndexPath(indexPath: NSIndexPath) -> UITableViewCell {
-        fatalError()
-    }
-
     // MARK: UI
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
@@ -36,6 +23,20 @@ class DailyTableViewController: HidesHairLineUnderNavBarViewController {
 
     deinit {
         stopFollowingScrollView()
+    }
+}
+
+extension DailyTableViewController {
+    func hasNewsMetaAtIndexPath(indexPath: NSIndexPath) -> Bool {
+        fatalError()
+    }
+
+    func dateStringAtSection(section: Int) -> String {
+        fatalError()
+    }
+
+    func cellAtIndexPath(indexPath: NSIndexPath) -> UITableViewCell {
+        fatalError()
     }
 }
 

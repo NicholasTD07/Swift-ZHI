@@ -33,7 +33,10 @@ class DailyInMemoryTableViewController: DailyTableViewController {
 
         return daily.news[indexPath.row]
     }
+}
 
+// MARK: Concrete methods
+extension DailyInMemoryTableViewController {
     override func hasNewsMetaAtIndexPath(indexPath: NSIndexPath) -> Bool {
         return newsMetaAtIndexPath(indexPath) != nil
     }
