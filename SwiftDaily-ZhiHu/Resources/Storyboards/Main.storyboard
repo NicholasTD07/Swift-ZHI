@@ -142,7 +142,7 @@
             </objects>
             <point key="canvasLocation" x="1579" y="519"/>
         </scene>
-        <!--Realm Daily Table View Controller-->
+        <!--SwiftDaily-->
         <scene sceneID="QI6-Td-Mjf">
             <objects>
                 <viewController id="wQ7-FU-fc5" customClass="RealmDailyTableViewController" customModule="SwiftDaily_ZhiHu" customModuleProvider="target" sceneMemberID="viewController">
@@ -154,30 +154,53 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="27G-5C-Lwn">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="44" sectionFooterHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="27G-5C-Lwn">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsMetaCell" textLabel="t3t-UQ-hRR" style="IBUITableViewCellStyleDefault" id="9EK-Uu-SlL">
-                                        <rect key="frame" x="0.0" y="22" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="44" width="600" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9EK-Uu-SlL" id="HyI-0X-0PS">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="53.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="t3t-UQ-hRR">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="53.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoadingCell" id="4js-Mo-awF" customClass="LoadingCell" customModule="SwiftDaily_ZhiHu" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="98" width="600" height="54"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4js-Mo-awF" id="4NG-ai-Rvn">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="53.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="DIa-ME-lkh">
+                                                    <rect key="frame" x="290" y="17" width="20" height="20"/>
+                                                    <animations/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="DIa-ME-lkh" firstAttribute="centerX" secondItem="4NG-ai-Rvn" secondAttribute="centerX" id="7TA-1N-HZU"/>
+                                                <constraint firstItem="DIa-ME-lkh" firstAttribute="centerY" secondItem="4NG-ai-Rvn" secondAttribute="centerY" id="pp9-GV-m7x"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="activityIndicator" destination="DIa-ME-lkh" id="dyg-n5-ICc"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -195,7 +218,7 @@
                             <constraint firstItem="27G-5C-Lwn" firstAttribute="top" secondItem="bdl-Kp-raE" secondAttribute="bottom" id="xV8-1R-d4X"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="6iy-EE-vdL"/>
+                    <navigationItem key="navigationItem" title="SwiftDaily" id="6iy-EE-vdL"/>
                     <connections>
                         <outlet property="tableView" destination="27G-5C-Lwn" id="7DA-l0-Q79"/>
                     </connections>
