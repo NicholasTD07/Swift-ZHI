@@ -18,6 +18,10 @@ class DailyTableViewController: HidesHairLineUnderNavBarViewController {
         fatalError()
     }
 
+    func cellAtIndexPath(indexPath: NSIndexPath) -> UITableViewCell {
+        fatalError()
+    }
+
     // MARK: UI
     @IBOutlet weak var tableView: UITableView!
     let refreshControl: UIRefreshControl = UIRefreshControl()
@@ -43,10 +47,6 @@ extension DailyTableViewController {
 
         refreshControl.addTarget(self, action: "refreshLatestDaily", forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(refreshControl)
-    }
-
-    func cellAtIndexPath(indexPath: NSIndexPath) -> UITableViewCell {
-        fatalError()
     }
 }
 

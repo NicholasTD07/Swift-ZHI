@@ -12,7 +12,7 @@ import SwiftDailyAPI
 
 // TODO: think about all the `self`s in closures
 
-class DailyInMemoryTableViewController: HidesHairLineUnderNavBarViewController {
+class DailyInMemoryTableViewController: DailyTableViewController {
     // MARK: Store
     private let store = DailyInMemoryStore(completionQueue: dispatch_get_main_queue())
 
@@ -34,18 +34,32 @@ class DailyInMemoryTableViewController: HidesHairLineUnderNavBarViewController {
         return daily.news[indexPath.row]
     }
 
+    override func hasNewsMetaAtIndexPath(indexPath: NSIndexPath) -> Bool {
+        return newsMetaAtIndexPath(indexPath) != nil
+    }
+
+    override func dateStringAtSection(section: Int) -> String {
+        let date = store.dailies.dateIndexAtIndex(section).date
+        return dateFormatter.stringFromDate(date)
+    }
+
+    override func cellAtIndexPath(indexPath: NSIndexPath) -> UITableViewCell {
+        let newsMeta = newsMetaAtIndexPath(indexPath)!
+        let cell = tableView.dequeueReusableCellWithIdentifier("NewsMetaCell", forIndexPath: indexPath)
+
+        cell.textLabel?.text = newsMeta.title
+
+        if let _ = store.news[newsMeta.newsId] {
+            cell.accessoryType = .Checkmark
+        } else {
+            cell.accessoryType = .None
+        }
+
+        return cell
+    }
+
     // MARK: UI
-    private var firstAppeared = false
-    private let dateFormatter: NSDateFormatter = {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
-        return dateFormatter
-    }()
-
     @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var tableView: UITableView!
-    private let refreshControl: UIRefreshControl = UIRefreshControl()
-
     deinit {
         stopFollowingScrollView()
     }
@@ -62,15 +76,6 @@ extension DailyInMemoryTableViewController {
             UITableViewRowAnimation.Automatic)
         tableView.insertSections(NSIndexSet(index: sectionIndex), withRowAnimation: UITableViewRowAnimation.Automatic)
         tableView.endUpdates()
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        tableView.registerNib(UINib(nibName: "DailySectionHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "DailySectionHeaderView")
-
-        refreshControl.addTarget(self, action: "refreshLatestDaily", forControlEvents: UIControlEvents.ValueChanged)
-        tableView.addSubview(refreshControl)
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -136,26 +141,6 @@ extension DailyInMemoryTableViewController: UITableViewDataSource {
 // MARK: Delegate
 
 extension DailyInMemoryTableViewController: UITableViewDelegate {
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        guard let newsMeta = newsMetaAtIndexPath(indexPath) else {
-            let loadingCell = tableView.dequeueReusableCellWithIdentifier("LoadingCell", forIndexPath: indexPath) as! LoadingCell
-            loadingCell.activityIndicator.startAnimating()
-            return loadingCell
-        }
-
-        let cell = tableView.dequeueReusableCellWithIdentifier("NewsMetaCell", forIndexPath: indexPath)
-
-        cell.textLabel?.text = newsMeta.title
-
-        if let _ = store.news[newsMeta.newsId] {
-            cell.accessoryType = .Checkmark
-        } else {
-            cell.accessoryType = .None
-        }
-
-        return cell
-    }
-
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         let save = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Save") { (_, indexPath) in
             self.tableView.setEditing(false, animated: true)
@@ -178,19 +163,4 @@ extension DailyInMemoryTableViewController: UITableViewDelegate {
 
         store.daily(forDate: date) { self.loadDailyIntoTableView($0) }
     }
-
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let header = tableView.dequeueReusableHeaderFooterViewWithIdentifier("DailySectionHeaderView") as? DailySectionHeaderView else { return nil }
-
-        header.backgroundView = {
-            let view = UIView(frame: header.bounds)
-            // HACK: To put color in Storyboard, not in code
-            view.backgroundColor = header.titleLabel.highlightedTextColor
-            return view
-            }()
-        header.titleLabel.text = dateFormatter.stringFromDate(store.dailies.dateIndexAtIndex(section).date)
-
-        return header
-    }
-
 }
