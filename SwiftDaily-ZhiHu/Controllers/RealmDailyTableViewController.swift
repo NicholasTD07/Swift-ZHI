@@ -12,10 +12,23 @@ import SwiftDailyAPI
 
 class RealmDailyTableViewController: UIViewController {
     private let store = DailyRealmStore()
+    private let dailyDates = DailyDates()
 
     private var token: NotificationToken?
 
     private let dailies = defaultRealm().objects(DailyObject).sorted("date")
+
+    private func dailyAtDate(date: NSDate) -> DailyObject? {
+        let results = dailies.filter("dateHash == \(date.hash)")
+        return results.first
+    }
+
+    private func newsMetaAtIndexPath(indexPath: NSIndexPath) -> NewsMetaObject? {
+        let date = dailyDates.dateAtIndex(indexPath.section)
+        guard let daily = dailyAtDate(date) else { return nil }
+
+        return daily.news[indexPath.row]
+    }
 
     // MARK: UI
     private var firstAppeared = false
@@ -29,9 +42,18 @@ extension RealmDailyTableViewController {
         super.viewDidLoad()
 
         token = defaultRealm().addNotificationBlock { (_, _) in
+            self.dailyDates.endDate = self.store.latestDate
             self.tableView.reloadData()
         }
+
+        setupUi()
     }
+
+    // TODO: clean up
+    private func setupUi() {
+        tableView.registerNib(UINib(nibName: "DailySectionHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "DailySectionHeaderView")
+    }
+
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -45,16 +67,25 @@ extension RealmDailyTableViewController {
 // MARK: Data Source
 extension RealmDailyTableViewController: UITableViewDataSource {
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return dailies.count
+        return dailyDates.days()
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dailies[section].news.count
+        let date = dailyDates.dateAtIndex(section)
+        guard let daily = dailyAtDate(date) else { return 1 }
+
+        return daily.news.count
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        guard let newsMeta = newsMetaAtIndexPath(indexPath) else {
+            let loadingCell = tableView.dequeueReusableCellWithIdentifier("LoadingCell", forIndexPath: indexPath) as! LoadingCell
+            loadingCell.activityIndicator.startAnimating()
+            return loadingCell
+        }
+
+        // TODO: configueCell
         let cell = tableView.dequeueReusableCellWithIdentifier("NewsMetaCell", forIndexPath: indexPath)
-        let newsMeta = dailies[indexPath.section].news[indexPath.row]
 
         cell.textLabel?.text = newsMeta.title
 
