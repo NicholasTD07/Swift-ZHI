@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		756D46AA1B3D343A00F29259 /* DailyDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D46A91B3D343A00F29259 /* DailyDates.swift */; };
 		757FEB891B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEB881B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift */; };
 		757FEB941B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEB931B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift */; };
 		757FEBC91B3ACFE200B4F327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA51B3ACFE100B4F327 /* AppDelegate.swift */; };
@@ -78,6 +79,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		756D46A91B3D343A00F29259 /* DailyDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyDates.swift; sourceTree = "<group>"; };
 		757FEB701B3ACF5600B4F327 /* SwiftDaily-ZhiHu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftDaily-ZhiHu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		757FEB841B3ACF5600B4F327 /* SwiftDaily-ZhiHuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftDaily-ZhiHuTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		757FEB881B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDaily_ZhiHuTests.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			children = (
 				757FEBB01B3ACFE100B4F327 /* RealmModels.swift */,
 				75CDD20B1B3BBB4A00343CAA /* DailyRealmStore.swift */,
+				756D46A91B3D343A00F29259 /* DailyDates.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				756D46AA1B3D343A00F29259 /* DailyDates.swift in Sources */,
 				757FEBCD1B3ACFE200B4F327 /* RealmDailyTableViewController.swift in Sources */,
 				757FEBCB1B3ACFE200B4F327 /* HidesHairLineUnderNavBarViewController.swift in Sources */,
 				757FEBE01B3ACFE200B4F327 /* LoadingCell.swift in Sources */,
