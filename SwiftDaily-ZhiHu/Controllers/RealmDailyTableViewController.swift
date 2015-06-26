@@ -11,12 +11,11 @@ import RealmSwift
 import SwiftDailyAPI
 
 class RealmDailyTableViewController: UIViewController {
-    private let api = DailyAPI()
+    private let store = DailyRealmStore()
 
-    private let realm = defautRealm()
     private var token: NotificationToken?
 
-    private let dailies = defautRealm().objects(RLMDaily).sorted("date")
+    private let dailies = defaultRealm().objects(DailyObject).sorted("date")
 
     // MARK: UI
     private var firstAppeared = false
@@ -29,10 +28,8 @@ extension RealmDailyTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        token = realm.addNotificationBlock { (_, _) in
+        token = defaultRealm().addNotificationBlock { (_, _) in
             self.tableView.reloadData()
-            print(self.dailies)
-            print(self.realm.objects(RLMDaily))
         }
     }
 
@@ -40,26 +37,7 @@ extension RealmDailyTableViewController {
         super.viewWillAppear(animated)
 
         if !firstAppeared {
-            api.latestDaily { latestDaily in
-                autoreleasepool {
-                    let realm = defautRealm()
-                    let daily = RLMDaily()
-                    let news = latestDaily.news.map { (newsMeta: NewsMeta) -> RLMNewsMeta in
-                        // TODO: Put this into RLMNewsMeta
-                        let rlmNews = RLMNewsMeta()
-                        rlmNews.newsId = newsMeta.newsId
-                        rlmNews.title = newsMeta.title
-                        return rlmNews
-                    }
-                    daily.news.extend(news)
-                    daily.date = latestDaily.date
-                    daily.dateHash = daily.date.hashValue
-
-                    realm.write {
-                        realm.add(daily)
-                    }
-                }
-            }
+            store.updateLatestDaily()
         }
     }
 }
