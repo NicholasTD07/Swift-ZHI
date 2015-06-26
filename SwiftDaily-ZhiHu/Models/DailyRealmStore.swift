@@ -17,18 +17,33 @@ public class DailyRealmStore {
     }
 
     let dailyAPI: DailyAPI
-    let realm = defautRealm()
-    private static let dailyStartDate = NSDate.dateAt(year: 2013, month: 05, day: 19)!
+    let realm = defaultRealm()
 
     public init(completionQueue: dispatch_queue_t? = nil)
     {
         dailyAPI = DailyAPI(completionQueue: completionQueue)
     }
 
-    public func latestDaily(_: Int) {
+    public func updateLatestDaily() {
         dailyAPI.latestDaily { latestDaily in
-            let realm = realmInMemory()
-            
+            self.latestDaily = latestDaily
+            self.addDaily(Daily(latestDaily))
         }
+    }
+
+    public func daily(forDate date: NSDate) {
+        dailyAPI.daily(forDate: date) { self.addDaily($0) }
+    }
+
+    private func addDaily(daily: Daily, toRealm realm: Realm = defaultRealm()) {
+        addObject(DailyObject.from(daily))
+    }
+
+    private func addObject(object: Object, toRealm realm: Realm = defaultRealm()) {
+        realm.write { realm.add(object) }
+    }
+
+    public func news(newsId: Int) {
+        dailyAPI.news(newsId) { self.addObject(NewsObject.from($0)) }
     }
 }
