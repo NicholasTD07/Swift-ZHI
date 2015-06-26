@@ -11,7 +11,7 @@
 		757FEB891B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEB881B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift */; };
 		757FEB941B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEB931B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift */; };
 		757FEBC91B3ACFE200B4F327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA51B3ACFE100B4F327 /* AppDelegate.swift */; };
-		757FEBCA1B3ACFE200B4F327 /* DailyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA61B3ACFE100B4F327 /* DailyTableViewController.swift */; };
+		757FEBCA1B3ACFE200B4F327 /* DailyInMemoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA61B3ACFE100B4F327 /* DailyInMemoryTableViewController.swift */; };
 		757FEBCB1B3ACFE200B4F327 /* HidesHairLineUnderNavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA71B3ACFE100B4F327 /* HidesHairLineUnderNavBarViewController.swift */; };
 		757FEBCC1B3ACFE200B4F327 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA81B3ACFE100B4F327 /* NewsViewController.swift */; };
 		757FEBCD1B3ACFE200B4F327 /* RealmDailyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA91B3ACFE100B4F327 /* RealmDailyTableViewController.swift */; };
@@ -88,7 +88,7 @@
 		757FEB931B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDaily_ZhiHuUITests.swift; sourceTree = "<group>"; };
 		757FEB951B3ACF5600B4F327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		757FEBA51B3ACFE100B4F327 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		757FEBA61B3ACFE100B4F327 /* DailyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTableViewController.swift; sourceTree = "<group>"; };
+		757FEBA61B3ACFE100B4F327 /* DailyInMemoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyInMemoryTableViewController.swift; sourceTree = "<group>"; };
 		757FEBA71B3ACFE100B4F327 /* HidesHairLineUnderNavBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HidesHairLineUnderNavBarViewController.swift; sourceTree = "<group>"; };
 		757FEBA81B3ACFE100B4F327 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		757FEBA91B3ACFE100B4F327 /* RealmDailyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDailyTableViewController.swift; sourceTree = "<group>"; };
@@ -202,7 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				757FEBA51B3ACFE100B4F327 /* AppDelegate.swift */,
-				757FEBA61B3ACFE100B4F327 /* DailyTableViewController.swift */,
+				757FEBA61B3ACFE100B4F327 /* DailyInMemoryTableViewController.swift */,
 				757FEBA71B3ACFE100B4F327 /* HidesHairLineUnderNavBarViewController.swift */,
 				757FEBA81B3ACFE100B4F327 /* NewsViewController.swift */,
 				757FEBA91B3ACFE100B4F327 /* RealmDailyTableViewController.swift */,
@@ -451,7 +451,7 @@
 				757FEBC91B3ACFE200B4F327 /* AppDelegate.swift in Sources */,
 				75CDD20E1B3BBD3900343CAA /* RealmHelpers.swift in Sources */,
 				757FEBD11B3ACFE200B4F327 /* RealmModels.swift in Sources */,
-				757FEBCA1B3ACFE200B4F327 /* DailyTableViewController.swift in Sources */,
+				757FEBCA1B3ACFE200B4F327 /* DailyInMemoryTableViewController.swift in Sources */,
 				757FEBCC1B3ACFE200B4F327 /* NewsViewController.swift in Sources */,
 				757FEBDF1B3ACFE200B4F327 /* DailySectionHeaderView.swift in Sources */,
 			);

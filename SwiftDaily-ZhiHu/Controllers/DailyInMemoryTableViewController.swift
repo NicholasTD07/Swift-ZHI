@@ -12,7 +12,7 @@ import SwiftDailyAPI
 
 // TODO: think about all the `self`s in closures
 
-class DailyTableViewController: HidesHairLineUnderNavBarViewController {
+class DailyInMemoryTableViewController: HidesHairLineUnderNavBarViewController {
     // MARK: Store
     private let store = DailyInMemoryStore(completionQueue: dispatch_get_main_queue())
 
@@ -53,7 +53,7 @@ class DailyTableViewController: HidesHairLineUnderNavBarViewController {
 }
 
 // MARK: UI methods
-extension DailyTableViewController {
+extension DailyInMemoryTableViewController {
     private func loadDailyIntoTableView(daily: Daily) {
         let tableView = self.tableView
         let sectionIndex = store.dailies.indexAtDate(daily.date)
@@ -116,7 +116,7 @@ extension DailyTableViewController {
 }
 
 // MARK: Data Source
-extension DailyTableViewController: UITableViewDataSource {
+extension DailyInMemoryTableViewController: UITableViewDataSource {
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return store.dailies.count
     }
@@ -135,7 +135,7 @@ extension DailyTableViewController: UITableViewDataSource {
 
 // MARK: Delegate
 
-extension DailyTableViewController: UITableViewDelegate {
+extension DailyInMemoryTableViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         guard let newsMeta = newsMetaAtIndexPath(indexPath) else {
             let loadingCell = tableView.dequeueReusableCellWithIdentifier("LoadingCell", forIndexPath: indexPath) as! LoadingCell

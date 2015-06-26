@@ -56,7 +56,7 @@
         <!--SwiftDaily-->
         <scene sceneID="LJu-CX-obO">
             <objects>
-                <viewController id="6cA-5j-KWr" customClass="DailyTableViewController" customModule="SwiftDaily_ZhiHu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6cA-5j-KWr" customClass="DailyInMemoryTableViewController" customModule="SwiftDaily_ZhiHu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5jz-KJ-lVe"/>
                         <viewControllerLayoutGuide type="bottom" id="1Vz-z8-wqo"/>
