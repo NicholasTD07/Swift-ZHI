@@ -28,7 +28,7 @@ class RealmDailyTableViewController: DailyTableViewController {
     }
 
     private func hasNewsWithId(newsId: Int) -> Bool {
-        let news = defaultRealm().objects(NewsObject.self).filter("newsId == \(newsId)").first
+        let news = store.newsWithId(newsId)
         return news != nil
     }
 }
