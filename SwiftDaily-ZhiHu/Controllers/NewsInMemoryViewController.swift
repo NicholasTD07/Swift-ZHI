@@ -9,7 +9,7 @@
 import UIKit
 import SwiftDailyAPI
 
-class NewsViewController: UIViewController {
+class NewsInMemoryViewController: UIViewController {
     var store: DailyInMemoryStore!
     var newsId: Int!
 
@@ -24,7 +24,7 @@ class NewsViewController: UIViewController {
 }
 
 // MARK: UI
-extension NewsViewController {
+extension NewsInMemoryViewController {
     override func viewWillDisappear(animated: Bool) {
         showNavBarAnimated(false)
 

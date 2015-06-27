@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--News View Controller-->
+        <!--News In Memory View Controller-->
         <scene sceneID="NGw-Ri-uSR">
             <objects>
-                <viewController id="5nZ-RO-tSE" customClass="NewsViewController" customModule="SwiftDaily_ZhiHu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5nZ-RO-tSE" customClass="NewsInMemoryViewController" customModule="SwiftDaily_ZhiHu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jd2-lG-Za1"/>
                         <viewControllerLayoutGuide type="bottom" id="H2F-yb-wzp"/>

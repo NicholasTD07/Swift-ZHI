@@ -99,7 +99,7 @@ extension DailyInMemoryTableViewController {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         guard let newsMeta = newsMetaAtIndexPath(indexPath) else { return }
 
-        let newsVC = segue.destinationViewController as! NewsViewController
+        let newsVC = segue.destinationViewController as! NewsInMemoryViewController
         newsVC.store = store
         newsVC.newsId = newsMeta.newsId
     }
