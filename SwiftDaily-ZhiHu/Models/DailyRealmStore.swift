@@ -24,6 +24,16 @@ public class DailyRealmStore {
         dailyAPI = DailyAPI(completionQueue: completionQueue)
     }
 
+    public func dailyAtDate(date: NSDate) -> DailyObject? {
+        let results = realm.objects(DailyObject).filter("dateHash == \(date.hash)")
+        return results.first
+    }
+
+    public func newsWithId(newsId: Int) -> NewsObject? {
+        let results = realm.objects(NewsObject).filter("newsId == \(newsId)")
+        return results.first
+    }
+
     public func updateLatestDaily() {
         dailyAPI.latestDaily { latestDaily in
             self.latestDaily = latestDaily
