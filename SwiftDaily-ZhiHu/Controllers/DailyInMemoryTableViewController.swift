@@ -16,14 +16,6 @@ class DailyInMemoryTableViewController: DailyTableViewController {
     // MARK: Store
     private let store = DailyInMemoryStore(completionQueue: dispatch_get_main_queue())
 
-    private func loadLatestDaily() {
-        store.latestDaily { latestDaily in
-            self.tableView.reloadData()
-            self.refreshControl.endRefreshing()
-            self.showNavBarAnimated(true)
-        }
-    }
-
     private func dailyAtSection(section: Int) -> Daily? {
         return store.dailies[section]
     }
@@ -50,6 +42,25 @@ extension DailyInMemoryTableViewController {
         let date = store.dailies.dateIndexAtIndex(indexPath.section).date
 
         store.daily(forDate: date) { self.loadDailyIntoTableView($0) }
+    }
+
+    override func loadLatestDaily() {
+        store.latestDaily { latestDaily in
+            self.tableView.reloadData()
+            self.refreshControl.endRefreshing()
+            self.showNavBarAnimated(true)
+        }
+    }
+
+    override func loadNewsAtIndexPath(indexPath: NSIndexPath) {
+        self.tableView.setEditing(false, animated: true)
+
+        guard let newsMeta = self.newsMetaAtIndexPath(indexPath) else { return }
+
+        // TODO: should notify user successful fetching and decoding
+        self.store.news(newsMeta.newsId) { (news) in
+            self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
     }
 
     override func cellAtIndexPath(indexPath: NSIndexPath) -> UITableViewCell {
@@ -80,20 +91,6 @@ extension DailyInMemoryTableViewController {
         tableView.endUpdates()
     }
 
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-
-        if !firstAppeared {
-            beginRefreshing()
-            firstAppeared = true
-            loadLatestDaily()
-        }
-
-        if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        }
-    }
-
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         guard segue.identifier == "showNews" else { return }
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
@@ -102,15 +99,6 @@ extension DailyInMemoryTableViewController {
         let newsVC = segue.destinationViewController as! NewsInMemoryViewController
         newsVC.store = store
         newsVC.newsId = newsMeta.newsId
-    }
-
-    @IBAction func refreshLatestDaily() {
-        loadLatestDaily()
-    }
-
-    private func beginRefreshing() {
-        tableView.setContentOffset(CGPoint(x: 0, y: -refreshControl.frame.size.height), animated: true)
-        refreshControl.beginRefreshing()
     }
 }
 
@@ -122,31 +110,5 @@ extension DailyInMemoryTableViewController: UITableViewDataSource {
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dailyAtSection(section)?.news.count ?? 1
-    }
-
-    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-    }
-}
-
-// MARK: Delegate
-
-extension DailyInMemoryTableViewController: UITableViewDelegate {
-    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        let save = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Save") { (_, indexPath) in
-            self.tableView.setEditing(false, animated: true)
-
-            guard let newsMeta = self.newsMetaAtIndexPath(indexPath) else { return }
-
-            // TODO: should notify user successful fetching and decoding
-            self.store.news(newsMeta.newsId) { (news) in
-                self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-            }
-        }
-        save.backgroundColor = UIColor(hue: 0.353, saturation: 0.635, brightness: 0.765, alpha: 1)
-        return [save]
     }
 }

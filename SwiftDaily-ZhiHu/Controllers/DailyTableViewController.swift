@@ -26,6 +26,7 @@ class DailyTableViewController: HidesHairLineUnderNavBarViewController {
     }
 }
 
+// MARK: Abstract methods
 extension DailyTableViewController {
     func hasNewsMetaAtIndexPath(indexPath: NSIndexPath) -> Bool {
         fatalError()
@@ -35,7 +36,14 @@ extension DailyTableViewController {
         fatalError()
     }
 
+    func loadLatestDaily() {
+    }
+
     func loadDailyAtIndexPath(indexPath: NSIndexPath) {
+    }
+
+    func loadNewsAtIndexPath(indexPath: NSIndexPath) {
+
     }
 
     func cellAtIndexPath(indexPath: NSIndexPath) -> UITableViewCell {
@@ -60,13 +68,38 @@ extension DailyTableViewController {
         followScrollView(tableView, usingTopConstraint: tableViewTopConstraint)
     }
 
+
+    @IBAction func refreshLatestDaily() {
+        loadLatestDaily()
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if !firstAppeared {
+            beginRefreshing()
+            firstAppeared = true
+            loadLatestDaily()
+        }
+
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
+    }
+
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
 
         showNavBarAnimated(false)
     }
+
+    func beginRefreshing() {
+        tableView.setContentOffset(CGPoint(x: 0, y: -refreshControl.frame.size.height), animated: true)
+        refreshControl.beginRefreshing()
+    }
 }
 
+// MARK: Data Source
 extension DailyTableViewController {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         guard hasNewsMetaAtIndexPath(indexPath) else {
@@ -78,6 +111,16 @@ extension DailyTableViewController {
         return cellAtIndexPath(indexPath)
     }
 
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    }
+}
+
+// MARK: Delegate
+extension DailyTableViewController {
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let header = tableView.dequeueReusableHeaderFooterViewWithIdentifier("DailySectionHeaderView") as? DailySectionHeaderView else { return nil }
 
@@ -97,5 +140,13 @@ extension DailyTableViewController {
         guard let _ = cell as? LoadingCell else { return }
 
         loadDailyAtIndexPath(indexPath)
+    }
+
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let save = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Save") { (_, indexPath) in
+            self.loadNewsAtIndexPath(indexPath)
+        }
+        save.backgroundColor = UIColor(hue: 0.353, saturation: 0.635, brightness: 0.765, alpha: 1)
+        return [save]
     }
 }

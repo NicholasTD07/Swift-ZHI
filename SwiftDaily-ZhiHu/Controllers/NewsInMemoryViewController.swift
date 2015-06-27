@@ -9,47 +9,14 @@
 import UIKit
 import SwiftDailyAPI
 
-class NewsInMemoryViewController: UIViewController {
+class NewsInMemoryViewController: NewsViewController {
     var store: DailyInMemoryStore!
     var newsId: Int!
-
-    // MARK: UI
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var webView: UIWebView!
-    @IBOutlet weak var webViewTopConstraint: NSLayoutConstraint!
-
-    deinit {
-        stopFollowingScrollView()
-    }
 }
 
 // MARK: UI
 extension NewsInMemoryViewController {
-    override func viewWillDisappear(animated: Bool) {
-        showNavBarAnimated(false)
-
-        saveReadingProgress()
-
-        super.viewWillDisappear(animated)
-    }
-
-    private func saveReadingProgress() {
-        let offset = webView.scrollView.contentOffset.y
-        let height = webView.scrollView.contentSize.height
-        let percentage = Double(offset/height)
-        print("height: \(height), offset: \(offset), \(percentage*100)% read")
-
-        // TODO: Actually save the percentage
-    }
-
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-
-        loadNews()
-        followScrollView(webView, usingTopConstraint: webViewTopConstraint)
-    }
-
-    private func loadNews() {
+    override func loadNews() {
         if let news = store.news[newsId] {
             loadNews(news)
             return
@@ -73,10 +40,5 @@ extension NewsInMemoryViewController {
 
         webView.loadHTMLString(newsBody, baseURL: nil)
 
-    }
-
-    private func stopIndicator() {
-        activityIndicator.stopAnimating()
-        activityIndicator.hidden = true
     }
 }
