@@ -53,8 +53,6 @@ extension DailyInMemoryTableViewController {
     }
 
     override func loadNewsAtIndexPath(indexPath: NSIndexPath) {
-        self.tableView.setEditing(false, animated: true)
-
         guard let newsMeta = self.newsMetaAtIndexPath(indexPath) else { return }
 
         // TODO: should notify user successful fetching and decoding

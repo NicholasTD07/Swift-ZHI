@@ -46,11 +46,28 @@ extension RealmDailyTableViewController {
         store.daily(forDate: dailyDates.dateAtIndex(indexPath.section))
     }
 
+    override func loadLatestDaily() {
+        store.updateLatestDaily()
+    }
+
+    override func loadNewsAtIndexPath(indexPath: NSIndexPath) {
+        guard let newsMeta = self.newsMetaAtIndexPath(indexPath)
+            else { return }
+
+        self.store.news(newsMeta.newsId)
+    }
+
     override func cellAtIndexPath(indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NewsMetaCell", forIndexPath: indexPath)
         let newsMeta = newsMetaAtIndexPath(indexPath)!
 
         cell.textLabel?.text = newsMeta.title
+
+        if let _ = defaultRealm().objects(NewsObject.self).filter("newsId == \(newsMeta.newsId)").first {
+            cell.accessoryType = .Checkmark
+        } else {
+            cell.accessoryType = .None
+        }
 
         return cell
     }
@@ -65,14 +82,7 @@ extension RealmDailyTableViewController {
         token = defaultRealm().addNotificationBlock { (_, _) in
             self.dailyDates.endDate = self.store.latestDate
             self.tableView.reloadData()
-        }
-    }
-
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-
-        if !firstAppeared {
-            store.updateLatestDaily()
+            self.refreshControl.endRefreshing()
         }
     }
 }
