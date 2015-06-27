@@ -23,7 +23,7 @@ class DailyDates {
     }
 
     func days() -> Int {
-        return calendar.components(.Day, fromDate: startDate, toDate: endDate, options: []).day
+        return calendar.components(.Day, fromDate: startDate, toDate: endDate, options: []).day + 1
     }
 
 }
