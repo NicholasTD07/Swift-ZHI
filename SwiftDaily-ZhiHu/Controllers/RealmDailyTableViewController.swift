@@ -29,6 +29,11 @@ class RealmDailyTableViewController: DailyTableViewController {
 
         return daily.news[indexPath.row]
     }
+
+    private func hasNewsWithId(newsId: Int) -> Bool {
+        let news = defaultRealm().objects(NewsObject.self).filter("newsId == \(newsId)").first
+        return news != nil
+    }
 }
 
 // MARK: Concrete methods
@@ -63,7 +68,7 @@ extension RealmDailyTableViewController {
 
         cell.textLabel?.text = newsMeta.title
 
-        if let _ = defaultRealm().objects(NewsObject.self).filter("newsId == \(newsMeta.newsId)").first {
+        if hasNewsWithId(newsMeta.newsId) {
             cell.accessoryType = .Checkmark
         } else {
             cell.accessoryType = .None
@@ -72,7 +77,6 @@ extension RealmDailyTableViewController {
         return cell
     }
 }
-
 
 // MARK: UI methods
 extension RealmDailyTableViewController {
