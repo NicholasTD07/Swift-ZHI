@@ -35,6 +35,11 @@ class RealmDailyTableViewController: DailyTableViewController {
 
 // MARK: Concrete methods
 extension RealmDailyTableViewController {
+    override func hasDailyAtIndexPath(indexPath: NSIndexPath) -> Bool {
+        let date = dailyDates.dateAtIndex(indexPath.section)
+        return store.dailyAtDate(date) != nil
+    }
+
     override func hasNewsMetaAtIndexPath(indexPath: NSIndexPath) -> Bool {
         return newsMetaAtIndexPath(indexPath) != nil
     }

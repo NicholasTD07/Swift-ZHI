@@ -29,6 +29,9 @@ class DailyInMemoryTableViewController: DailyTableViewController {
 
 // MARK: Concrete methods
 extension DailyInMemoryTableViewController {
+    override func hasDailyAtIndexPath(indexPath: NSIndexPath) -> Bool {
+        return dailyAtSection(indexPath.section) != nil
+    }
     override func hasNewsMetaAtIndexPath(indexPath: NSIndexPath) -> Bool {
         return newsMetaAtIndexPath(indexPath) != nil
     }

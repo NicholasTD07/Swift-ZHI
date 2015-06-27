@@ -28,6 +28,10 @@ class DailyTableViewController: HidesHairLineUnderNavBarViewController {
 
 // MARK: Abstract methods
 extension DailyTableViewController {
+    func hasDailyAtIndexPath(indexPath: NSIndexPath) -> Bool {
+        fatalError()
+    }
+
     func hasNewsMetaAtIndexPath(indexPath: NSIndexPath) -> Bool {
         fatalError()
     }
@@ -138,7 +142,9 @@ extension DailyTableViewController {
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         guard let _ = cell as? LoadingCell else { return }
 
-        loadDailyAtIndexPath(indexPath)
+        if !hasDailyAtIndexPath(indexPath) {
+            loadDailyAtIndexPath(indexPath)
+        }
     }
 
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
