@@ -19,12 +19,13 @@ class NewsViewController: UIViewController {
     }
 }
 
+// MARK: Abstract methods
 extension NewsViewController {
     func loadNews() {
     }
 }
 
-// MARK: UI
+// MARK: UI methods
 extension NewsViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)

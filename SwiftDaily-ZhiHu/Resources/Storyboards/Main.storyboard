@@ -178,6 +178,9 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <segue destination="Oc7-Gv-mqp" kind="show" identifier="showNews/Realm" id="E8o-UH-175"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoadingCell" id="4js-Mo-awF" customClass="LoadingCell" customModule="SwiftDaily_ZhiHu" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="98" width="600" height="54"/>
@@ -262,6 +265,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="tintColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.19376453757286072" green="0.50850099325180054" blue="0.85232251882553101" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -272,6 +276,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="niw-cG-Nxm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="767" y="1252"/>
+        </scene>
+        <!--Realm News View Controller-->
+        <scene sceneID="oqc-nv-yqT">
+            <objects>
+                <viewController id="Oc7-Gv-mqp" customClass="RealmNewsViewController" customModule="SwiftDaily_ZhiHu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a5c-Cb-dc9"/>
+                        <viewControllerLayoutGuide type="bottom" id="VjN-mJ-ewv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6QW-Op-f5c">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kq4-Wm-jRa">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Zki-u1-x1J">
+                                <rect key="frame" x="290" y="258" width="20" height="20"/>
+                                <animations/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="kq4-Wm-jRa" secondAttribute="leading" constant="20" id="Vey-j6-sOs"/>
+                            <constraint firstItem="VjN-mJ-ewv" firstAttribute="top" secondItem="kq4-Wm-jRa" secondAttribute="bottom" id="Wcy-yu-3E1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kq4-Wm-jRa" secondAttribute="trailing" constant="-20" id="ZGe-zW-kyY"/>
+                            <constraint firstItem="Zki-u1-x1J" firstAttribute="centerX" secondItem="kq4-Wm-jRa" secondAttribute="centerX" id="ZaU-uN-py2"/>
+                            <constraint firstItem="kq4-Wm-jRa" firstAttribute="top" secondItem="a5c-Cb-dc9" secondAttribute="bottom" id="gvk-Vd-zYI"/>
+                            <constraint firstItem="Zki-u1-x1J" firstAttribute="centerY" secondItem="kq4-Wm-jRa" secondAttribute="centerY" id="ss2-w9-7Q0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="k66-RO-qzC">
+                        <barButtonItem key="backBarButtonItem" title="SwiftDaily" id="ROh-Y2-yuO">
+                            <color key="tintColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Zki-u1-x1J" id="dum-vk-hYe"/>
+                        <outlet property="webView" destination="kq4-Wm-jRa" id="6VO-ds-5xV"/>
+                        <outlet property="webViewTopConstraint" destination="gvk-Vd-zYI" id="y1O-Ek-3zQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ecA-QR-P5Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2392" y="1252"/>
         </scene>
     </scenes>
 </document>

@@ -16,11 +16,8 @@ class RealmDailyTableViewController: DailyTableViewController {
 
     private var token: NotificationToken?
 
-    private let dailies = defaultRealm().objects(DailyObject).sorted("date")
-
     private func dailyAtDate(date: NSDate) -> DailyObject? {
-        let results = dailies.filter("dateHash == \(date.hash)")
-        return results.first
+        return store.dailyAtDate(date)
     }
 
     private func newsMetaAtIndexPath(indexPath: NSIndexPath) -> NewsMetaObject? {
@@ -87,6 +84,17 @@ extension RealmDailyTableViewController {
             self.dailyDates.endDate = self.store.latestDate
             self.tableView.reloadData()
             self.refreshControl.endRefreshing()
+        }
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showNews/Realm" {
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            guard let newsMeta = newsMetaAtIndexPath(indexPath) else { return }
+            guard let vc = segue.destinationViewController as? RealmNewsViewController else { return }
+
+            vc.store = store
+            vc.newsId = newsMeta.newsId
         }
     }
 }
