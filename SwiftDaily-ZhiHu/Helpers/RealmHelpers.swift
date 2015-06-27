@@ -12,5 +12,7 @@ import RealmSwift
 func defaultRealm() -> Realm {
     // TODO: Until next release, use in memroy realm
     // NOTE: So there's no need to migrate XD until a stable model
-    return Realm(inMemoryIdentifier: "DailyTestGround")
+
+    return try! Realm()
+//    return Realm(inMemoryIdentifier: "DailyTestGround")
 }
