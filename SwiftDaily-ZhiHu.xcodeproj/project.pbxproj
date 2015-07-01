@@ -88,7 +88,7 @@
 		757183A21B44190000E345B3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		757183A31B44190300E345B3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		757183A41B441CDA00E345B3 /* HideNavBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideNavBarViewController.swift; sourceTree = "<group>"; };
-		757FEB701B3ACF5600B4F327 /* SwiftDaily-ZhiHu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftDaily-ZhiHu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		757FEB701B3ACF5600B4F327 /* Swift ZHI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift ZHI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		757FEB841B3ACF5600B4F327 /* SwiftDaily-ZhiHuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftDaily-ZhiHuTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		757FEB881B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDaily_ZhiHuTests.swift; sourceTree = "<group>"; };
 		757FEB8A1B3ACF5600B4F327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 		757FEB711B3ACF5600B4F327 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				757FEB701B3ACF5600B4F327 /* SwiftDaily-ZhiHu.app */,
+				757FEB701B3ACF5600B4F327 /* Swift ZHI.app */,
 				757FEB841B3ACF5600B4F327 /* SwiftDaily-ZhiHuTests.xctest */,
 				757FEB8F1B3ACF5600B4F327 /* SwiftDaily-ZhiHuUITests.xctest */,
 			);
@@ -319,9 +319,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		757FEB6F1B3ACF5600B4F327 /* SwiftDaily-ZhiHu */ = {
+		757FEB6F1B3ACF5600B4F327 /* Swift ZHI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 757FEB981B3ACF5600B4F327 /* Build configuration list for PBXNativeTarget "SwiftDaily-ZhiHu" */;
+			buildConfigurationList = 757FEB981B3ACF5600B4F327 /* Build configuration list for PBXNativeTarget "Swift ZHI" */;
 			buildPhases = (
 				757FEB6C1B3ACF5600B4F327 /* Sources */,
 				757FEB6D1B3ACF5600B4F327 /* Frameworks */,
@@ -332,9 +332,9 @@
 			);
 			dependencies = (
 			);
-			name = "SwiftDaily-ZhiHu";
+			name = "Swift ZHI";
 			productName = "SwiftDaily-ZhiHu";
-			productReference = 757FEB701B3ACF5600B4F327 /* SwiftDaily-ZhiHu.app */;
+			productReference = 757FEB701B3ACF5600B4F327 /* Swift ZHI.app */;
 			productType = "com.apple.product-type.application";
 		};
 		757FEB831B3ACF5600B4F327 /* SwiftDaily-ZhiHuTests */ = {
@@ -408,7 +408,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				757FEB6F1B3ACF5600B4F327 /* SwiftDaily-ZhiHu */,
+				757FEB6F1B3ACF5600B4F327 /* Swift ZHI */,
 				757FEB831B3ACF5600B4F327 /* SwiftDaily-ZhiHuTests */,
 				757FEB8E1B3ACF5600B4F327 /* SwiftDaily-ZhiHuUITests */,
 			);
@@ -486,12 +486,12 @@
 /* Begin PBXTargetDependency section */
 		757FEB861B3ACF5600B4F327 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 757FEB6F1B3ACF5600B4F327 /* SwiftDaily-ZhiHu */;
+			target = 757FEB6F1B3ACF5600B4F327 /* Swift ZHI */;
 			targetProxy = 757FEB851B3ACF5600B4F327 /* PBXContainerItemProxy */;
 		};
 		757FEB911B3ACF5600B4F327 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 757FEB6F1B3ACF5600B4F327 /* SwiftDaily-ZhiHu */;
+			target = 757FEB6F1B3ACF5600B4F327 /* Swift ZHI */;
 			targetProxy = 757FEB901B3ACF5600B4F327 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -687,7 +687,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		757FEB981B3ACF5600B4F327 /* Build configuration list for PBXNativeTarget "SwiftDaily-ZhiHu" */ = {
+		757FEB981B3ACF5600B4F327 /* Build configuration list for PBXNativeTarget "Swift ZHI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				757FEB991B3ACF5600B4F327 /* Debug */,
