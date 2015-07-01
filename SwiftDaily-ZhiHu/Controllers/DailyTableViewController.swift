@@ -9,10 +9,9 @@
 import UIKit
 import AMScrollingNavbar
 
-class DailyTableViewController: HidesHairLineUnderNavBarViewController {
+class DailyTableViewController: HideNavBarViewController {
     // MARK: UI
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
     let refreshControl: UIRefreshControl = UIRefreshControl()
 
     var firstAppeared = false
@@ -68,8 +67,6 @@ extension DailyTableViewController {
 
         refreshControl.addTarget(self, action: "refreshLatestDaily", forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(refreshControl)
-
-        followScrollView(tableView, usingTopConstraint: tableViewTopConstraint)
     }
 
 
@@ -89,12 +86,6 @@ extension DailyTableViewController {
         if let indexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
-    }
-
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-
-        showNavBarAnimated(false)
     }
 
     func beginRefreshing() {
