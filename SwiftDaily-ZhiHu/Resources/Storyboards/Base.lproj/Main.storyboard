@@ -158,8 +158,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="Zki-u1-x1J" id="dum-vk-hYe"/>
+                        <outlet property="scrollableView" destination="kq4-Wm-jRa" id="ae5-oY-ldh"/>
+                        <outlet property="scrollableViewTopConstraint" destination="gvk-Vd-zYI" id="Sih-dC-DQv"/>
                         <outlet property="webView" destination="kq4-Wm-jRa" id="6VO-ds-5xV"/>
-                        <outlet property="webViewTopConstraint" destination="gvk-Vd-zYI" id="y1O-Ek-3zQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ecA-QR-P5Z" userLabel="First Responder" sceneMemberID="firstResponder"/>

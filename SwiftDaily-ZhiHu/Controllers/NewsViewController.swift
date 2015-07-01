@@ -9,11 +9,10 @@
 import UIKit
 import AMScrollingNavbar
 
-class NewsViewController: UIViewController {
+class NewsViewController: HideNavBarViewController {
     // MARK: UI
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var webView: UIWebView!
-    @IBOutlet weak var webViewTopConstraint: NSLayoutConstraint!
 
     deinit {
         stopFollowingScrollView()
@@ -31,14 +30,10 @@ extension NewsViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
-        followScrollView(webView, usingTopConstraint: webViewTopConstraint)
-
         loadNews()
     }
 
     override func viewWillDisappear(animated: Bool) {
-        showNavBarAnimated(false)
-
         saveReadingProgress()
 
         super.viewWillDisappear(animated)

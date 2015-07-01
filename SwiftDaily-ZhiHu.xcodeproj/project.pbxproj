@@ -12,6 +12,7 @@
 		7529FA441B3E6B68007D54A8 /* RealmNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7529FA431B3E6B68007D54A8 /* RealmNewsViewController.swift */; };
 		7530F3FD1B3D53D10035AD7A /* DailyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7530F3FC1B3D53D10035AD7A /* DailyTableViewController.swift */; };
 		7571839E1B4418ED00E345B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757183A01B4418ED00E345B3 /* Main.storyboard */; };
+		757183A51B441CDA00E345B3 /* HideNavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757183A41B441CDA00E345B3 /* HideNavBarViewController.swift */; };
 		757FEB891B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEB881B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift */; };
 		757FEB941B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEB931B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift */; };
 		757FEBC91B3ACFE200B4F327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA51B3ACFE100B4F327 /* AppDelegate.swift */; };
@@ -86,6 +87,7 @@
 		757183A11B4418F300E345B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		757183A21B44190000E345B3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		757183A31B44190300E345B3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		757183A41B441CDA00E345B3 /* HideNavBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideNavBarViewController.swift; sourceTree = "<group>"; };
 		757FEB701B3ACF5600B4F327 /* SwiftDaily-ZhiHu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftDaily-ZhiHu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		757FEB841B3ACF5600B4F327 /* SwiftDaily-ZhiHuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftDaily-ZhiHuTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		757FEB881B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDaily_ZhiHuTests.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				7530F3FC1B3D53D10035AD7A /* DailyTableViewController.swift */,
 				7529FA411B3E5EF5007D54A8 /* NewsViewController.swift */,
 				7529FA431B3E6B68007D54A8 /* RealmNewsViewController.swift */,
+				757183A41B441CDA00E345B3 /* HideNavBarViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				75CDD20E1B3BBD3900343CAA /* RealmHelpers.swift in Sources */,
 				757FEBD11B3ACFE200B4F327 /* RealmModels.swift in Sources */,
 				757FEBDF1B3ACFE200B4F327 /* DailySectionHeaderView.swift in Sources */,
+				757183A51B441CDA00E345B3 /* HideNavBarViewController.swift in Sources */,
 				7530F3FD1B3D53D10035AD7A /* DailyTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
