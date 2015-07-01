@@ -136,9 +136,11 @@ extension DailyTableViewController {
     }
 
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        let save = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Save") { (_, indexPath) in
-            self.tableView.setEditing(false, animated: true)
-            self.loadNewsAtIndexPath(indexPath)
+        let save = UITableViewRowAction(style: UITableViewRowActionStyle.Default,
+            title: NSLocalizedString("DailyView-DownloadButton", comment: "Download"))
+            { (_, indexPath) in
+                self.tableView.setEditing(false, animated: true)
+                self.loadNewsAtIndexPath(indexPath)
         }
         save.backgroundColor = UIColor(hue: 0.353, saturation: 0.635, brightness: 0.765, alpha: 1)
         return [save]

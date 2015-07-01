@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Swift-ZHI-->
+        <!--Swift ZHI-->
         <scene sceneID="QI6-Td-Mjf">
             <objects>
-                <viewController id="wQ7-FU-fc5" customClass="RealmDailyTableViewController" customModule="SwiftDaily_ZhiHu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wQ7-FU-fc5" customClass="RealmDailyTableViewController" customModule="Swift_ZHI" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bdl-Kp-raE"/>
                         <viewControllerLayoutGuide type="bottom" id="Xen-pY-F4N"/>
@@ -46,7 +46,7 @@
                                             <segue destination="Oc7-Gv-mqp" kind="show" identifier="showNews/Realm" id="E8o-UH-175"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoadingCell" id="4js-Mo-awF" customClass="LoadingCell" customModule="SwiftDaily_ZhiHu" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoadingCell" id="4js-Mo-awF" customClass="LoadingCell" customModule="Swift_ZHI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="98" width="600" height="54"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4js-Mo-awF" id="4NG-ai-Rvn">
@@ -85,7 +85,7 @@
                             <constraint firstItem="27G-5C-Lwn" firstAttribute="top" secondItem="bdl-Kp-raE" secondAttribute="bottom" id="xV8-1R-d4X"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Swift-ZHI" id="6iy-EE-vdL"/>
+                    <navigationItem key="navigationItem" title="Swift ZHI" id="6iy-EE-vdL"/>
                     <connections>
                         <outlet property="scrollableView" destination="27G-5C-Lwn" id="F7h-fw-v6T"/>
                         <outlet property="scrollableViewTopConstraint" destination="xV8-1R-d4X" id="76S-KX-yDz"/>
@@ -121,7 +121,7 @@
         <!--Realm News View Controller-->
         <scene sceneID="oqc-nv-yqT">
             <objects>
-                <viewController id="Oc7-Gv-mqp" customClass="RealmNewsViewController" customModule="SwiftDaily_ZhiHu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Oc7-Gv-mqp" customClass="RealmNewsViewController" customModule="Swift_ZHI" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="a5c-Cb-dc9"/>
                         <viewControllerLayoutGuide type="bottom" id="VjN-mJ-ewv"/>
@@ -153,7 +153,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="k66-RO-qzC">
-                        <barButtonItem key="backBarButtonItem" title="SwiftDaily" id="ROh-Y2-yuO">
+                        <barButtonItem key="backBarButtonItem" title="Swift ZHI" id="ROh-Y2-yuO">
                             <color key="tintColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>

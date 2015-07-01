@@ -11,6 +11,8 @@
 		7529FA421B3E5EF5007D54A8 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7529FA411B3E5EF5007D54A8 /* NewsViewController.swift */; };
 		7529FA441B3E6B68007D54A8 /* RealmNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7529FA431B3E6B68007D54A8 /* RealmNewsViewController.swift */; };
 		7530F3FD1B3D53D10035AD7A /* DailyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7530F3FC1B3D53D10035AD7A /* DailyTableViewController.swift */; };
+		7531EC831B44A82F000AC4E3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7531EC811B44A82F000AC4E3 /* Localizable.strings */; };
+		7531EC851B44A883000AC4E3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBBC1B3ACFE200B4F327 /* Info.plist */; };
 		7571839E1B4418ED00E345B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757183A01B4418ED00E345B3 /* Main.storyboard */; };
 		757183A51B441CDA00E345B3 /* HideNavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757183A41B441CDA00E345B3 /* HideNavBarViewController.swift */; };
 		757FEB891B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEB881B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift */; };
@@ -84,6 +86,9 @@
 		7529FA411B3E5EF5007D54A8 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		7529FA431B3E6B68007D54A8 /* RealmNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmNewsViewController.swift; sourceTree = "<group>"; };
 		7530F3FC1B3D53D10035AD7A /* DailyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTableViewController.swift; sourceTree = "<group>"; };
+		7531EC821B44A82F000AC4E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = "SwiftDaily-ZhiHu/Resources/Storyboards/Base.lproj/Localizable.strings"; sourceTree = SOURCE_ROOT; };
+		7531EC841B44A883000AC4E3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "SwiftDaily-ZhiHu/Resources/Storyboards/zh-Hans.lproj/Localizable.strings"; sourceTree = SOURCE_ROOT; };
+		7531EC861B44A893000AC4E3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "SwiftDaily-ZhiHu/Resources/Storyboards/zh-Hant.lproj/Localizable.strings"; sourceTree = SOURCE_ROOT; };
 		757183A11B4418F300E345B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		757183A21B44190000E345B3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		757183A31B44190300E345B3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -273,6 +278,7 @@
 		757FEBBA1B3ACFE200B4F327 /* Other-Sources */ = {
 			isa = PBXGroup;
 			children = (
+				7531EC811B44A82F000AC4E3 /* Localizable.strings */,
 				757FEBBC1B3ACFE200B4F327 /* Info.plist */,
 			);
 			path = "Other-Sources";
@@ -402,6 +408,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 757FEB671B3ACF5600B4F327;
 			productRefGroup = 757FEB711B3ACF5600B4F327 /* Products */;
@@ -421,10 +429,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				757FEBD41B3ACFE200B4F327 /* Images.xcassets in Resources */,
+				7531EC831B44A82F000AC4E3 /* Localizable.strings in Resources */,
 				757FEBDA1B3ACFE200B4F327 /* Settings.bundle in Resources */,
 				7571839E1B4418ED00E345B3 /* Main.storyboard in Resources */,
 				757FEBD71B3ACFE200B4F327 /* LaunchScreen.xib in Resources */,
 				757FEBD61B3ACFE200B4F327 /* DailySectionHeaderView.xib in Resources */,
+				7531EC851B44A883000AC4E3 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +507,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		7531EC811B44A82F000AC4E3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7531EC821B44A82F000AC4E3 /* Base */,
+				7531EC841B44A883000AC4E3 /* zh-Hans */,
+				7531EC861B44A893000AC4E3 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		757183A01B4418ED00E345B3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
