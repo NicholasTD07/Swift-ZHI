@@ -605,7 +605,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftDaily-ZhiHu/Resources/Other-Sources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nickTD.SwiftDaily-ZhiHu";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nickTD.Swift-ZHI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -622,7 +622,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftDaily-ZhiHu/Resources/Other-Sources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nickTD.SwiftDaily-ZhiHu";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nickTD.Swift-ZHI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
