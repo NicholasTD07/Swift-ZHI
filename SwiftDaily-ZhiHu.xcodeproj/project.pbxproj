@@ -15,9 +15,7 @@
 		757FEB891B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEB881B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift */; };
 		757FEB941B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEB931B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift */; };
 		757FEBC91B3ACFE200B4F327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA51B3ACFE100B4F327 /* AppDelegate.swift */; };
-		757FEBCA1B3ACFE200B4F327 /* DailyInMemoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA61B3ACFE100B4F327 /* DailyInMemoryTableViewController.swift */; };
 		757FEBCB1B3ACFE200B4F327 /* HidesHairLineUnderNavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA71B3ACFE100B4F327 /* HidesHairLineUnderNavBarViewController.swift */; };
-		757FEBCC1B3ACFE200B4F327 /* NewsInMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA81B3ACFE100B4F327 /* NewsInMemoryViewController.swift */; };
 		757FEBCD1B3ACFE200B4F327 /* RealmDailyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA91B3ACFE100B4F327 /* RealmDailyTableViewController.swift */; };
 		757FEBD11B3ACFE200B4F327 /* RealmModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBB01B3ACFE100B4F327 /* RealmModels.swift */; };
 		757FEBD41B3ACFE200B4F327 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBB51B3ACFE100B4F327 /* Images.xcassets */; };
@@ -96,9 +94,7 @@
 		757FEB931B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDaily_ZhiHuUITests.swift; sourceTree = "<group>"; };
 		757FEB951B3ACF5600B4F327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		757FEBA51B3ACFE100B4F327 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		757FEBA61B3ACFE100B4F327 /* DailyInMemoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyInMemoryTableViewController.swift; sourceTree = "<group>"; };
 		757FEBA71B3ACFE100B4F327 /* HidesHairLineUnderNavBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HidesHairLineUnderNavBarViewController.swift; sourceTree = "<group>"; };
-		757FEBA81B3ACFE100B4F327 /* NewsInMemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsInMemoryViewController.swift; sourceTree = "<group>"; };
 		757FEBA91B3ACFE100B4F327 /* RealmDailyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDailyTableViewController.swift; sourceTree = "<group>"; };
 		757FEBB01B3ACFE100B4F327 /* RealmModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmModels.swift; sourceTree = "<group>"; };
 		757FEBB51B3ACFE100B4F327 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -209,9 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				757FEBA51B3ACFE100B4F327 /* AppDelegate.swift */,
-				757FEBA61B3ACFE100B4F327 /* DailyInMemoryTableViewController.swift */,
 				757FEBA71B3ACFE100B4F327 /* HidesHairLineUnderNavBarViewController.swift */,
-				757FEBA81B3ACFE100B4F327 /* NewsInMemoryViewController.swift */,
 				757FEBA91B3ACFE100B4F327 /* RealmDailyTableViewController.swift */,
 				7530F3FC1B3D53D10035AD7A /* DailyTableViewController.swift */,
 				7529FA411B3E5EF5007D54A8 /* NewsViewController.swift */,
@@ -462,8 +456,6 @@
 				7529FA421B3E5EF5007D54A8 /* NewsViewController.swift in Sources */,
 				75CDD20E1B3BBD3900343CAA /* RealmHelpers.swift in Sources */,
 				757FEBD11B3ACFE200B4F327 /* RealmModels.swift in Sources */,
-				757FEBCA1B3ACFE200B4F327 /* DailyInMemoryTableViewController.swift in Sources */,
-				757FEBCC1B3ACFE200B4F327 /* NewsInMemoryViewController.swift in Sources */,
 				757FEBDF1B3ACFE200B4F327 /* DailySectionHeaderView.swift in Sources */,
 				7530F3FD1B3D53D10035AD7A /* DailyTableViewController.swift in Sources */,
 			);
