@@ -34,3 +34,12 @@ extension HideNavBarViewController {
         super.viewWillDisappear(animated)
     }
 }
+
+extension HideNavBarViewController: UIScrollViewDelegate {
+    func scrollViewShouldScrollToTop(scrollView: UIScrollView) -> Bool {
+        // NOTE: Must set self to scrollView's delegate 
+        showNavbar()
+
+        return true
+    }
+}

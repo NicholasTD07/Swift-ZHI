@@ -13,10 +13,6 @@ class NewsViewController: HideNavBarViewController {
     // MARK: UI
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var webView: UIWebView!
-
-    deinit {
-        stopFollowingScrollView()
-    }
 }
 
 // MARK: Abstract methods
@@ -27,6 +23,12 @@ extension NewsViewController {
 
 // MARK: UI methods
 extension NewsViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        webView.scrollView.delegate = self
+    }
+
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 

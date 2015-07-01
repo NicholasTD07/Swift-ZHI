@@ -20,10 +20,6 @@ class DailyTableViewController: HideNavBarViewController {
         dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
         return dateFormatter
         }()
-
-    deinit {
-        stopFollowingScrollView()
-    }
 }
 
 // MARK: Abstract methods
@@ -63,10 +59,10 @@ extension DailyTableViewController {
     }
 
     func setupUi() {
-        tableView.registerNib(UINib(nibName: "DailySectionHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "DailySectionHeaderView")
-
         refreshControl.addTarget(self, action: "refreshLatestDaily", forControlEvents: UIControlEvents.ValueChanged)
+
         tableView.addSubview(refreshControl)
+        tableView.registerNib(UINib(nibName: "DailySectionHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "DailySectionHeaderView")
     }
 
 

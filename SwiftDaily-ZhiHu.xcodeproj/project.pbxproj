@@ -207,12 +207,12 @@
 			isa = PBXGroup;
 			children = (
 				757FEBA51B3ACFE100B4F327 /* AppDelegate.swift */,
-				757FEBA71B3ACFE100B4F327 /* HidesHairLineUnderNavBarViewController.swift */,
-				757FEBA91B3ACFE100B4F327 /* RealmDailyTableViewController.swift */,
 				7530F3FC1B3D53D10035AD7A /* DailyTableViewController.swift */,
-				7529FA411B3E5EF5007D54A8 /* NewsViewController.swift */,
-				7529FA431B3E6B68007D54A8 /* RealmNewsViewController.swift */,
 				757183A41B441CDA00E345B3 /* HideNavBarViewController.swift */,
+				757FEBA71B3ACFE100B4F327 /* HidesHairLineUnderNavBarViewController.swift */,
+				7529FA411B3E5EF5007D54A8 /* NewsViewController.swift */,
+				757FEBA91B3ACFE100B4F327 /* RealmDailyTableViewController.swift */,
+				7529FA431B3E6B68007D54A8 /* RealmNewsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
