@@ -53,7 +53,7 @@
             </objects>
             <point key="canvasLocation" x="2392" y="519"/>
         </scene>
-        <!--SwiftDaily-->
+        <!--Swift-ZHI-->
         <scene sceneID="LJu-CX-obO">
             <objects>
                 <viewController id="6cA-5j-KWr" customClass="DailyInMemoryTableViewController" customModule="SwiftDaily_ZhiHu" customModuleProvider="target" sceneMemberID="viewController">
@@ -132,7 +132,7 @@
                             <constraint firstItem="Uj9-q3-aUI" firstAttribute="top" secondItem="5jz-KJ-lVe" secondAttribute="bottom" id="wtz-Ds-ELH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="SwiftDaily" id="F9j-aQ-OCO"/>
+                    <navigationItem key="navigationItem" title="Swift-ZHI" id="F9j-aQ-OCO"/>
                     <connections>
                         <outlet property="tableView" destination="Uj9-q3-aUI" id="e2e-Sc-eap"/>
                         <outlet property="tableViewTopConstraint" destination="wtz-Ds-ELH" id="iW0-42-dgA"/>
@@ -142,7 +142,7 @@
             </objects>
             <point key="canvasLocation" x="1579" y="519"/>
         </scene>
-        <!--SwiftDaily-->
+        <!--Swift-ZHI-->
         <scene sceneID="QI6-Td-Mjf">
             <objects>
                 <viewController id="wQ7-FU-fc5" customClass="RealmDailyTableViewController" customModule="SwiftDaily_ZhiHu" customModuleProvider="target" sceneMemberID="viewController">
@@ -221,7 +221,7 @@
                             <constraint firstItem="27G-5C-Lwn" firstAttribute="top" secondItem="bdl-Kp-raE" secondAttribute="bottom" id="xV8-1R-d4X"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="SwiftDaily" id="6iy-EE-vdL"/>
+                    <navigationItem key="navigationItem" title="Swift-ZHI" id="6iy-EE-vdL"/>
                     <connections>
                         <outlet property="tableView" destination="27G-5C-Lwn" id="7DA-l0-Q79"/>
                         <outlet property="tableViewTopConstraint" destination="xV8-1R-d4X" id="rA7-ec-1M6"/>

@@ -11,6 +11,7 @@
 		7529FA421B3E5EF5007D54A8 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7529FA411B3E5EF5007D54A8 /* NewsViewController.swift */; };
 		7529FA441B3E6B68007D54A8 /* RealmNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7529FA431B3E6B68007D54A8 /* RealmNewsViewController.swift */; };
 		7530F3FD1B3D53D10035AD7A /* DailyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7530F3FC1B3D53D10035AD7A /* DailyTableViewController.swift */; };
+		7571839E1B4418ED00E345B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757183A01B4418ED00E345B3 /* Main.storyboard */; };
 		757FEB891B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEB881B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift */; };
 		757FEB941B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEB931B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift */; };
 		757FEBC91B3ACFE200B4F327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA51B3ACFE100B4F327 /* AppDelegate.swift */; };
@@ -23,7 +24,6 @@
 		757FEBD61B3ACFE200B4F327 /* DailySectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBB81B3ACFE200B4F327 /* DailySectionHeaderView.xib */; };
 		757FEBD71B3ACFE200B4F327 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBB91B3ACFE200B4F327 /* LaunchScreen.xib */; };
 		757FEBDA1B3ACFE200B4F327 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBBD1B3ACFE200B4F327 /* Settings.bundle */; };
-		757FEBDC1B3ACFE200B4F327 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBC01B3ACFE200B4F327 /* Main.storyboard */; };
 		757FEBDF1B3ACFE200B4F327 /* DailySectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBC51B3ACFE200B4F327 /* DailySectionHeaderView.swift */; };
 		757FEBE01B3ACFE200B4F327 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBC61B3ACFE200B4F327 /* LoadingCell.swift */; };
 		757FEBE61B3AD0C800B4F327 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBE11B3AD0C800B4F327 /* Alamofire.framework */; };
@@ -85,6 +85,9 @@
 		7529FA411B3E5EF5007D54A8 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		7529FA431B3E6B68007D54A8 /* RealmNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmNewsViewController.swift; sourceTree = "<group>"; };
 		7530F3FC1B3D53D10035AD7A /* DailyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTableViewController.swift; sourceTree = "<group>"; };
+		757183A11B4418F300E345B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		757183A21B44190000E345B3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		757183A31B44190300E345B3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		757FEB701B3ACF5600B4F327 /* SwiftDaily-ZhiHu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftDaily-ZhiHu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		757FEB841B3ACF5600B4F327 /* SwiftDaily-ZhiHuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftDaily-ZhiHuTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		757FEB881B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDaily_ZhiHuTests.swift; sourceTree = "<group>"; };
@@ -103,7 +106,6 @@
 		757FEBB91B3ACFE200B4F327 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		757FEBBC1B3ACFE200B4F327 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		757FEBBD1B3ACFE200B4F327 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		757FEBC01B3ACFE200B4F327 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		757FEBC51B3ACFE200B4F327 /* DailySectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailySectionHeaderView.swift; sourceTree = "<group>"; };
 		757FEBC61B3ACFE200B4F327 /* LoadingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
 		757FEBE11B3AD0C800B4F327 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -282,7 +284,7 @@
 		757FEBBE1B3ACFE200B4F327 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				757FEBC01B3ACFE200B4F327 /* Main.storyboard */,
+				757183A01B4418ED00E345B3 /* Main.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -423,7 +425,7 @@
 			files = (
 				757FEBD41B3ACFE200B4F327 /* Images.xcassets in Resources */,
 				757FEBDA1B3ACFE200B4F327 /* Settings.bundle in Resources */,
-				757FEBDC1B3ACFE200B4F327 /* Main.storyboard in Resources */,
+				7571839E1B4418ED00E345B3 /* Main.storyboard in Resources */,
 				757FEBD71B3ACFE200B4F327 /* LaunchScreen.xib in Resources */,
 				757FEBD61B3ACFE200B4F327 /* DailySectionHeaderView.xib in Resources */,
 			);
@@ -497,6 +499,19 @@
 			targetProxy = 757FEB901B3ACF5600B4F327 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		757183A01B4418ED00E345B3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757183A11B4418F300E345B3 /* Base */,
+				757183A21B44190000E345B3 /* zh-Hans */,
+				757183A31B44190300E345B3 /* zh-Hant */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		757FEB961B3ACF5600B4F327 /* Debug */ = {
