@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AMScrollingNavbar
 
 class NewsViewController: UIViewController {
     // MARK: UI
