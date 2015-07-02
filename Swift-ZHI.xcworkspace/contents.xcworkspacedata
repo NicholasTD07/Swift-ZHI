@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "container:Swift ZHI.xcodeproj">
+      location = "container:/Users/nicholastian/proj/Swift-ZHI/Swift-ZHI/Swift-ZHI.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Carthage/Checkouts/SwiftDailyAPI/SwiftDailyAPI.xcodeproj">
