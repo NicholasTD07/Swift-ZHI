@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="SwiftDaily-ZhiHu/Resources/Info.plist" source-language="en" datatype="plaintext" target-language="zh-Hant">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="7.0" build-num="7A121l"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleDisplayName">
+        <source>${PRODUCT_NAME}</source>
+        <target>速知</target>
+      </trans-unit>
+      <trans-unit id="CFBundleName">
+        <source>${PRODUCT_NAME}</source>
+        <target>速知</target>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>1.1.3</source>
+        <target>1.1.3</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="SwiftDaily-ZhiHu/Resources/Localizable.strings" source-language="en" datatype="plaintext" target-language="zh-Hant">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="7.0" build-num="7A121l"/>
+    </header>
+    <body>
+      <trans-unit id="DailyView-DownloadButton">
+        <source>DailyView-DownloadButton</source>
+        <target>下載並保存</target>
+        <note>Download</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="SwiftDaily-ZhiHu/Resources/Storyboards/Base.lproj/Main.storyboard" source-language="en" datatype="plaintext" target-language="zh-Hant">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="7.0" build-num="7A121l"/>
+    </header>
+    <body>
+      <trans-unit id="6iy-EE-vdL.title">
+        <source>Swift ZHI</source>
+        <target>速知</target>
+        <note>Class = "UINavigationItem"; title = "Swift ZHI"; ObjectID = "6iy-EE-vdL";</note>
+      </trans-unit>
+      <trans-unit id="ROh-Y2-yuO.title">
+        <source>Swift ZHI</source>
+        <target>速知</target>
+        <note>Class = "UIBarButtonItem"; title = "Swift ZHI"; ObjectID = "ROh-Y2-yuO";</note>
+      </trans-unit>
+      <trans-unit id="t3t-UQ-hRR.text">
+        <source>Title</source>
+        <target/>
+        <note>Class = "UILabel"; text = "Title"; ObjectID = "t3t-UQ-hRR";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="SwiftDaily-ZhiHuTests/Info.plist" source-language="en" datatype="plaintext" target-language="zh-Hant">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="7.0" build-num="7A121l"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+        <target>速知</target>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>1.0</source>
+        <target>1.0</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="SwiftDaily-ZhiHuUITests/Info.plist" source-language="en" datatype="plaintext" target-language="zh-Hant">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="7.0" build-num="7A121l"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+        <target>速知</target>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>1.0</source>
+        <target>1.0</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
