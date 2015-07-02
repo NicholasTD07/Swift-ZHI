@@ -40,8 +40,6 @@
 		757FEBF71B3AD1E400B4F327 /* RealmSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBF31B3AD1D400B4F327 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75B5F5FC1B44BA18001E1461 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75D98CA81B44B93B001B4F9C /* InfoPlist.strings */; };
 		75B5F5FD1B44BA8A001E1461 /* DailySectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBB81B3ACFE200B4F327 /* DailySectionHeaderView.xib */; };
-		75B5F6051B44BD3D001E1461 /* zh-Hans.xliff in Resources */ = {isa = PBXBuildFile; fileRef = 75B5F6031B44BD3D001E1461 /* zh-Hans.xliff */; };
-		75B5F6061B44BD3D001E1461 /* zh-Hant.xliff in Resources */ = {isa = PBXBuildFile; fileRef = 75B5F6041B44BD3D001E1461 /* zh-Hant.xliff */; };
 		75B5F60A1B44BF2C001E1461 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75B5F6081B44BF2C001E1461 /* Localizable.strings */; };
 		75CDD20C1B3BBB4A00343CAA /* DailyRealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CDD20B1B3BBB4A00343CAA /* DailyRealmStore.swift */; };
 		75CDD20E1B3BBD3900343CAA /* RealmHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CDD20D1B3BBD3900343CAA /* RealmHelpers.swift */; };
@@ -455,12 +453,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				75B5F5FD1B44BA8A001E1461 /* DailySectionHeaderView.xib in Resources */,
-				75B5F6061B44BD3D001E1461 /* zh-Hant.xliff in Resources */,
 				75B5F5FC1B44BA18001E1461 /* InfoPlist.strings in Resources */,
 				757FEBD41B3ACFE200B4F327 /* Images.xcassets in Resources */,
 				75B5F60A1B44BF2C001E1461 /* Localizable.strings in Resources */,
 				757FEBDA1B3ACFE200B4F327 /* Settings.bundle in Resources */,
-				75B5F6051B44BD3D001E1461 /* zh-Hans.xliff in Resources */,
 				7571839E1B4418ED00E345B3 /* Main.storyboard in Resources */,
 				757FEBD71B3ACFE200B4F327 /* LaunchScreen.xib in Resources */,
 			);
