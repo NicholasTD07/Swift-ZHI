@@ -26,7 +26,7 @@
       <trans-unit id="DailyView-DownloadButton">
         <source>DailyView-DownloadButton</source>
         <target>下載並保存</target>
-        <note>Download</note>
+        <note>Download button in DailyView</note>
       </trans-unit>
     </body>
   </file>

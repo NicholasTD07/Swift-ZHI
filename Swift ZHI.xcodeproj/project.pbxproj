@@ -38,11 +38,11 @@
 		757FEBF51B3AD1D400B4F327 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBF31B3AD1D400B4F327 /* RealmSwift.framework */; };
 		757FEBF61B3AD1E400B4F327 /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBF21B3AD1D400B4F327 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		757FEBF71B3AD1E400B4F327 /* RealmSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBF31B3AD1D400B4F327 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		75B5F5FB1B44B9F1001E1461 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75B5F5F61B44B96C001E1461 /* Localizable.strings */; };
 		75B5F5FC1B44BA18001E1461 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75D98CA81B44B93B001B4F9C /* InfoPlist.strings */; };
 		75B5F5FD1B44BA8A001E1461 /* DailySectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBB81B3ACFE200B4F327 /* DailySectionHeaderView.xib */; };
 		75B5F6051B44BD3D001E1461 /* zh-Hans.xliff in Resources */ = {isa = PBXBuildFile; fileRef = 75B5F6031B44BD3D001E1461 /* zh-Hans.xliff */; };
 		75B5F6061B44BD3D001E1461 /* zh-Hant.xliff in Resources */ = {isa = PBXBuildFile; fileRef = 75B5F6041B44BD3D001E1461 /* zh-Hant.xliff */; };
+		75B5F60A1B44BF2C001E1461 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75B5F6081B44BF2C001E1461 /* Localizable.strings */; };
 		75CDD20C1B3BBB4A00343CAA /* DailyRealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CDD20B1B3BBB4A00343CAA /* DailyRealmStore.swift */; };
 		75CDD20E1B3BBD3900343CAA /* RealmHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CDD20D1B3BBD3900343CAA /* RealmHelpers.swift */; };
 		75D98CAB1B44B93C001B4F9C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75D98CAD1B44B93C001B4F9C /* InfoPlist.strings */; };
@@ -118,13 +118,14 @@
 		757FEBE51B3AD0C800B4F327 /* SwiftDailyAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDailyAPI.framework; path = Carthage/Build/iOS/SwiftDailyAPI.framework; sourceTree = "<group>"; };
 		757FEBF21B3AD1D400B4F327 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Carthage/Checkouts/realm-cocoa/build/ios/swift/Realm.framework"; sourceTree = "<group>"; };
 		757FEBF31B3AD1D400B4F327 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Carthage/Checkouts/realm-cocoa/build/ios/swift/RealmSwift.framework"; sourceTree = "<group>"; };
-		75B5F5F51B44B96C001E1461 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		75B5F5F71B44B97D001E1461 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		75B5F5F81B44B97D001E1461 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		75B5F5F91B44B97E001E1461 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		75B5F5FA1B44B97E001E1461 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		75B5F6031B44BD3D001E1461 /* zh-Hans.xliff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "zh-Hans.xliff"; sourceTree = "<group>"; };
 		75B5F6041B44BD3D001E1461 /* zh-Hant.xliff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "zh-Hant.xliff"; sourceTree = "<group>"; };
+		75B5F6091B44BF2C001E1461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = "SwiftDaily-ZhiHu/Resources/Base.lproj/Localizable.strings"; sourceTree = SOURCE_ROOT; };
+		75B5F60B1B44BF37001E1461 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "SwiftDaily-ZhiHu/Resources/zh-Hans.lproj/Localizable.strings"; sourceTree = SOURCE_ROOT; };
+		75B5F60C1B44BF3E001E1461 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "SwiftDaily-ZhiHu/Resources/zh-Hant.lproj/Localizable.strings"; sourceTree = SOURCE_ROOT; };
 		75CDD20B1B3BBB4A00343CAA /* DailyRealmStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyRealmStore.swift; sourceTree = "<group>"; };
 		75CDD20D1B3BBD3900343CAA /* RealmHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelpers.swift; sourceTree = "<group>"; };
 		75D98C9D1B44B704001B4F9C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -270,8 +271,6 @@
 		757FEBB31B3ACFE100B4F327 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				75B5F5F61B44B96C001E1461 /* Localizable.strings */,
-				75D98CA81B44B93B001B4F9C /* InfoPlist.strings */,
 				75D98C9D1B44B704001B4F9C /* Info.plist */,
 				757FEBB51B3ACFE100B4F327 /* Images.xcassets */,
 				75D98C9F1B44B920001B4F9C /* Localizations */,
@@ -341,6 +340,8 @@
 		75D98C9F1B44B920001B4F9C /* Localizations */ = {
 			isa = PBXGroup;
 			children = (
+				75D98CA81B44B93B001B4F9C /* InfoPlist.strings */,
+				75B5F6081B44BF2C001E1461 /* Localizable.strings */,
 				75B5F5FE1B44BCF2001E1461 /* Swift ZHI */,
 			);
 			path = Localizations;
@@ -357,6 +358,7 @@
 				757FEB6D1B3ACF5600B4F327 /* Frameworks */,
 				757FEB6E1B3ACF5600B4F327 /* Resources */,
 				757FEBEC1B3AD15F00B4F327 /* CopyFiles */,
+				75B5F60D1B44BF70001E1461 /* genstrings */,
 			);
 			buildRules = (
 			);
@@ -455,8 +457,8 @@
 				75B5F5FD1B44BA8A001E1461 /* DailySectionHeaderView.xib in Resources */,
 				75B5F6061B44BD3D001E1461 /* zh-Hant.xliff in Resources */,
 				75B5F5FC1B44BA18001E1461 /* InfoPlist.strings in Resources */,
-				75B5F5FB1B44B9F1001E1461 /* Localizable.strings in Resources */,
 				757FEBD41B3ACFE200B4F327 /* Images.xcassets in Resources */,
+				75B5F60A1B44BF2C001E1461 /* Localizable.strings in Resources */,
 				757FEBDA1B3ACFE200B4F327 /* Settings.bundle in Resources */,
 				75B5F6051B44BD3D001E1461 /* zh-Hans.xliff in Resources */,
 				7571839E1B4418ED00E345B3 /* Main.storyboard in Resources */,
@@ -481,6 +483,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		75B5F60D1B44BF70001E1461 /* genstrings */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = genstrings;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd $PROJECT_DIR && find . -name \\*.swift | xargs genstrings -o SwiftDaily-ZhiHu/Resources/Base.lproj/";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		757FEB6C1B3ACF5600B4F327 /* Sources */ = {
@@ -545,11 +564,12 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		75B5F5F61B44B96C001E1461 /* Localizable.strings */ = {
+		75B5F6081B44BF2C001E1461 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				75B5F5F51B44B96C001E1461 /* zh-Hans */,
-				75B5F5FA1B44B97E001E1461 /* zh-Hant */,
+				75B5F6091B44BF2C001E1461 /* Base */,
+				75B5F60B1B44BF37001E1461 /* zh-Hans */,
+				75B5F60C1B44BF3E001E1461 /* zh-Hant */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -561,6 +581,7 @@
 				75B5F5F71B44B97D001E1461 /* zh-Hant */,
 			);
 			name = InfoPlist.strings;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		75D98CAD1B44B93C001B4F9C /* InfoPlist.strings */ = {
