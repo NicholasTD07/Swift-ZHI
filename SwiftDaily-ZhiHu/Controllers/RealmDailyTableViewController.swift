@@ -22,9 +22,11 @@ class RealmDailyTableViewController: DailyTableViewController {
 
     private func newsMetaAtIndexPath(indexPath: NSIndexPath) -> NewsMetaObject? {
         let date = dailyDates.dateAtIndex(indexPath.section)
-        guard let daily = dailyAtDate(date) else { return nil }
-
-        return daily.news[indexPath.row]
+        if let daily = dailyAtDate(date) {
+            return daily.news[indexPath.row]
+        } else {
+            return nil
+        }
     }
 
     private func hasNewsWithId(newsId: Int) -> Bool {
@@ -58,10 +60,11 @@ extension RealmDailyTableViewController {
     }
 
     override func loadNewsAtIndexPath(indexPath: NSIndexPath) {
-        guard let newsMeta = self.newsMetaAtIndexPath(indexPath)
-            else { return }
-
-        self.store.news(newsMeta.newsId)
+        if let newsMeta = self.newsMetaAtIndexPath(indexPath) {
+            self.store.news(newsMeta.newsId)
+        } else {
+            return
+        }
     }
 
     override func cellAtIndexPath(indexPath: NSIndexPath) -> UITableViewCell {
@@ -94,12 +97,12 @@ extension RealmDailyTableViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showNews/Realm" {
-            guard let indexPath = tableView.indexPathForSelectedRow else { return }
-            guard let newsMeta = newsMetaAtIndexPath(indexPath) else { return }
-            guard let vc = segue.destinationViewController as? RealmNewsViewController else { return }
-
-            vc.store = store
-            vc.newsId = newsMeta.newsId
+            if let indexPath = tableView.indexPathForSelectedRow,
+            let newsMeta = newsMetaAtIndexPath(indexPath),
+            let vc = segue.destinationViewController as? RealmNewsViewController {
+                vc.store = store
+                vc.newsId = newsMeta.newsId
+            }
         }
     }
 }
@@ -112,9 +115,11 @@ extension RealmDailyTableViewController: UITableViewDataSource {
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let date = dailyDates.dateAtIndex(section)
-        guard let daily = dailyAtDate(date) else { return 1 }
-
-        return daily.news.count
+        if let daily = dailyAtDate(date) {
+            return daily.news.count
+        } else {
+            return 1
+        }
     }
 
 }

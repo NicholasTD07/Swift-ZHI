@@ -20,8 +20,9 @@ class HidesHairLineUnderNavBarViewController: UIViewController {
             }
 
             for subView in view.subviews {
-                guard let imageView = findHairLineImageViewUnder(subView) else { continue }
-                return imageView
+                if let imageView = findHairLineImageViewUnder(subView) {
+                    return imageView
+                } else { continue }
             }
             return nil
         }
