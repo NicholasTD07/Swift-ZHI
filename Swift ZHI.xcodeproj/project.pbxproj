@@ -41,6 +41,8 @@
 		75B5F5FB1B44B9F1001E1461 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75B5F5F61B44B96C001E1461 /* Localizable.strings */; };
 		75B5F5FC1B44BA18001E1461 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75D98CA81B44B93B001B4F9C /* InfoPlist.strings */; };
 		75B5F5FD1B44BA8A001E1461 /* DailySectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBB81B3ACFE200B4F327 /* DailySectionHeaderView.xib */; };
+		75B5F6051B44BD3D001E1461 /* zh-Hans.xliff in Resources */ = {isa = PBXBuildFile; fileRef = 75B5F6031B44BD3D001E1461 /* zh-Hans.xliff */; };
+		75B5F6061B44BD3D001E1461 /* zh-Hant.xliff in Resources */ = {isa = PBXBuildFile; fileRef = 75B5F6041B44BD3D001E1461 /* zh-Hant.xliff */; };
 		75CDD20C1B3BBB4A00343CAA /* DailyRealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CDD20B1B3BBB4A00343CAA /* DailyRealmStore.swift */; };
 		75CDD20E1B3BBD3900343CAA /* RealmHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CDD20D1B3BBD3900343CAA /* RealmHelpers.swift */; };
 		75D98CAB1B44B93C001B4F9C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75D98CAD1B44B93C001B4F9C /* InfoPlist.strings */; };
@@ -121,11 +123,11 @@
 		75B5F5F81B44B97D001E1461 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		75B5F5F91B44B97E001E1461 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		75B5F5FA1B44B97E001E1461 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		75B5F6031B44BD3D001E1461 /* zh-Hans.xliff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "zh-Hans.xliff"; sourceTree = "<group>"; };
+		75B5F6041B44BD3D001E1461 /* zh-Hant.xliff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "zh-Hant.xliff"; sourceTree = "<group>"; };
 		75CDD20B1B3BBB4A00343CAA /* DailyRealmStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyRealmStore.swift; sourceTree = "<group>"; };
 		75CDD20D1B3BBD3900343CAA /* RealmHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelpers.swift; sourceTree = "<group>"; };
 		75D98C9D1B44B704001B4F9C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75D98CA01B44B920001B4F9C /* zh-Hans.xliff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "zh-Hans.xliff"; sourceTree = "<group>"; };
-		75D98CA11B44B920001B4F9C /* zh-Hant.xliff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "zh-Hant.xliff"; sourceTree = "<group>"; };
 		75D98CA71B44B93B001B4F9C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		75D98CAC1B44B93C001B4F9C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		75D98CB11B44B93C001B4F9C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -327,11 +329,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		75B5F5FE1B44BCF2001E1461 /* Swift ZHI */ = {
+			isa = PBXGroup;
+			children = (
+				75B5F6031B44BD3D001E1461 /* zh-Hans.xliff */,
+				75B5F6041B44BD3D001E1461 /* zh-Hant.xliff */,
+			);
+			path = "Swift ZHI";
+			sourceTree = "<group>";
+		};
 		75D98C9F1B44B920001B4F9C /* Localizations */ = {
 			isa = PBXGroup;
 			children = (
-				75D98CA01B44B920001B4F9C /* zh-Hans.xliff */,
-				75D98CA11B44B920001B4F9C /* zh-Hant.xliff */,
+				75B5F5FE1B44BCF2001E1461 /* Swift ZHI */,
 			);
 			path = Localizations;
 			sourceTree = "<group>";
@@ -443,10 +453,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				75B5F5FD1B44BA8A001E1461 /* DailySectionHeaderView.xib in Resources */,
+				75B5F6061B44BD3D001E1461 /* zh-Hant.xliff in Resources */,
 				75B5F5FC1B44BA18001E1461 /* InfoPlist.strings in Resources */,
 				75B5F5FB1B44B9F1001E1461 /* Localizable.strings in Resources */,
 				757FEBD41B3ACFE200B4F327 /* Images.xcassets in Resources */,
 				757FEBDA1B3ACFE200B4F327 /* Settings.bundle in Resources */,
+				75B5F6051B44BD3D001E1461 /* zh-Hans.xliff in Resources */,
 				7571839E1B4418ED00E345B3 /* Main.storyboard in Resources */,
 				757FEBD71B3ACFE200B4F327 /* LaunchScreen.xib in Resources */,
 			);

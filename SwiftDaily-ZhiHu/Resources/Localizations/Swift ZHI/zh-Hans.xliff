@@ -14,8 +14,7 @@
         <target>速知</target>
       </trans-unit>
       <trans-unit id="CFBundleShortVersionString">
-        <source>1.1.3</source>
-        <target>1.1.3</target>
+        <source>1.1.4</source>
       </trans-unit>
     </body>
   </file>
