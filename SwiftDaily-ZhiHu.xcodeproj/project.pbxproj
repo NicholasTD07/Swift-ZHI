@@ -11,8 +11,6 @@
 		7529FA421B3E5EF5007D54A8 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7529FA411B3E5EF5007D54A8 /* NewsViewController.swift */; };
 		7529FA441B3E6B68007D54A8 /* RealmNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7529FA431B3E6B68007D54A8 /* RealmNewsViewController.swift */; };
 		7530F3FD1B3D53D10035AD7A /* DailyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7530F3FC1B3D53D10035AD7A /* DailyTableViewController.swift */; };
-		7531EC831B44A82F000AC4E3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7531EC811B44A82F000AC4E3 /* Localizable.strings */; };
-		7531EC851B44A883000AC4E3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBBC1B3ACFE200B4F327 /* Info.plist */; };
 		7571839E1B4418ED00E345B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757183A01B4418ED00E345B3 /* Main.storyboard */; };
 		757183A51B441CDA00E345B3 /* HideNavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757183A41B441CDA00E345B3 /* HideNavBarViewController.swift */; };
 		757FEB891B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEB881B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift */; };
@@ -43,6 +41,7 @@
 		757FEBF71B3AD1E400B4F327 /* RealmSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBF31B3AD1D400B4F327 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75CDD20C1B3BBB4A00343CAA /* DailyRealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CDD20B1B3BBB4A00343CAA /* DailyRealmStore.swift */; };
 		75CDD20E1B3BBD3900343CAA /* RealmHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CDD20D1B3BBD3900343CAA /* RealmHelpers.swift */; };
+		75D98C9E1B44B704001B4F9C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75D98C9D1B44B704001B4F9C /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,9 +85,6 @@
 		7529FA411B3E5EF5007D54A8 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		7529FA431B3E6B68007D54A8 /* RealmNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmNewsViewController.swift; sourceTree = "<group>"; };
 		7530F3FC1B3D53D10035AD7A /* DailyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTableViewController.swift; sourceTree = "<group>"; };
-		7531EC821B44A82F000AC4E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = "SwiftDaily-ZhiHu/Resources/Storyboards/Base.lproj/Localizable.strings"; sourceTree = SOURCE_ROOT; };
-		7531EC841B44A883000AC4E3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "SwiftDaily-ZhiHu/Resources/Storyboards/zh-Hans.lproj/Localizable.strings"; sourceTree = SOURCE_ROOT; };
-		7531EC861B44A893000AC4E3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "SwiftDaily-ZhiHu/Resources/Storyboards/zh-Hant.lproj/Localizable.strings"; sourceTree = SOURCE_ROOT; };
 		757183A11B4418F300E345B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		757183A21B44190000E345B3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		757183A31B44190300E345B3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -107,7 +103,6 @@
 		757FEBB51B3ACFE100B4F327 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		757FEBB81B3ACFE200B4F327 /* DailySectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DailySectionHeaderView.xib; sourceTree = "<group>"; };
 		757FEBB91B3ACFE200B4F327 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		757FEBBC1B3ACFE200B4F327 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		757FEBBD1B3ACFE200B4F327 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		757FEBC51B3ACFE200B4F327 /* DailySectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailySectionHeaderView.swift; sourceTree = "<group>"; };
 		757FEBC61B3ACFE200B4F327 /* LoadingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
@@ -120,6 +115,7 @@
 		757FEBF31B3AD1D400B4F327 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Carthage/Checkouts/realm-cocoa/build/ios/swift/RealmSwift.framework"; sourceTree = "<group>"; };
 		75CDD20B1B3BBB4A00343CAA /* DailyRealmStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyRealmStore.swift; sourceTree = "<group>"; };
 		75CDD20D1B3BBD3900343CAA /* RealmHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelpers.swift; sourceTree = "<group>"; };
+		75D98C9D1B44B704001B4F9C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,9 +253,9 @@
 		757FEBB31B3ACFE100B4F327 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				75D98C9D1B44B704001B4F9C /* Info.plist */,
 				757FEBB51B3ACFE100B4F327 /* Images.xcassets */,
 				757FEBB61B3ACFE100B4F327 /* Nibs */,
-				757FEBBA1B3ACFE200B4F327 /* Other-Sources */,
 				757FEBBD1B3ACFE200B4F327 /* Settings.bundle */,
 				757FEBBE1B3ACFE200B4F327 /* Storyboards */,
 			);
@@ -273,15 +269,6 @@
 				757FEBB91B3ACFE200B4F327 /* LaunchScreen.xib */,
 			);
 			path = Nibs;
-			sourceTree = "<group>";
-		};
-		757FEBBA1B3ACFE200B4F327 /* Other-Sources */ = {
-			isa = PBXGroup;
-			children = (
-				7531EC811B44A82F000AC4E3 /* Localizable.strings */,
-				757FEBBC1B3ACFE200B4F327 /* Info.plist */,
-			);
-			path = "Other-Sources";
 			sourceTree = "<group>";
 		};
 		757FEBBE1B3ACFE200B4F327 /* Storyboards */ = {
@@ -429,12 +416,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				757FEBD41B3ACFE200B4F327 /* Images.xcassets in Resources */,
-				7531EC831B44A82F000AC4E3 /* Localizable.strings in Resources */,
 				757FEBDA1B3ACFE200B4F327 /* Settings.bundle in Resources */,
 				7571839E1B4418ED00E345B3 /* Main.storyboard in Resources */,
 				757FEBD71B3ACFE200B4F327 /* LaunchScreen.xib in Resources */,
 				757FEBD61B3ACFE200B4F327 /* DailySectionHeaderView.xib in Resources */,
-				7531EC851B44A883000AC4E3 /* Info.plist in Resources */,
+				75D98C9E1B44B704001B4F9C /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,16 +493,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7531EC811B44A82F000AC4E3 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7531EC821B44A82F000AC4E3 /* Base */,
-				7531EC841B44A883000AC4E3 /* zh-Hans */,
-				7531EC861B44A893000AC4E3 /* zh-Hant */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
 		757183A01B4418ED00E345B3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -622,7 +598,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS/",
 					"$(PROJECT_DIR)/Carthage/Checkouts/realm-cocoa/build/ios/swift/",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/SwiftDaily-ZhiHu/Resources/Other-Sources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SwiftDaily-ZhiHu/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nickTD.Swift-ZHI";
@@ -639,7 +615,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS/",
 					"$(PROJECT_DIR)/Carthage/Checkouts/realm-cocoa/build/ios/swift/",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/SwiftDaily-ZhiHu/Resources/Other-Sources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SwiftDaily-ZhiHu/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nickTD.Swift-ZHI";
