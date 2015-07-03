@@ -86,6 +86,6 @@ public class NewsObject: Object {
     }
 
     static public func from(news: News) -> NewsObject {
-        return NewsObject(newsId: news.newsId, title: news.title, body: news.body, cssURLStrings: news.cssURLs.map {$0.absoluteString})
+        return NewsObject(newsId: news.newsId, title: news.title, body: news.body, cssURLStrings: news.cssURLs.map {$0.absoluteString!})
     }
 }
