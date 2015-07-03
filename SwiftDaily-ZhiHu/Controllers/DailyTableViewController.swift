@@ -138,7 +138,7 @@ extension DailyTableViewController {
     }
 
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        let download = NSLocalizedString("DailyView-DownloadButton",
+        let download = NSLocalizedString("Download & Save",
             comment: "Download button in DailyView")
         let save = UITableViewRowAction(style: UITableViewRowActionStyle.Default,
             title: download)
