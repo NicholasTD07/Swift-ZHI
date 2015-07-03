@@ -68,10 +68,10 @@ extension RealmDailyTableViewController {
     }
 
     override func cellAtIndexPath(indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("NewsMetaCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("NewsMetaCell", forIndexPath: indexPath) as! UITableViewCell
         let newsMeta = newsMetaAtIndexPath(indexPath)!
 
-        cell.textLabel?.text = newsMeta.title
+        cell.textLabel!.text = newsMeta.title
 
         if hasNewsWithId(newsMeta.newsId) {
             cell.accessoryType = .Checkmark
