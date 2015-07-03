@@ -11,6 +11,14 @@
 		7529FA421B3E5EF5007D54A8 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7529FA411B3E5EF5007D54A8 /* NewsViewController.swift */; };
 		7529FA441B3E6B68007D54A8 /* RealmNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7529FA431B3E6B68007D54A8 /* RealmNewsViewController.swift */; };
 		7530F3FD1B3D53D10035AD7A /* DailyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7530F3FC1B3D53D10035AD7A /* DailyTableViewController.swift */; };
+		75656D031B46549E007D11EA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75656D011B46549E007D11EA /* Realm.framework */; };
+		75656D041B46549E007D11EA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75656D021B46549E007D11EA /* RealmSwift.framework */; };
+		75656D051B4654A7007D11EA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75656D011B46549E007D11EA /* Realm.framework */; };
+		75656D061B4654A7007D11EA /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75656D011B46549E007D11EA /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		75656D071B4654A7007D11EA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75656D021B46549E007D11EA /* RealmSwift.framework */; };
+		75656D081B4654A7007D11EA /* RealmSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75656D021B46549E007D11EA /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		75656D0A1B4659B4007D11EA /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75656D091B4659B4007D11EA /* Box.framework */; };
+		75656D0B1B4659B4007D11EA /* Box.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75656D091B4659B4007D11EA /* Box.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7571839E1B4418ED00E345B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757183A01B4418ED00E345B3 /* Main.storyboard */; };
 		757183A51B441CDA00E345B3 /* HideNavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757183A41B441CDA00E345B3 /* HideNavBarViewController.swift */; };
 		757FEB891B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEB881B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift */; };
@@ -34,10 +42,6 @@
 		757FEBEF1B3AD16C00B4F327 /* Argo.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBE31B3AD0C800B4F327 /* Argo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		757FEBF01B3AD16C00B4F327 /* Runes.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBE41B3AD0C800B4F327 /* Runes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		757FEBF11B3AD16D00B4F327 /* SwiftDailyAPI.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBE51B3AD0C800B4F327 /* SwiftDailyAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		757FEBF41B3AD1D400B4F327 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBF21B3AD1D400B4F327 /* Realm.framework */; };
-		757FEBF51B3AD1D400B4F327 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBF31B3AD1D400B4F327 /* RealmSwift.framework */; };
-		757FEBF61B3AD1E400B4F327 /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBF21B3AD1D400B4F327 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		757FEBF71B3AD1E400B4F327 /* RealmSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBF31B3AD1D400B4F327 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75B5F5FC1B44BA18001E1461 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75D98CA81B44B93B001B4F9C /* InfoPlist.strings */; };
 		75B5F5FD1B44BA8A001E1461 /* DailySectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBB81B3ACFE200B4F327 /* DailySectionHeaderView.xib */; };
 		75B5F60A1B44BF2C001E1461 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75B5F6081B44BF2C001E1461 /* Localizable.strings */; };
@@ -71,9 +75,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				757FEBF61B3AD1E400B4F327 /* Realm.framework in CopyFiles */,
-				757FEBF71B3AD1E400B4F327 /* RealmSwift.framework in CopyFiles */,
+				75656D061B4654A7007D11EA /* Realm.framework in CopyFiles */,
 				757FEBED1B3AD16C00B4F327 /* Alamofire.framework in CopyFiles */,
+				75656D0B1B4659B4007D11EA /* Box.framework in CopyFiles */,
+				75656D081B4654A7007D11EA /* RealmSwift.framework in CopyFiles */,
 				757FEBEE1B3AD16C00B4F327 /* AMScrollingNavbar.framework in CopyFiles */,
 				757FEBEF1B3AD16C00B4F327 /* Argo.framework in CopyFiles */,
 				757FEBF01B3AD16C00B4F327 /* Runes.framework in CopyFiles */,
@@ -88,6 +93,9 @@
 		7529FA411B3E5EF5007D54A8 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		7529FA431B3E6B68007D54A8 /* RealmNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmNewsViewController.swift; sourceTree = "<group>"; };
 		7530F3FC1B3D53D10035AD7A /* DailyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTableViewController.swift; sourceTree = "<group>"; };
+		75656D011B46549E007D11EA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Carthage/Checkouts/realm-cocoa/build/ios/swift/Realm.framework"; sourceTree = "<group>"; };
+		75656D021B46549E007D11EA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Carthage/Checkouts/realm-cocoa/build/ios/swift/RealmSwift.framework"; sourceTree = "<group>"; };
+		75656D091B4659B4007D11EA /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Carthage/Build/iOS/Box.framework; sourceTree = "<group>"; };
 		757183A11B4418F300E345B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		757183A21B44190000E345B3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		757183A31B44190300E345B3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -114,8 +122,6 @@
 		757FEBE31B3AD0C800B4F327 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
 		757FEBE41B3AD0C800B4F327 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		757FEBE51B3AD0C800B4F327 /* SwiftDailyAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDailyAPI.framework; path = Carthage/Build/iOS/SwiftDailyAPI.framework; sourceTree = "<group>"; };
-		757FEBF21B3AD1D400B4F327 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Carthage/Checkouts/realm-cocoa/build/ios/swift/Realm.framework"; sourceTree = "<group>"; };
-		757FEBF31B3AD1D400B4F327 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Carthage/Checkouts/realm-cocoa/build/ios/swift/RealmSwift.framework"; sourceTree = "<group>"; };
 		75B5F5F71B44B97D001E1461 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		75B5F5F81B44B97D001E1461 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		75B5F5F91B44B97E001E1461 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -137,12 +143,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				757FEBF41B3AD1D400B4F327 /* Realm.framework in Frameworks */,
-				757FEBF51B3AD1D400B4F327 /* RealmSwift.framework in Frameworks */,
+				75656D031B46549E007D11EA /* Realm.framework in Frameworks */,
+				75656D041B46549E007D11EA /* RealmSwift.framework in Frameworks */,
+				75656D071B4654A7007D11EA /* RealmSwift.framework in Frameworks */,
 				757FEBE61B3AD0C800B4F327 /* Alamofire.framework in Frameworks */,
 				757FEBE71B3AD0C800B4F327 /* AMScrollingNavbar.framework in Frameworks */,
+				75656D051B4654A7007D11EA /* Realm.framework in Frameworks */,
 				757FEBE81B3AD0C800B4F327 /* Argo.framework in Frameworks */,
 				757FEBE91B3AD0C800B4F327 /* Runes.framework in Frameworks */,
+				75656D0A1B4659B4007D11EA /* Box.framework in Frameworks */,
 				757FEBEA1B3AD0C800B4F327 /* SwiftDailyAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +176,7 @@
 		757FEB671B3ACF5600B4F327 = {
 			isa = PBXGroup;
 			children = (
+				75656D091B4659B4007D11EA /* Box.framework */,
 				757FEBA11B3ACFE100B4F327 /* SwiftDaily-ZhiHu */,
 				757FEB871B3ACF5600B4F327 /* SwiftDaily-ZhiHuTests */,
 				757FEB921B3ACF5600B4F327 /* SwiftDaily-ZhiHuUITests */,
@@ -315,8 +325,8 @@
 		757FEBEB1B3AD0D300B4F327 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				757FEBF21B3AD1D400B4F327 /* Realm.framework */,
-				757FEBF31B3AD1D400B4F327 /* RealmSwift.framework */,
+				75656D011B46549E007D11EA /* Realm.framework */,
+				75656D021B46549E007D11EA /* RealmSwift.framework */,
 				757FEBE11B3AD0C800B4F327 /* Alamofire.framework */,
 				757FEBE21B3AD0C800B4F327 /* AMScrollingNavbar.framework */,
 				757FEBE31B3AD0C800B4F327 /* Argo.framework */,
@@ -692,6 +702,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/Carthage/Build/iOS/",
 					"$(PROJECT_DIR)/Carthage/Checkouts/realm-cocoa/build/ios/swift/",
+					"$(PROJECT_DIR)/Carthage/Checkouts/realm-cocoa/build/ios/swift",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftDaily-ZhiHu/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -709,6 +721,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/Carthage/Build/iOS/",
 					"$(PROJECT_DIR)/Carthage/Checkouts/realm-cocoa/build/ios/swift/",
+					"$(PROJECT_DIR)/Carthage/Checkouts/realm-cocoa/build/ios/swift",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftDaily-ZhiHu/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

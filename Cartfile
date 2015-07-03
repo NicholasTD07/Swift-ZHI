@@ -1,3 +1,3 @@
-github "NicholasTD07/SwiftDailyAPI" "develop"
+github "NicholasTD07/SwiftDailyAPI" "0d61ebfe7ae91fee2e520a2be1445c33429a7d7c"
 github "andreamazz/AMScrollingNavbar" ~> 1.5
-github "realm/realm-cocoa" "5a23299889e561397d2bc572c3963b3e2f28984c"
+github "realm/realm-cocoa" ~> 0.93.2
