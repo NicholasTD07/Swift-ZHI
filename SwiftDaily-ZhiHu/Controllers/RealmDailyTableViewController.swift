@@ -97,11 +97,11 @@ extension RealmDailyTableViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showNews/Realm" {
-            if let indexPath = tableView.indexPathForSelectedRow,
-            let newsMeta = newsMetaAtIndexPath(indexPath),
-            let vc = segue.destinationViewController as? RealmNewsViewController {
-                vc.store = store
-                vc.newsId = newsMeta.newsId
+            if let indexPath = tableView.indexPathForSelectedRow(),
+                let newsMeta = newsMetaAtIndexPath(indexPath),
+                let vc = segue.destinationViewController as? RealmNewsViewController {
+                    vc.store = store
+                    vc.newsId = newsMeta.newsId
             }
         }
     }

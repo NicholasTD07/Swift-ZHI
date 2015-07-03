@@ -79,7 +79,7 @@ extension DailyTableViewController {
             loadLatestDaily()
         }
 
-        if let indexPath = tableView.indexPathForSelectedRow {
+        if let indexPath = tableView.indexPathForSelectedRow() {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
     }
