@@ -42,7 +42,7 @@ extension RealmNewsViewController {
 
     // TODO: Use protocol
     private func loadNews(news: NewsObject) {
-        let css = news.cssURLStrings.map { "<link rel='stylesheet' type='text/css' href='\($0.value)'>" }
+        let css = map(news.cssURLStrings) { "<link rel='stylesheet' type='text/css' href='\($0.value)'>" }
         var newsBody = css.reduce(news.body) { $0 + $1 }
         // hide 200px #div.img-place-holder in css
         newsBody.extend("<style>.headline .img-place-holder {\n height: 0px;\n}</style>")
