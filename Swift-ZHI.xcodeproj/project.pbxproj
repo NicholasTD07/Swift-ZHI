@@ -176,7 +176,6 @@
 		757FEB671B3ACF5600B4F327 = {
 			isa = PBXGroup;
 			children = (
-				75656D091B4659B4007D11EA /* Box.framework */,
 				757FEBA11B3ACFE100B4F327 /* SwiftDaily-ZhiHu */,
 				757FEB871B3ACF5600B4F327 /* SwiftDaily-ZhiHuTests */,
 				757FEB921B3ACF5600B4F327 /* SwiftDaily-ZhiHuUITests */,
@@ -325,6 +324,7 @@
 		757FEBEB1B3AD0D300B4F327 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				75656D091B4659B4007D11EA /* Box.framework */,
 				75656D011B46549E007D11EA /* Realm.framework */,
 				75656D021B46549E007D11EA /* RealmSwift.framework */,
 				757FEBE11B3AD0C800B4F327 /* Alamofire.framework */,
