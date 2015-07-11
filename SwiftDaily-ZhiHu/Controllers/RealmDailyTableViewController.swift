@@ -46,6 +46,14 @@ extension RealmDailyTableViewController {
         return newsMetaAtIndexPath(indexPath) != nil
     }
 
+    override func hasNewsAtIndexPath(indexPath: NSIndexPath) -> Bool {
+        if let newsMeta = newsMetaAtIndexPath(indexPath) {
+            return store.newsWithId(newsMeta.newsId) != nil
+        } else {
+            return false
+        }
+    }
+
     override func dateStringAtSection(section: Int) -> String {
         let date = dailyDates.dateAtIndex(section)
         return dateFormatter.stringFromDate(date)
@@ -64,6 +72,12 @@ extension RealmDailyTableViewController {
             self.store.news(newsMeta.newsId)
         } else {
             return
+        }
+    }
+
+    override func deleteNewsAtIndexPath(indexPath: NSIndexPath) {
+        if let newsMeta = newsMetaAtIndexPath(indexPath) {
+            store.deleteNewsWithId(newsMeta.newsId)
         }
     }
 

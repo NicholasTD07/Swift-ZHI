@@ -34,6 +34,12 @@ public class DailyRealmStore {
         return results.first
     }
 
+    public func deleteNewsWithId(newsId: Int, inRealm realm: Realm = defaultRealm()) {
+        if let news = newsWithId(newsId) {
+            realm.write { realm.delete(news) }
+        }
+    }
+
     public func updateLatestDaily() {
         dailyAPI.latestDaily { latestDaily in
             self.latestDaily = latestDaily

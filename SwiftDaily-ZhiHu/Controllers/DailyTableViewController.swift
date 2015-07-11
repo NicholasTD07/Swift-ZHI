@@ -32,6 +32,10 @@ extension DailyTableViewController {
         fatalError()
     }
 
+    func hasNewsAtIndexPath(indexPath: NSIndexPath) -> Bool {
+        return false
+    }
+
     func dateStringAtSection(section: Int) -> String {
         fatalError()
     }
@@ -45,6 +49,10 @@ extension DailyTableViewController {
     func loadNewsAtIndexPath(indexPath: NSIndexPath) {
     }
 
+    func deleteNewsAtIndexPath(indexPath: NSIndexPath) {
+    }
+
+    // Will only be called if `hasNewsMetaAtIndexPath` returns `true`
     func cellAtIndexPath(indexPath: NSIndexPath) -> UITableViewCell {
         fatalError()
     }
@@ -132,21 +140,43 @@ extension DailyTableViewController {
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         if let _ = cell as? LoadingCell where  !hasDailyAtIndexPath(indexPath) {
             loadDailyAtIndexPath(indexPath)
-        } else {
-            return
         }
     }
 
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        if hasNewsAtIndexPath(indexPath) {
+            return [deleteNewsAction()]
+        } else {
+            return [downloadAndSaveNewsAction()]
+        }
+    }
+
+    private func downloadAndSaveNewsAction() -> UITableViewRowAction {
         let download = NSLocalizedString("Download & Save",
             comment: "Download button in DailyView")
-        let save = UITableViewRowAction(style: UITableViewRowActionStyle.Default,
-            title: download)
+        let save = UITableViewRowAction(style: .Default, title: download)
             { (_, indexPath) in
                 self.tableView.setEditing(false, animated: true)
                 self.loadNewsAtIndexPath(indexPath)
         }
         save.backgroundColor = UIColor(hue: 0.353, saturation: 0.635, brightness: 0.765, alpha: 1)
-        return [save]
+
+        return save
+    }
+
+    private func deleteNewsAction() -> UITableViewRowAction {
+        let deleteString = NSLocalizedString("Delete", comment: "Delete News button in DailyView")
+        let deleteAction = UITableViewRowAction(style: .Default, title: deleteString)
+            { (_, indexPath) in
+                self.tableView.setEditing(false, animated: true)
+
+                // HACK: To let the animation finish
+                //       before table view gets refreshed
+                delay(0.3) {
+                    self.deleteNewsAtIndexPath(indexPath)
+                }
+        }
+
+        return deleteAction
     }
 }
