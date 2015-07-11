@@ -136,6 +136,12 @@ extension DailyTableViewController {
     }
 
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        if true { // TODO: change this to hasNewsAtIndexPath
+            return [downloadAndSaveAction()]
+        }
+    }
+
+    private func downloadAndSaveAction() -> UITableViewRowAction {
         let download = NSLocalizedString("Download & Save",
             comment: "Download button in DailyView")
         let save = UITableViewRowAction(style: UITableViewRowActionStyle.Default,
@@ -145,6 +151,7 @@ extension DailyTableViewController {
                 self.loadNewsAtIndexPath(indexPath)
         }
         save.backgroundColor = UIColor(hue: 0.353, saturation: 0.635, brightness: 0.765, alpha: 1)
-        return [save]
+
+        return save
     }
 }
