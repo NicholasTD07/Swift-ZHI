@@ -169,7 +169,12 @@ extension DailyTableViewController {
         let deleteAction = UITableViewRowAction(style: .Default, title: deleteString)
             { (_, indexPath) in
                 self.tableView.setEditing(false, animated: true)
-                self.deleteNewsAtIndexPath(indexPath)
+
+                // HACK: To let the animation finish
+                //       before table view gets refreshed
+                delay(0.3) {
+                    self.deleteNewsAtIndexPath(indexPath)
+                }
         }
 
         return deleteAction
