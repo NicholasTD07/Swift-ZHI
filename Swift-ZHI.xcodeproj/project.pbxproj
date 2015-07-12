@@ -105,7 +105,7 @@
 		757FEB841B3ACF5600B4F327 /* Swift-ZHITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift-ZHITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		757FEB881B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDaily_ZhiHuTests.swift; sourceTree = "<group>"; };
 		757FEB8A1B3ACF5600B4F327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		757FEB8F1B3ACF5600B4F327 /* Swift ZHITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Swift ZHITests.xctest"; path = "Swift-ZHITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		757FEB8F1B3ACF5600B4F327 /* Swift-ZHITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift-ZHITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		757FEB931B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDaily_ZhiHuUITests.swift; sourceTree = "<group>"; };
 		757FEB951B3ACF5600B4F327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		757FEBA51B3ACFE100B4F327 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 			children = (
 				757FEB701B3ACF5600B4F327 /* Swift-ZHI.app */,
 				757FEB841B3ACF5600B4F327 /* Swift-ZHITests.xctest */,
-				757FEB8F1B3ACF5600B4F327 /* Swift ZHITests.xctest */,
+				757FEB8F1B3ACF5600B4F327 /* Swift-ZHITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -414,7 +414,7 @@
 			);
 			name = "Swift-ZHIUITests";
 			productName = "SwiftDaily-ZhiHuUITests";
-			productReference = 757FEB8F1B3ACF5600B4F327 /* Swift ZHITests.xctest */;
+			productReference = 757FEB8F1B3ACF5600B4F327 /* Swift-ZHITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -423,6 +423,7 @@
 		757FEB681B3ACF5600B4F327 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = nickTD;
 				TargetAttributes = {
