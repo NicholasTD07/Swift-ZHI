@@ -25,7 +25,6 @@ extension HideNavBarViewController {
         super.viewDidLoad()
 
         followScrollView(scrollableView, usingTopConstraint: scrollableViewTopConstraint)
-
     }
 
     override func viewWillDisappear(animated: Bool) {
