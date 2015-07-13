@@ -165,11 +165,7 @@
                             <constraint firstAttribute="leadingMargin" secondItem="vPl-j6-8DD" secondAttribute="leading" constant="20" id="yzE-5w-bXe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="d1k-f4-Xpk">
-                        <barButtonItem key="backBarButtonItem" title="Swift ZHI" id="nPV-4C-IK0">
-                            <color key="tintColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="d1k-f4-Xpk"/>
                     <connections>
                         <outlet property="activityIndicator" destination="LKV-Cr-SPY" id="t9R-Dv-prK"/>
                         <outlet property="scrollableView" destination="vPl-j6-8DD" id="fO3-5A-2po"/>
@@ -205,6 +201,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="k9k-i7-EjV"/>
+        <segue reference="xtC-tL-xiE"/>
     </inferredMetricsTieBreakers>
 </document>
