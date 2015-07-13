@@ -113,9 +113,11 @@ extension RealmDailyTableViewController {
         if segue.identifier == "showNews/Realm" {
             if let indexPath = tableView.indexPathForSelectedRow(),
                 let newsMeta = newsMetaAtIndexPath(indexPath),
-                let vc = segue.destinationViewController as? RealmNewsViewController {
-                    vc.store = store
+                let nvc = segue.destinationViewController as? UINavigationController,
+                let vc = nvc.topViewController as? RealmNewsViewController {
                     vc.newsId = newsMeta.newsId
+                    vc.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem()
+                    vc.navigationItem.leftItemsSupplementBackButton = true
             }
         }
     }

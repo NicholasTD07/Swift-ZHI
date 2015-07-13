@@ -10,10 +10,11 @@ import UIKit
 import RealmSwift
 
 class RealmNewsViewController: NewsViewController {
-    var store: DailyRealmStore!
-    var newsId: Int!
+    var newsId: Int?
 
-    var token: NotificationToken?
+    private let store = DailyRealmStore()
+
+    private var token: NotificationToken?
 }
 
 extension RealmNewsViewController {
@@ -21,7 +22,8 @@ extension RealmNewsViewController {
         super.viewDidLoad()
 
         token = defaultRealm().addNotificationBlock { (_, _) in
-            if let news = self.store.newsWithId(self.newsId) {
+            if let newsId = self.newsId,
+                let news = self.store.newsWithId(newsId) {
                 self.loadNews(news)
                 self.stopIndicator()
             }
@@ -32,6 +34,8 @@ extension RealmNewsViewController {
 // Concrete methods
 extension RealmNewsViewController {
     override func loadNews() {
+        let newsId = self.newsId ?? 4863580 // TODO: last viewd news
+
         if let news = store.newsWithId(newsId) {
             loadNews(news)
         } else {
