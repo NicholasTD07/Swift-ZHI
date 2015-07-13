@@ -702,6 +702,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nickTD.Swift-ZHI";
 				PRODUCT_NAME = "Swift-ZHI";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -719,6 +720,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nickTD.Swift-ZHI";
 				PRODUCT_NAME = "Swift-ZHI";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
