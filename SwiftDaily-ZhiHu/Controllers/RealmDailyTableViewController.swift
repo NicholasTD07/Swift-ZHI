@@ -111,6 +111,8 @@ extension RealmDailyTableViewController {
             guard let vc = nvc.topViewController as? RealmNewsViewController else { return }
 
             vc.newsId = newsMeta.newsId
+            vc.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem()
+            vc.navigationItem.leftItemsSupplementBackButton = true
         }
     }
 }
