@@ -10,10 +10,11 @@ import UIKit
 import RealmSwift
 
 class RealmNewsViewController: NewsViewController {
-    var store: DailyRealmStore!
     var newsId: Int!
 
-    var token: NotificationToken?
+    private let store = DailyRealmStore()
+
+    private var token: NotificationToken?
 }
 
 extension RealmNewsViewController {

@@ -107,9 +107,9 @@ extension RealmDailyTableViewController {
         if segue.identifier == "showNews/Realm" {
             guard let indexPath = tableView.indexPathForSelectedRow else { return }
             guard let newsMeta = newsMetaAtIndexPath(indexPath) else { return }
-            guard let vc = segue.destinationViewController as? RealmNewsViewController else { return }
+            guard let nvc = segue.destinationViewController as? UINavigationController else { return }
+            guard let vc = nvc.topViewController as? RealmNewsViewController else { return }
 
-            vc.store = store
             vc.newsId = newsMeta.newsId
         }
     }
