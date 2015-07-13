@@ -27,6 +27,7 @@ extension NewsViewController {
         super.viewDidLoad()
 
         webView.scrollView.delegate = self
+        navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem()
     }
 
     override func viewWillAppear(animated: Bool) {
