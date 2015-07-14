@@ -13,6 +13,7 @@ class RealmNewsViewController: NewsViewController {
     var newsId: Int?
 
     private let store = DailyRealmStore()
+    private var loadedNewsId: Int?
 
     private var token: NotificationToken?
 }
@@ -24,7 +25,7 @@ extension RealmNewsViewController {
         token = defaultRealm().addNotificationBlock { (_, _) in
             guard let newsId = self.newsId else { return }
 
-            if let news = self.store.newsWithId(newsId) {
+            if let news = self.store.newsWithId(newsId) where newsId != self.loadedNewsId {
                 self.loadNews(news)
                 self.stopIndicator()
             }
@@ -39,6 +40,7 @@ extension RealmNewsViewController {
 
         if let news = store.newsWithId(newsId) {
             loadNews(news)
+            loadedNewsId = newsId
         } else {
             activityIndicator.startAnimating()
             store.news(newsId)
