@@ -45,7 +45,6 @@
 		75CDD20E1B3BBD3900343CAA /* RealmHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CDD20D1B3BBD3900343CAA /* RealmHelpers.swift */; };
 		75D98CAB1B44B93C001B4F9C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75D98CAD1B44B93C001B4F9C /* InfoPlist.strings */; };
 		75D98CB01B44B93C001B4F9C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75D98CB21B44B93C001B4F9C /* InfoPlist.strings */; };
-		75E0DF7A1B549B3D006E768C /* UISplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0DF791B549B3D006E768C /* UISplitViewController.swift */; };
 		75EF90F61B50E2D4006D008B /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EF90F51B50E2D4006D008B /* Delay.swift */; };
 /* End PBXBuildFile section */
 
@@ -130,7 +129,6 @@
 		75D98CA71B44B93B001B4F9C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		75D98CAC1B44B93C001B4F9C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		75D98CB11B44B93C001B4F9C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		75E0DF791B549B3D006E768C /* UISplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISplitViewController.swift; sourceTree = "<group>"; };
 		75E2E5AE1B46B24200E26DD0 /* zh-Hans.xliff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "zh-Hans.xliff"; sourceTree = "<group>"; };
 		75E2E5AF1B46B24200E26DD0 /* zh-Hant.xliff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "zh-Hant.xliff"; sourceTree = "<group>"; };
 		75EF90F51B50E2D4006D008B /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
@@ -241,7 +239,6 @@
 		757FEBAA1B3ACFE100B4F327 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				75E0DF791B549B3D006E768C /* UISplitViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -509,7 +506,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75E0DF7A1B549B3D006E768C /* UISplitViewController.swift in Sources */,
 				751788E91B3D47E700526889 /* DailyDates.swift in Sources */,
 				7529FA441B3E6B68007D54A8 /* RealmNewsViewController.swift in Sources */,
 				757FEBCD1B3ACFE200B4F327 /* RealmDailyTableViewController.swift in Sources */,
