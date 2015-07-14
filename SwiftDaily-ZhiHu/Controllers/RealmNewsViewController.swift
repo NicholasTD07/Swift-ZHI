@@ -13,18 +13,18 @@ class RealmNewsViewController: NewsViewController {
     var newsId: Int?
 
     private let store = DailyRealmStore()
+    private var loadedNewsId: Int?
 
     private var token: NotificationToken?
 }
 
-// MARK: UI methods
 extension RealmNewsViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
         token = defaultRealm().addNotificationBlock { (_, _) in
             if let newsId = self.newsId,
-                let news = self.store.newsWithId(newsId) {
+                let news = self.store.newsWithId(newsId) where newsId != self.loadedNewsId {
                 self.loadNews(news)
                 self.stopIndicator()
             }
@@ -32,13 +32,14 @@ extension RealmNewsViewController {
     }
 }
 
-// MARK: Concrete methods
+// Concrete methods
 extension RealmNewsViewController {
     override func loadNews() {
         let newsId = self.newsId ?? 4863580 // TODO: last viewd news
 
         if let news = store.newsWithId(newsId) {
             loadNews(news)
+            loadedNewsId = newsId
         } else {
             activityIndicator.startAnimating()
             store.news(newsId)
