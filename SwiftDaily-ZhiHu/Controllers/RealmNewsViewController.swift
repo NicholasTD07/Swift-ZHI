@@ -41,12 +41,16 @@ extension RealmNewsViewController {
 
         if let news = store.newsWithId(newsId) {
             loadNews(news)
-            loadedNewsId = newsId
-            preferences.lastReadNewsId = newsId
+            didLoadNewsInWebViewWithNewsId(newsId)
         } else {
             activityIndicator.startAnimating()
             store.news(newsId)
         }
+    }
+
+    private func didLoadNewsInWebViewWithNewsId(newsId: Int) {
+        loadedNewsId = newsId
+        preferences.lastReadNewsId = newsId
     }
 
     // TODO: Use protocol
