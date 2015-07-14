@@ -14,10 +14,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let splitViewController = window!.rootViewController as! UISplitViewController
 
-        splitViewController.preferredDisplayMode = .AllVisible
-        splitViewController.delegate = self
+        setUpSplitViewController(splitViewController)
 
         return true
+    }
+}
+
+extension AppDelegate {
+    private func setUpSplitViewController(svc: UISplitViewController) {
+        svc.preferredDisplayMode = .AllVisible
+        svc.delegate = self
     }
 }
 
@@ -30,6 +36,8 @@ extension AppDelegate: UISplitViewControllerDelegate {
             // Without this, RealmNewsViewController is first shown when on iPhone.
             return true
         }
+
         return false
     }
 }
+
