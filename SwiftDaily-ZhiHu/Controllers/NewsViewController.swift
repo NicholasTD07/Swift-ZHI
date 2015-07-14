@@ -21,6 +21,16 @@ extension NewsViewController {
     }
 }
 
+
+// MARK: Scorll View Delegate
+extension NewsViewController {
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if splitViewController?.displayMode == .AllVisible {
+            splitViewController?.toggleMasterView()
+        }
+    }
+}
+
 // MARK: UI methods
 extension NewsViewController {
     override func viewDidLoad() {

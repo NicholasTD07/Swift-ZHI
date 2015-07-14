@@ -17,6 +17,7 @@ class RealmNewsViewController: NewsViewController {
     private var token: NotificationToken?
 }
 
+// MARK: UI methods
 extension RealmNewsViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,7 @@ extension RealmNewsViewController {
     }
 }
 
-// Concrete methods
+// MARK: Concrete methods
 extension RealmNewsViewController {
     override func loadNews() {
         let newsId = self.newsId ?? 4863580 // TODO: last viewd news
