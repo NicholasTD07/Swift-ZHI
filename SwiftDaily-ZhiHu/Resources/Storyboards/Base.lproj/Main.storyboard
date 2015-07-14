@@ -21,7 +21,6 @@
         <!--Swift ZHI-->
         <scene sceneID="VXl-2Z-x6t">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AdV-nV-f7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="aLg-D2-oG0" customClass="RealmDailyTableViewController" customModule="Swift_ZHI" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zaX-ga-b3c"/>
@@ -105,13 +104,13 @@
                         <outlet property="tableView" destination="Vue-dk-8lr" id="2XG-hB-bZo"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AdV-nV-f7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1569" y="-220"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UnS-3X-Efw">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sbs-vq-m3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8jg-nv-S4p" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
@@ -127,13 +126,13 @@
                         <segue destination="aLg-D2-oG0" kind="relationship" relationship="rootViewController" id="hrS-5D-Evd"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sbs-vq-m3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="757" y="-220"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ieg-Du-rr4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6sW-9R-aez" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9bw-2u-s72" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
@@ -149,13 +148,13 @@
                         <segue destination="0nB-J7-nq3" kind="relationship" relationship="rootViewController" id="F7E-fa-VDD"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6sW-9R-aez" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="757" y="567"/>
         </scene>
         <!--Realm News View Controller-->
         <scene sceneID="jUb-DJ-zPC">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eZp-kN-cUU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="0nB-J7-nq3" customClass="RealmNewsViewController" customModule="Swift_ZHI" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zi4-3w-F0M"/>
@@ -166,7 +165,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cn8-VY-bcJ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <rect key="frame" x="-4" y="0.0" width="608" height="536"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
@@ -182,8 +181,8 @@
                             <constraint firstItem="Cn8-VY-bcJ" firstAttribute="top" secondItem="zi4-3w-F0M" secondAttribute="bottom" id="10P-g6-pBZ"/>
                             <constraint firstItem="UU3-xc-oC9" firstAttribute="top" secondItem="Cn8-VY-bcJ" secondAttribute="bottom" id="9Kp-pw-jtD"/>
                             <constraint firstItem="ERg-xu-EGE" firstAttribute="centerY" secondItem="Cn8-VY-bcJ" secondAttribute="centerY" id="BUn-gh-8Fo"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="Cn8-VY-bcJ" secondAttribute="leading" constant="16" id="OFz-gf-EXf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Cn8-VY-bcJ" secondAttribute="trailing" constant="-16" id="OUP-sn-OER"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Cn8-VY-bcJ" secondAttribute="leading" constant="20" id="OFz-gf-EXf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cn8-VY-bcJ" secondAttribute="trailing" constant="-20" id="OUP-sn-OER"/>
                             <constraint firstItem="ERg-xu-EGE" firstAttribute="centerX" secondItem="Cn8-VY-bcJ" secondAttribute="centerX" id="w8p-g8-WmD"/>
                         </constraints>
                     </view>
@@ -199,6 +198,7 @@
                         <outlet property="webView" destination="Cn8-VY-bcJ" id="fZf-oA-rHx"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eZp-kN-cUU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1569" y="567"/>
         </scene>

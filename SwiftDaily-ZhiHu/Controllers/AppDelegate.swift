@@ -13,13 +13,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let splitViewController = window!.rootViewController as! UISplitViewController
-        let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
-        navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
+        setUpSplitViewController(splitViewController)
 
-        splitViewController.preferredDisplayMode = .AllVisible
-        splitViewController.delegate = self
+        UserPreferences.registerDefaults()
 
         return true
+    }
+}
+
+extension AppDelegate {
+    private func setUpSplitViewController(svc: UISplitViewController) {
+        // TODO: Check whether next two lines is needed.
+        let navigationController = svc.viewControllers[svc.viewControllers.count-1] as! UINavigationController
+        navigationController.topViewController!.navigationItem.leftBarButtonItem = svc.displayModeButtonItem()
+
+        svc.preferredDisplayMode = .AllVisible
+        svc.delegate = self
     }
 }
 

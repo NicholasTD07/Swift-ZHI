@@ -13,6 +13,7 @@ class RealmNewsViewController: NewsViewController {
     var newsId: Int?
 
     private let store = DailyRealmStore()
+    private let preferences = UserPreferences()
     private var loadedNewsId: Int?
 
     private var token: NotificationToken?
@@ -35,15 +36,20 @@ extension RealmNewsViewController {
 // Concrete methods
 extension RealmNewsViewController {
     override func loadNews() {
-        let newsId = self.newsId ?? 4863580 // TODO: last viewd news
+        let newsId = self.newsId ?? preferences.lastReadNewsId
 
         if let news = store.newsWithId(newsId) {
             loadNews(news)
-            loadedNewsId = newsId
+            didLoadNewsInWebViewWithNewsId(newsId)
         } else {
             activityIndicator.startAnimating()
             store.news(newsId)
         }
+    }
+
+    private func didLoadNewsInWebViewWithNewsId(newsId: Int) {
+        loadedNewsId = newsId
+        preferences.lastReadNewsId = newsId
     }
 
     // TODO: Use protocol
