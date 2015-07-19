@@ -98,9 +98,23 @@ extension RealmDailyTableViewController {
 
         token = defaultRealm().addNotificationBlock { (_, _) in
             self.dailyDates.endDate = self.store.latestDate
-            self.tableView.reloadData()
-            self.refreshControl.endRefreshing()
+            self.reloadTableViewWhenNotEditing()
         }
+    }
+
+    func reloadTableViewWhenNotEditing() {
+        if tableView.editing {
+            delay(0.1) { self.reloadTableViewWhenNotEditing() }
+        } else {
+            // HACK: To let the animation for ending editing finish
+            //       before table view gets refreshed
+            delay(0.3) { self.reloadTableView() }
+        }
+    }
+
+    func reloadTableView() {
+        tableView.reloadData()
+        refreshControl.endRefreshing()
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
