@@ -31,7 +31,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="75" sectionHeaderHeight="44" sectionFooterHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="Vue-dk-8lr">
-                                <rect key="frame" x="-4" y="0.0" width="608" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -65,7 +65,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="L39-5y-pxJ">
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="L39-5y-pxJ">
                                                     <rect key="frame" x="294" y="27" width="20" height="20"/>
                                                     <animations/>
                                                 </activityIndicatorView>
@@ -91,9 +91,9 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Vue-dk-8lr" secondAttribute="trailing" constant="-20" id="d3V-Dd-GgX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vue-dk-8lr" secondAttribute="trailing" constant="-16" id="d3V-Dd-GgX"/>
                             <constraint firstItem="Vue-dk-8lr" firstAttribute="top" secondItem="zaX-ga-b3c" secondAttribute="bottom" id="fBl-lo-BPV"/>
-                            <constraint firstItem="Vue-dk-8lr" firstAttribute="leading" secondItem="8Wz-GP-50q" secondAttribute="leadingMargin" constant="-20" id="qNu-VA-aa9"/>
+                            <constraint firstItem="Vue-dk-8lr" firstAttribute="leading" secondItem="8Wz-GP-50q" secondAttribute="leadingMargin" constant="-16" id="qNu-VA-aa9"/>
                             <constraint firstItem="aM3-nY-ibz" firstAttribute="top" secondItem="Vue-dk-8lr" secondAttribute="bottom" id="v9A-CX-iJ0"/>
                         </constraints>
                     </view>
@@ -164,15 +164,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cn8-VY-bcJ">
-                                <rect key="frame" x="-4" y="0.0" width="608" height="536"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ERg-xu-EGE">
                                 <rect key="frame" x="290" y="258" width="20" height="20"/>
                                 <animations/>
                             </activityIndicatorView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cn8-VY-bcJ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -181,8 +181,8 @@
                             <constraint firstItem="Cn8-VY-bcJ" firstAttribute="top" secondItem="zi4-3w-F0M" secondAttribute="bottom" id="10P-g6-pBZ"/>
                             <constraint firstItem="UU3-xc-oC9" firstAttribute="top" secondItem="Cn8-VY-bcJ" secondAttribute="bottom" id="9Kp-pw-jtD"/>
                             <constraint firstItem="ERg-xu-EGE" firstAttribute="centerY" secondItem="Cn8-VY-bcJ" secondAttribute="centerY" id="BUn-gh-8Fo"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="Cn8-VY-bcJ" secondAttribute="leading" constant="20" id="OFz-gf-EXf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Cn8-VY-bcJ" secondAttribute="trailing" constant="-20" id="OUP-sn-OER"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Cn8-VY-bcJ" secondAttribute="leading" constant="16" id="OFz-gf-EXf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cn8-VY-bcJ" secondAttribute="trailing" constant="-16" id="OUP-sn-OER"/>
                             <constraint firstItem="ERg-xu-EGE" firstAttribute="centerX" secondItem="Cn8-VY-bcJ" secondAttribute="centerX" id="w8p-g8-WmD"/>
                         </constraints>
                     </view>
@@ -201,6 +201,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZp-kN-cUU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1569" y="567"/>
+        </scene>
+        <!--Realm Comment View Controller-->
+        <scene sceneID="kzC-pT-A8p">
+            <objects>
+                <viewController id="bbP-A0-Tmp" customClass="RealmCommentViewController" customModule="Swift_ZHI" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Oin-Cc-aLC"/>
+                        <viewControllerLayoutGuide type="bottom" id="CID-w4-EDT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cDC-3u-Xg6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ycc-DR-PVe">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="bbP-A0-Tmp" id="F80-T2-7Fl"/>
+                                    <outlet property="delegate" destination="bbP-A0-Tmp" id="tAl-D0-fpK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ycc-DR-PVe" firstAttribute="top" secondItem="cDC-3u-Xg6" secondAttribute="topMargin" id="Pql-Wb-BSe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ycc-DR-PVe" secondAttribute="trailing" constant="-16" id="SOh-9Y-D3k"/>
+                            <constraint firstItem="ycc-DR-PVe" firstAttribute="leading" secondItem="cDC-3u-Xg6" secondAttribute="leadingMargin" constant="-16" id="fZz-8C-xI2"/>
+                            <constraint firstItem="CID-w4-EDT" firstAttribute="top" secondItem="ycc-DR-PVe" secondAttribute="bottom" id="w1E-gG-GSm"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xD8-b7-m0F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2394" y="254"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
