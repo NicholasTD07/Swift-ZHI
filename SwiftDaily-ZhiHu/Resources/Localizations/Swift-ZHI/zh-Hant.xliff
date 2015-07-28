@@ -46,6 +46,7 @@
       </trans-unit>
       <trans-unit id="Sz8-Ml-p5c.title">
         <source>Swift ZHI</source>
+        <target>速知</target>
         <note>Class = "UIBarButtonItem"; title = "Swift ZHI"; ObjectID = "Sz8-Ml-p5c";</note>
       </trans-unit>
       <trans-unit id="loV-SC-E0Y.text">
@@ -54,10 +55,12 @@
       </trans-unit>
       <trans-unit id="qMw-ph-xNh.title">
         <source>Comments</source>
+        <target>評論</target>
         <note>Class = "UIBarButtonItem"; title = "Comments"; ObjectID = "qMw-ph-xNh";</note>
       </trans-unit>
       <trans-unit id="u84-IW-9ED.title">
         <source>Swift ZHI</source>
+        <target>速知</target>
         <note>Class = "UINavigationItem"; title = "Swift ZHI"; ObjectID = "u84-IW-9ED";</note>
       </trans-unit>
     </body>
