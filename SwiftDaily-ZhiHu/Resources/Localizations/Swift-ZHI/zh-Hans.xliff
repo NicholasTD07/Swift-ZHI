@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="SwiftDaily-ZhiHu/Resources/Info.plist" source-language="en" datatype="plaintext" target-language="zh-Hans">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="7.0" build-num="7A121l"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="6.4" build-num="6E35b"/>
     </header>
     <body>
       <trans-unit id="CFBundleDisplayName">
@@ -14,13 +14,13 @@
         <target>速知</target>
       </trans-unit>
       <trans-unit id="CFBundleShortVersionString">
-        <source>1.1.7</source>
+        <source>1.3.5</source>
       </trans-unit>
     </body>
   </file>
   <file original="SwiftDaily-ZhiHu/Resources/Localizable.strings" source-language="en" datatype="plaintext" target-language="zh-Hans">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="7.0" build-num="7A121l"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="6.4" build-num="6E35b"/>
     </header>
     <body>
       <trans-unit id="Delete">
@@ -37,29 +37,34 @@
   </file>
   <file original="SwiftDaily-ZhiHu/Resources/Storyboards/Base.lproj/Main.storyboard" source-language="en" datatype="plaintext" target-language="zh-Hans">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="7.0" build-num="7A121l"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="6.4" build-num="6E35b"/>
     </header>
     <body>
-      <trans-unit id="6iy-EE-vdL.title">
-        <source>Swift ZHI</source>
-        <target>速知</target>
-        <note>Class = "UINavigationItem"; title = "Swift ZHI"; ObjectID = "6iy-EE-vdL";</note>
-      </trans-unit>
-      <trans-unit id="ROh-Y2-yuO.title">
-        <source>Swift ZHI</source>
-        <target>速知</target>
-        <note>Class = "UIBarButtonItem"; title = "Swift ZHI"; ObjectID = "ROh-Y2-yuO";</note>
-      </trans-unit>
-      <trans-unit id="t3t-UQ-hRR.text">
+      <trans-unit id="Gt5-Zn-vsE.text">
         <source>Title</source>
-        <target/>
-        <note>Class = "UILabel"; text = "Title"; ObjectID = "t3t-UQ-hRR";</note>
+        <note>Class = "UILabel"; text = "Title"; ObjectID = "Gt5-Zn-vsE";</note>
+      </trans-unit>
+      <trans-unit id="Sz8-Ml-p5c.title">
+        <source>Swift ZHI</source>
+        <note>Class = "UIBarButtonItem"; title = "Swift ZHI"; ObjectID = "Sz8-Ml-p5c";</note>
+      </trans-unit>
+      <trans-unit id="loV-SC-E0Y.text">
+        <source>Title</source>
+        <note>Class = "UILabel"; text = "Title"; ObjectID = "loV-SC-E0Y";</note>
+      </trans-unit>
+      <trans-unit id="qMw-ph-xNh.title">
+        <source>Comments</source>
+        <note>Class = "UIBarButtonItem"; title = "Comments"; ObjectID = "qMw-ph-xNh";</note>
+      </trans-unit>
+      <trans-unit id="u84-IW-9ED.title">
+        <source>Swift ZHI</source>
+        <note>Class = "UINavigationItem"; title = "Swift ZHI"; ObjectID = "u84-IW-9ED";</note>
       </trans-unit>
     </body>
   </file>
   <file original="SwiftDaily-ZhiHuTests/Info.plist" source-language="en" datatype="plaintext" target-language="zh-Hans">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="7.0" build-num="7A121l"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="6.4" build-num="6E35b"/>
     </header>
     <body>
       <trans-unit id="CFBundleName">
@@ -74,7 +79,7 @@
   </file>
   <file original="SwiftDaily-ZhiHuUITests/Info.plist" source-language="en" datatype="plaintext" target-language="zh-Hans">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="7.0" build-num="7A121l"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="6.4" build-num="6E35b"/>
     </header>
     <body>
       <trans-unit id="CFBundleName">
