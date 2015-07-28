@@ -19,6 +19,7 @@ class RealmNewsViewController: NewsViewController {
     private var token: NotificationToken?
 }
 
+// MARK: UI methods
 extension RealmNewsViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,14 @@ extension RealmNewsViewController {
                 let news = self.store.newsWithId(newsId) where newsId != self.loadedNewsId {
                 self.loadNews(news)
                 self.stopIndicator()
+            }
+        }
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showComments/Realm" {
+            if let commentsVC = segue.destinationViewController as? RealmCommentViewController {
+                commentsVC.newsId = newsId
             }
         }
     }
