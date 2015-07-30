@@ -25,6 +25,7 @@ class RealmCommentViewController: UIViewController {
         formatter.dateStyle = .ShortStyle
         return formatter
         }()
+    private let replyString = NSLocalizedString("Reply", comment: "Reply string in CommentView")
 }
 
 // MARK:
@@ -91,15 +92,46 @@ extension RealmCommentViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("CommentCell/TextOnly") as! UITableViewCell
         let comment = commentInSection(indexPath.section)
 
-        var content = comment.content
-        if let replyTo = comment.replyToComment {
-            content = "\n\n".join(["\(replyTo.authorName): \"\(replyTo.content)\"", content])
-        }
-
-        cell.textLabel?.text = content
+        cell.textLabel?.text = CommentContentFormatter(comment: comment).content
         cell.textLabel?.sizeToFit()
         cell.sizeToFit()
         return cell
+    }
+
+    struct CommentContentFormatter {
+        let comment: Comment
+        let replyToComment: ReplyToComment?
+        static let replyString = NSLocalizedString("Reply", comment: "Reply string in CommentView")
+        static let newlinesBetweenCommentAndReply = "\n\n"
+
+        init(comment: Comment) {
+            self.comment = comment
+            self.replyToComment = comment.replyToComment
+        }
+
+        var content: String {
+            get {
+                return replyContentStringWithNewlines + commentContentString
+            }
+        }
+
+        var commentContentString: String { get { return comment.content } }
+
+        var replyContentStringWithNewlines: String {
+            get {
+                if replyToComment == nil {
+                    return ""
+                }
+
+                let content = replyAuthorString + ": " + replyCommentString
+
+                return CommentContentFormatter.replyString + " " + content + CommentContentFormatter.newlinesBetweenCommentAndReply
+            }
+        }
+
+        var replyCommentString: String { get { return replyToComment?.content ?? "" } }
+
+        var replyAuthorString: String { get { return replyToComment?.authorName ?? "" } }
     }
 
     func commentInSection(section: Int) -> Comment {
