@@ -224,7 +224,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CommentCell" textLabel="Gt5-Zn-vsE" style="IBUITableViewCellStyleDefault" id="TON-Dc-kHh">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CommentCell/TextOnly" textLabel="Gt5-Zn-vsE" style="IBUITableViewCellStyleDefault" id="TON-Dc-kHh">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TON-Dc-kHh" id="IL4-MX-Lgr">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -267,6 +267,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WQZ-jW-Jsq"/>
+        <segue reference="2g6-QC-Lpx"/>
     </inferredMetricsTieBreakers>
 </document>

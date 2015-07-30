@@ -78,7 +78,7 @@ extension RealmCommentViewController: UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CommentCell") as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("CommentCell/TextOnly") as! UITableViewCell
         let comment = commentAtIndexPath(indexPath)
 
         var content = ": ".join([comment.authorName, comment.content])
