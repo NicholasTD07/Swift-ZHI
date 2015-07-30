@@ -65,8 +65,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="L39-5y-pxJ">
-                                                    <rect key="frame" x="294" y="27" width="20" height="20"/>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="L39-5y-pxJ">
+                                                    <rect key="frame" x="290" y="27" width="20" height="20"/>
                                                     <animations/>
                                                 </activityIndicatorView>
                                             </subviews>
