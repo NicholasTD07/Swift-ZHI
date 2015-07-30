@@ -42,6 +42,8 @@
 		757FEBEF1B3AD16C00B4F327 /* Argo.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBE31B3AD0C800B4F327 /* Argo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		757FEBF01B3AD16C00B4F327 /* Runes.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBE41B3AD0C800B4F327 /* Runes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		757FEBF11B3AD16D00B4F327 /* SwiftDailyAPI.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBE51B3AD0C800B4F327 /* SwiftDailyAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		758872E71B6A117F006ECF61 /* CommentSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758872E61B6A117F006ECF61 /* CommentSectionHeaderView.xib */; };
+		758872E91B6A12FC006ECF61 /* CommentSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758872E81B6A12FC006ECF61 /* CommentSectionHeaderView.swift */; };
 		75AE08F21B65B12000462941 /* RealmCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AE08F11B65B12000462941 /* RealmCommentViewController.swift */; };
 		75B5F5FC1B44BA18001E1461 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75D98CA81B44B93B001B4F9C /* InfoPlist.strings */; };
 		75B5F5FD1B44BA8A001E1461 /* DailySectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBB81B3ACFE200B4F327 /* DailySectionHeaderView.xib */; };
@@ -125,6 +127,8 @@
 		757FEBE31B3AD0C800B4F327 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
 		757FEBE41B3AD0C800B4F327 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		757FEBE51B3AD0C800B4F327 /* SwiftDailyAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDailyAPI.framework; path = Carthage/Build/iOS/SwiftDailyAPI.framework; sourceTree = "<group>"; };
+		758872E61B6A117F006ECF61 /* CommentSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentSectionHeaderView.xib; sourceTree = "<group>"; };
+		758872E81B6A12FC006ECF61 /* CommentSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentSectionHeaderView.swift; sourceTree = "<group>"; };
 		75AE08F11B65B12000462941 /* RealmCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmCommentViewController.swift; sourceTree = "<group>"; };
 		75B5F5F71B44B97D001E1461 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		75B5F5F81B44B97D001E1461 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -302,6 +306,7 @@
 			children = (
 				757FEBB81B3ACFE200B4F327 /* DailySectionHeaderView.xib */,
 				757FEBB91B3ACFE200B4F327 /* LaunchScreen.xib */,
+				758872E61B6A117F006ECF61 /* CommentSectionHeaderView.xib */,
 			);
 			path = Nibs;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 			children = (
 				757FEBC51B3ACFE200B4F327 /* DailySectionHeaderView.swift */,
 				757FEBC61B3ACFE200B4F327 /* LoadingCell.swift */,
+				758872E81B6A12FC006ECF61 /* CommentSectionHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -475,6 +481,7 @@
 			files = (
 				75B5F5FD1B44BA8A001E1461 /* DailySectionHeaderView.xib in Resources */,
 				75B5F5FC1B44BA18001E1461 /* InfoPlist.strings in Resources */,
+				758872E71B6A117F006ECF61 /* CommentSectionHeaderView.xib in Resources */,
 				757FEBD41B3ACFE200B4F327 /* Images.xcassets in Resources */,
 				75B5F60A1B44BF2C001E1461 /* Localizable.strings in Resources */,
 				757FEBDA1B3ACFE200B4F327 /* Settings.bundle in Resources */,
@@ -553,6 +560,7 @@
 				75CDD20C1B3BBB4A00343CAA /* DailyRealmStore.swift in Sources */,
 				757FEBC91B3ACFE200B4F327 /* AppDelegate.swift in Sources */,
 				7529FA421B3E5EF5007D54A8 /* NewsViewController.swift in Sources */,
+				758872E91B6A12FC006ECF61 /* CommentSectionHeaderView.swift in Sources */,
 				75CDD20E1B3BBD3900343CAA /* RealmHelpers.swift in Sources */,
 				757FEBD11B3ACFE200B4F327 /* RealmModels.swift in Sources */,
 				75EDD0C91B55340300C3DC41 /* UserPreferences.swift in Sources */,

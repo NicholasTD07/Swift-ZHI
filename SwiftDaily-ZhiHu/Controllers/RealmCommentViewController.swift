@@ -18,6 +18,12 @@ class RealmCommentViewController: UIViewController {
 
     private let api = DailyAPI(completionQueue: dispatch_get_main_queue())
     private var comments: [Comment] = []
+    private var dateFormatter: NSDateFormatter = {
+        let formatter = NSDateFormatter()
+        formatter.timeStyle = .ShortStyle
+        formatter.dateStyle = .ShortStyle
+        return formatter
+        }()
 }
 
 // MARK:
@@ -53,6 +59,9 @@ extension RealmCommentViewController {
 
         refreshControl.addTarget(self, action: "loadNewsComments", forControlEvents: .ValueChanged)
         tableView.addSubview(refreshControl)
+
+        tableView.registerNib(UINib(nibName: "CommentSectionHeaderView", bundle: nil),
+            forHeaderFooterViewReuseIdentifier: "CommentSectionHeaderView")
     }
 
     func beginRefreshing() {
@@ -70,18 +79,18 @@ extension RealmCommentViewController {
 // MARK: Data Source
 extension RealmCommentViewController: UITableViewDataSource {
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return comments.count
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return comments.count
+        return 1
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CommentCell/TextOnly") as! UITableViewCell
-        let comment = commentAtIndexPath(indexPath)
+        let comment = commentInSection(indexPath.section)
 
-        var content = ": ".join([comment.authorName, comment.content])
+        var content = comment.content
         if let replyTo = comment.replyToComment {
             content = "\n\n".join(["\(replyTo.authorName): \"\(replyTo.content)\"", content])
         }
@@ -92,10 +101,22 @@ extension RealmCommentViewController: UITableViewDataSource {
         return cell
     }
 
-    func commentAtIndexPath(indexPath: NSIndexPath) -> Comment {
-        return comments[indexPath.row]
+    func commentInSection(section: Int) -> Comment {
+        return comments[section]
     }
 }
 
 extension RealmCommentViewController: UITableViewDelegate {
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if let header = tableView.dequeueReusableHeaderFooterViewWithIdentifier("CommentSectionHeaderView") as? CommentSectionHeaderView {
+            let comment = commentInSection(section)
+
+            header.usernameLabel.text = comment.authorName
+            header.repliedAtLabel.text = dateFormatter.stringFromDate(comment.repliedAt)
+
+            return header
+        } else {
+            return nil
+        }
+    }
 }
