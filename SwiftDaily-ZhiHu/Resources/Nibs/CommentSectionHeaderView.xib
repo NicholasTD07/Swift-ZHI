@@ -12,28 +12,29 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="loo-5v-Kci">
-                    <rect key="frame" x="20" y="0.0" width="88" height="88"/>
+                    <rect key="frame" x="20" y="8" width="72" height="72"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="loo-5v-Kci" secondAttribute="height" multiplier="1:1" id="m4f-bx-4EX"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="60"/>
+                            <integer key="value" value="9"/>
                         </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qD9-Ly-Dbj">
-                    <rect key="frame" x="116" y="35" width="38.5" height="17"/>
+                    <rect key="frame" x="100" y="35" width="38.5" height="17"/>
                     <animations/>
                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lac-36-zzP">
-                    <rect key="frame" x="554" y="34" width="38" height="19.5"/>
+                    <rect key="frame" x="559" y="36" width="33" height="16"/>
                     <animations/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -44,10 +45,10 @@
                 <constraint firstItem="qD9-Ly-Dbj" firstAttribute="leading" secondItem="loo-5v-Kci" secondAttribute="trailing" constant="8" id="9Te-RH-G5B"/>
                 <constraint firstAttribute="trailing" secondItem="Lac-36-zzP" secondAttribute="trailing" constant="8" id="HpI-wd-Kom"/>
                 <constraint firstAttribute="centerY" secondItem="qD9-Ly-Dbj" secondAttribute="centerY" constant="0.5" id="Vbz-r7-a01"/>
-                <constraint firstItem="loo-5v-Kci" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Wbm-dG-ioD"/>
-                <constraint firstAttribute="bottom" secondItem="loo-5v-Kci" secondAttribute="bottom" id="fsm-kl-elb"/>
+                <constraint firstItem="loo-5v-Kci" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="Wbm-dG-ioD"/>
+                <constraint firstAttribute="bottom" secondItem="loo-5v-Kci" secondAttribute="bottom" constant="8" id="fsm-kl-elb"/>
                 <constraint firstAttribute="centerY" secondItem="Lac-36-zzP" secondAttribute="centerY" constant="0.5" id="k0X-1i-lgJ"/>
-                <constraint firstItem="loo-5v-Kci" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mmw-Hr-i0S"/>
+                <constraint firstItem="loo-5v-Kci" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="mmw-Hr-i0S"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

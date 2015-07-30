@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftDailyAPI
+import Haneke
 
 // TODO: Save comments in Realm
 class RealmCommentViewController: UIViewController {
@@ -111,8 +112,22 @@ extension RealmCommentViewController: UITableViewDelegate {
         if let header = tableView.dequeueReusableHeaderFooterViewWithIdentifier("CommentSectionHeaderView") as? CommentSectionHeaderView {
             let comment = commentInSection(section)
 
+            // FIX/HACK: cant create a header view with `contentView` like the one in the xib for UITableViewCell
+            header.backgroundView = {
+                let view = UIView(frame: header.bounds)
+                view.backgroundColor = tableView.backgroundColor
+                return view
+            }()
+
             header.usernameLabel.text = comment.authorName
             header.repliedAtLabel.text = dateFormatter.stringFromDate(comment.repliedAt)
+
+            if let url = header.avatarURL where url != comment.avatarURL {
+                header.avatarImageView.image = nil
+                header.avatarImageView.hnk_cancelSetImage()
+            }
+
+            header.avatarImageView.hnk_setImageFromURL(comment.avatarURL)
 
             return header
         } else {
