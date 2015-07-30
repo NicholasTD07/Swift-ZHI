@@ -116,7 +116,7 @@ extension RealmCommentViewController: UITableViewDelegate {
             header.backgroundView = {
                 let view = UIView(frame: header.bounds)
                 view.backgroundColor = tableView.backgroundColor
-                view.alpha = 0.95
+                view.alpha = 0.96
                 return view
             }()
 

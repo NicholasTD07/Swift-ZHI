@@ -24,14 +24,14 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qD9-Ly-Dbj">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qD9-Ly-Dbj">
                     <rect key="frame" x="100" y="35" width="38.5" height="17"/>
                     <animations/>
                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lac-36-zzP">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lac-36-zzP">
                     <rect key="frame" x="559" y="36" width="33" height="16"/>
                     <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -47,8 +47,9 @@
                 <constraint firstAttribute="centerY" secondItem="qD9-Ly-Dbj" secondAttribute="centerY" constant="0.5" id="Vbz-r7-a01"/>
                 <constraint firstItem="loo-5v-Kci" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="Wbm-dG-ioD"/>
                 <constraint firstAttribute="bottom" secondItem="loo-5v-Kci" secondAttribute="bottom" constant="8" id="fsm-kl-elb"/>
-                <constraint firstAttribute="centerY" secondItem="Lac-36-zzP" secondAttribute="centerY" constant="0.5" id="k0X-1i-lgJ"/>
+                <constraint firstAttribute="centerY" secondItem="Lac-36-zzP" secondAttribute="centerY" id="k0X-1i-lgJ"/>
                 <constraint firstItem="loo-5v-Kci" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="mmw-Hr-i0S"/>
+                <constraint firstItem="Lac-36-zzP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qD9-Ly-Dbj" secondAttribute="trailing" constant="20" id="o32-2b-Sok"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
