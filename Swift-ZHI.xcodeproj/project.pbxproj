@@ -549,7 +549,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd $PROJECT_DIR && find . -name \\*.swift | xargs genstrings -o SwiftDaily-ZhiHu/Resources/Base.lproj/";
+			shellScript = "cd $PROJECT_DIR && find ./SwiftDaily-Zhihu -name \\*.swift | xargs genstrings -o SwiftDaily-ZhiHu/Resources/Base.lproj/";
 		};
 /* End PBXShellScriptBuildPhase section */
 
