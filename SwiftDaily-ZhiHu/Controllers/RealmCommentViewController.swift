@@ -92,7 +92,7 @@ extension RealmCommentViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("CommentCell/TextOnly") as! UITableViewCell
         let comment = commentInSection(indexPath.section)
 
-        cell.textLabel?.text = CommentContentFormatter(comment: comment).content
+        cell.textLabel?.attributedText = CommentContentFormatter(comment: comment).attributedContent
         cell.textLabel?.sizeToFit()
         cell.sizeToFit()
         return cell
@@ -109,6 +109,35 @@ extension RealmCommentViewController: UITableViewDataSource {
             self.replyToComment = comment.replyToComment
         }
 
+        var attributedContent: NSAttributedString {
+            get {
+                let attributedContent = NSMutableAttributedString(string: content)
+                let systemFontSize = UIFont.systemFontSize()
+
+                attributedContent.addAttributes(
+                    [
+                        NSForegroundColorAttributeName: UIColor.grayColor(),
+                        NSFontAttributeName: UIFont.systemFontOfSize(systemFontSize - 1)
+                    ],
+                    range: rangeOfReplyContentWithNewlines
+                )
+                attributedContent.addAttributes(
+                    [NSFontAttributeName: UIFont.boldSystemFontOfSize(systemFontSize)],
+                    range: rangeOfReplyAuthor
+                )
+
+                return attributedContent
+            }
+        }
+
+        var rangeOfReplyAuthor: NSRange {
+            get { return (content as NSString).rangeOfString(replyAuthorString) }
+        }
+
+        var rangeOfReplyContentWithNewlines: NSRange {
+            get { return (content as NSString).rangeOfString(replyContentString) }
+        }
+
         var content: String {
             get {
                 return replyContentStringWithNewlines + commentContentString
@@ -123,11 +152,11 @@ extension RealmCommentViewController: UITableViewDataSource {
                     return ""
                 }
 
-                let content = replyAuthorString + ": " + replyCommentString
-
-                return CommentContentFormatter.replyString + " " + content + CommentContentFormatter.newlinesBetweenCommentAndReply
+                return CommentContentFormatter.replyString + " " + replyContentString + CommentContentFormatter.newlinesBetweenCommentAndReply
             }
         }
+
+        var replyContentString: String { get { return replyAuthorString + "\n\n" + replyCommentString} }
 
         var replyCommentString: String { get { return replyToComment?.content ?? "" } }
 
