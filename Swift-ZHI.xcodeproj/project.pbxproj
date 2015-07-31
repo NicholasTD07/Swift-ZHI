@@ -44,6 +44,7 @@
 		758872E91B6A12FC006ECF61 /* CommentSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758872E81B6A12FC006ECF61 /* CommentSectionHeaderView.swift */; };
 		758872EB1B6A2C59006ECF61 /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758872EA1B6A2C59006ECF61 /* Haneke.framework */; };
 		758872EC1B6A2C68006ECF61 /* Haneke.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 758872EA1B6A2C59006ECF61 /* Haneke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		758872EE1B6B1026006ECF61 /* CommentContentFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758872ED1B6B1026006ECF61 /* CommentContentFormatter.swift */; };
 		75AE08F21B65B12000462941 /* RealmCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AE08F11B65B12000462941 /* RealmCommentViewController.swift */; };
 		75B5F5FC1B44BA18001E1461 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75D98CA81B44B93B001B4F9C /* InfoPlist.strings */; };
 		75B5F5FD1B44BA8A001E1461 /* DailySectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBB81B3ACFE200B4F327 /* DailySectionHeaderView.xib */; };
@@ -131,6 +132,7 @@
 		758872E61B6A117F006ECF61 /* CommentSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentSectionHeaderView.xib; sourceTree = "<group>"; };
 		758872E81B6A12FC006ECF61 /* CommentSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentSectionHeaderView.swift; sourceTree = "<group>"; };
 		758872EA1B6A2C59006ECF61 /* Haneke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Haneke.framework; path = Carthage/Build/iOS/Haneke.framework; sourceTree = "<group>"; };
+		758872ED1B6B1026006ECF61 /* CommentContentFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentContentFormatter.swift; sourceTree = "<group>"; };
 		75AE08F11B65B12000462941 /* RealmCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmCommentViewController.swift; sourceTree = "<group>"; };
 		75B5F5F71B44B97D001E1461 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		75B5F5F81B44B97D001E1461 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 				751788E81B3D47E700526889 /* DailyDates.swift */,
 				75CDD20D1B3BBD3900343CAA /* RealmHelpers.swift */,
 				75EF90F51B50E2D4006D008B /* Delay.swift */,
+				758872ED1B6B1026006ECF61 /* CommentContentFormatter.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 				75CDD20E1B3BBD3900343CAA /* RealmHelpers.swift in Sources */,
 				757FEBD11B3ACFE200B4F327 /* RealmModels.swift in Sources */,
 				75EDD0C91B55340300C3DC41 /* UserPreferences.swift in Sources */,
+				758872EE1B6B1026006ECF61 /* CommentContentFormatter.swift in Sources */,
 				757FEBDF1B3ACFE200B4F327 /* DailySectionHeaderView.swift in Sources */,
 				75AE08F21B65B12000462941 /* RealmCommentViewController.swift in Sources */,
 				75EF90F61B50E2D4006D008B /* Delay.swift in Sources */,
