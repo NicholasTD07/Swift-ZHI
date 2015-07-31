@@ -33,6 +33,11 @@
         <target>下载并保存</target>
         <note>Download button in DailyView</note>
       </trans-unit>
+      <trans-unit id="Reply">
+        <source>Reply</source>
+        <target>回复</target>
+        <note>Reply string in CommentView</note>
+      </trans-unit>
     </body>
   </file>
   <file original="SwiftDaily-ZhiHu/Resources/Storyboards/Base.lproj/Main.storyboard" source-language="en" datatype="plaintext" target-language="zh-Hans">

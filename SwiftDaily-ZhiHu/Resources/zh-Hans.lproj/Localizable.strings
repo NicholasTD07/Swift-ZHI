@@ -4,3 +4,6 @@
 /* Download button in DailyView */
 "Download & Save" = "下载并保存";
 
+/* Reply string in CommentView */
+"Reply" = "回复";
+
