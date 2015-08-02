@@ -25,7 +25,6 @@ class RealmCommentViewController: UIViewController {
         formatter.dateStyle = .ShortStyle
         return formatter
         }()
-    private let replyString = NSLocalizedString("Reply", comment: "Reply string in CommentView")
 }
 
 // MARK:
