@@ -9,16 +9,24 @@
 import UIKit
 import SwiftDailyAPI
 import Haneke
+import RealmSwift
 
-// TODO: Save comments in Realm
+// TODO: Load more short comments
 class RealmCommentViewController: UIViewController {
-    var newsId: Int?
+    var newsId: Int!
 
     @IBOutlet weak var tableView: UITableView!
     let refreshControl = UIRefreshControl()
 
-    private let api = DailyAPI(completionQueue: dispatch_get_main_queue())
-    private var comments: [Comment] = []
+    private var store = DailyRealmStore()
+    private var token: NotificationToken?
+
+    private var comments: Results<CommentObject> {
+        get {
+            return store.commentsForNewsId(newsId).sorted("repliedAt", ascending: false)
+        }
+    }
+
     private var dateFormatter: NSDateFormatter = {
         let formatter = NSDateFormatter()
         formatter.timeStyle = .ShortStyle
@@ -31,22 +39,14 @@ class RealmCommentViewController: UIViewController {
 extension RealmCommentViewController {
     func loadNewsComments() {
         if let newsId = newsId { // TODO: Swift 2.0, guard
-            let handler: (Comments) -> Void = { self.loadNewsComments($0.comments) }
-
             beginRefreshing()
-
-            api.comments(newsId,
-                shortCommentsHandler: handler,
-                longCommentsHandler: handler
-            )
+            store.shortComments(forNewsId: newsId)
+            store.longComments(forNewsId: newsId)
         }
     }
 
-    func loadNewsComments(comments: [Comment]) {
-        self.comments.extend(comments)
-        self.comments.sort { $0.repliedAt < $1.repliedAt }
-        tableView.reloadData()
-        refreshControl.endRefreshing()
+    func commentInSection(section: Int) -> CommentObject {
+        return comments[section]
     }
 }
 
@@ -55,6 +55,18 @@ extension RealmCommentViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupUi()
+        setupRealm()
+    }
+
+    private func setupRealm() {
+        token = defaultRealm().addNotificationBlock { (_, _) in
+            self.tableView.reloadData()
+            self.refreshControl.endRefreshing()
+        }
+    }
+
+    private func setupUi() {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44
 
@@ -89,24 +101,20 @@ extension RealmCommentViewController: UITableViewDataSource {
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CommentCell/TextOnly") as! UITableViewCell
+
         let comment = commentInSection(indexPath.section)
 
         cell.textLabel?.attributedText = CommentContentFormatter(comment: comment).attributedContent
         cell.textLabel?.sizeToFit()
         cell.sizeToFit()
-        return cell
-    }
 
-    func commentInSection(section: Int) -> Comment {
-        return comments[section]
+        return cell
     }
 }
 
 extension RealmCommentViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if let header = tableView.dequeueReusableHeaderFooterViewWithIdentifier("CommentSectionHeaderView") as? CommentSectionHeaderView {
-            let comment = commentInSection(section)
-
             // FIX/HACK: cant create a header view with `contentView` like the one in the xib for UITableViewCell
             header.backgroundView = {
                 let view = UIView(frame: header.bounds)
@@ -115,12 +123,14 @@ extension RealmCommentViewController: UITableViewDelegate {
                 return view
             }()
 
+            let comment = commentInSection(section)
+
             header.usernameLabel.text = comment.authorName
             header.repliedAtLabel.text = dateFormatter.stringFromDate(comment.repliedAt)
 
             if let url = header.avatarURL where url != comment.avatarURL {
-                header.avatarImageView.image = nil
                 header.avatarImageView.hnk_cancelSetImage()
+                header.avatarImageView.image = nil
             }
 
             header.avatarImageView.hnk_setImageFromURL(comment.avatarURL)
