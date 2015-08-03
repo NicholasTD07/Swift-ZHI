@@ -52,20 +52,13 @@ extension DailyRealmStore {
 
     public func shortComments(forNewsId newsId: Int) {
         dailyAPI.shortComments(newsId) {
-            // NOTE: Wow, two different $0 in the same line.
-            //       I am a bit worried the compiler may get confused.
-            $0.comments.map {
-                self.addObject(CommentObject.from($0, forNewsId: newsId, isShortComment: true))
-            }
+            self.addShortComments(fromComments: $0, forNewsId: newsId)
         }
     }
 
     public func shortComments(forNewsId newsId: Int, beforeCommentId commentId: Int) {
         dailyAPI.shortComments(newsId, beforeCommentId: commentId) {
-            // NOTE: BAD CODE SMELL - Copy and paste from `shortComments(forNewsId:)`
-            $0.comments.map {
-                self.addObject(CommentObject.from($0, forNewsId: newsId, isShortComment: true))
-            }
+            self.addShortComments(fromComments: $0, forNewsId: newsId)
         }
     }
 
@@ -92,7 +85,13 @@ extension DailyRealmStore {
 
 // MARK: Private methods
 extension DailyRealmStore {
-    private func addDaily(daily: Daily, toRealm realm: Realm = defaultRealm()) {
+    private func addShortComments(fromComments comments: Comments, forNewsId newsId: Int) {
+        comments.comments.map {
+            self.addObject(CommentObject.from($0, forNewsId: newsId, isShortComment: true))
+        }
+    }
+
+    private func addDaily(daily: Daily) {
         addObject(DailyObject.from(daily))
     }
 
