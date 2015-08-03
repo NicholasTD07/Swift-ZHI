@@ -42,6 +42,33 @@ extension DailyRealmStore {
         dailyAPI.news(newsId) { self.addObject(NewsObject.from($0)) }
     }
 
+    public func longComments(forNewsId newsId: Int) {
+        dailyAPI.longComments(newsId) {
+            $0.comments.map {
+                self.addObject(CommentObject.from($0, forNewsId: newsId, isShortComment: false))
+            }
+        }
+    }
+
+    public func shortComments(forNewsId newsId: Int) {
+        dailyAPI.shortComments(newsId) {
+            // NOTE: Wow, two different $0 in the same line.
+            //       I am a bit worried the compiler may get confused.
+            $0.comments.map {
+                self.addObject(CommentObject.from($0, forNewsId: newsId, isShortComment: true))
+            }
+        }
+    }
+
+    public func shortComments(forNewsId newsId: Int, beforeCommentId commentId: Int) {
+        dailyAPI.shortComments(newsId, beforeCommentId: commentId) {
+            // NOTE: BAD CODE SMELL - Copy and paste from `shortComments(forNewsId:)`
+            $0.comments.map {
+                self.addObject(CommentObject.from($0, forNewsId: newsId, isShortComment: true))
+            }
+        }
+    }
+
     // MARK: Deletion
     public func deleteNewsWithId(newsId: Int, inRealm realm: Realm = defaultRealm()) {
         if let news = newsWithId(newsId) {
