@@ -10,12 +10,12 @@ import UIKit
 import SwiftDailyAPI
 
 struct CommentContentFormatter {
-    let comment: Comment
-    let replyToComment: ReplyToComment?
+    let comment: CommentObject
+    let replyToComment: ReplyToCommentObject?
     static let replyString = NSLocalizedString("Reply", comment: "Reply string in CommentView")
     static let newlinesBetweenCommentAndReply = "\n\n"
 
-    init(comment: Comment) {
+    init(comment: CommentObject) {
         self.comment = comment
         self.replyToComment = comment.replyToComment
     }
