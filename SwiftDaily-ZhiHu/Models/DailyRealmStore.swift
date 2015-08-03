@@ -81,6 +81,12 @@ extension DailyRealmStore {
         let results = realm.objects(NewsObject).filter("newsId == \(newsId)")
         return results.first
     }
+
+    public func commentsForNewsId(newsId: Int) -> Results<CommentObject> {
+        let results = realm.objects(CommentObject).filter("newsId == \(newsId)")
+        return results
+    }
+
 }
 
 // MARK: Private methods
