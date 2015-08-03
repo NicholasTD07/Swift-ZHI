@@ -119,8 +119,10 @@ public class ReplyToCommentObject: Object {
 }
 
 public class CommentObject: Object {
+    // MARK: vars exist only in Realm
+    dynamic public var newsId: Int = 0
     dynamic public var isShortComment: Bool = true
-
+    // MARK: vars in JSON
     dynamic public var commentId: Int = 0
     dynamic public var authorName: String = ""
     dynamic public var content: String = ""
@@ -133,7 +135,7 @@ public class CommentObject: Object {
         return "commentId"
     }
 
-    convenience public init(commentId: Int , authorName: String , content: String , likes: Int , repliedAt: NSDate , avatarURL: NSURL , replyToComment: ReplyToComment?) {
+    convenience public init(commentId: Int , authorName: String , content: String , likes: Int , repliedAt: NSDate , avatarURL: NSURL , replyToComment: ReplyToComment?, newsId: Int, isShortComment: Bool) {
         self.init()
         self.commentId = commentId
         self.authorName = authorName
@@ -144,7 +146,8 @@ public class CommentObject: Object {
         self.replyToComment = ReplyToCommentObject.from(replyToComment)
     }
 
-    static public func from(comment: Comment) -> Self {
-        return self.init(commentId: comment.commentId, authorName: comment.authorName , content: comment.content , likes: comment.likes , repliedAt: comment.repliedAt, avatarURL: comment.avatarURL, replyToComment: comment.replyToComment)
+    // Default to short comment.
+    static public func from(comment: Comment, forNewsId newsId: Int, isShortComment: Bool) -> Self {
+        return self.init(commentId: comment.commentId, authorName: comment.authorName , content: comment.content , likes: comment.likes , repliedAt: comment.repliedAt, avatarURL: comment.avatarURL, replyToComment: comment.replyToComment, newsId: newsId, isShortComment: isShortComment)
     }
 }
