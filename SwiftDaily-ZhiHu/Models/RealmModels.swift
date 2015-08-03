@@ -128,8 +128,12 @@ public class CommentObject: Object {
     dynamic public var content: String = ""
     dynamic public var likes: Int = 0
     dynamic public var repliedAt: NSDate = NSDate()
-    dynamic public var avatarURL: NSURL = NSURL(string: "https://www.google.com")!
+    dynamic public var avatarURLString: String = ""
     dynamic public var replyToComment: ReplyToCommentObject?
+
+    public var avatarURL: NSURL {
+        get { return NSURL(string: avatarURLString)! }
+    }
 
     override static public func primaryKey() -> String? {
         return "commentId"
@@ -137,12 +141,15 @@ public class CommentObject: Object {
 
     convenience public init(commentId: Int , authorName: String , content: String , likes: Int , repliedAt: NSDate , avatarURL: NSURL , replyToComment: ReplyToComment?, newsId: Int, isShortComment: Bool) {
         self.init()
+        self.newsId = newsId
+        self.isShortComment = isShortComment
+
         self.commentId = commentId
         self.authorName = authorName
         self.content = content
         self.likes = likes
         self.repliedAt = repliedAt
-        self.avatarURL = avatarURL
+        self.avatarURLString = avatarURL.absoluteString!
         self.replyToComment = ReplyToCommentObject.from(replyToComment)
     }
 
