@@ -87,6 +87,10 @@ extension DailyRealmStore {
         return results
     }
 
+    public func shortCommentsForNewsId(newsId: Int) -> Results<CommentObject> {
+        let results = realm.objects(CommentObject).filter("newsId == \(newsId) AND isShortComment == TRUE")
+        return results
+    }
 }
 
 // MARK: Private methods

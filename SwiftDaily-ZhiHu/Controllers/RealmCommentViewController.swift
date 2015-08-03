@@ -11,7 +11,6 @@ import SwiftDailyAPI
 import Haneke
 import RealmSwift
 
-// TODO: Load more short comments
 class RealmCommentViewController: UIViewController {
     var newsId: Int!
 
@@ -47,6 +46,17 @@ extension RealmCommentViewController {
 
     func commentInSection(section: Int) -> CommentObject {
         return comments[section]
+    }
+}
+
+// MARK: DidScrollToEnd
+extension RealmCommentViewController: UIScrollViewDelegate {
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        let didComeToTheEnd = scrollView.contentOffset.y + scrollView.frame.size.height >= scrollView.contentSize.height
+        if let lastShortComment = store.shortCommentsForNewsId(newsId).sorted("commentId", ascending: true).first where didComeToTheEnd {
+            // TODO: There could be a test for whether this is the correct way to get the last comment or not
+            store.shortComments(forNewsId: newsId, beforeCommentId: lastShortComment.commentId)
+        }
     }
 }
 
