@@ -20,9 +20,13 @@ class RealmCommentViewController: UIViewController {
     private var store = DailyRealmStore()
     private var token: NotificationToken?
 
+    private var commentsSortDescriptors = [
+        SortDescriptor(property: "isShortComment", ascending: true),
+        SortDescriptor(property: "repliedAt", ascending: false)
+    ]
     private var comments: Results<CommentObject> {
         get {
-            return store.commentsForNewsId(newsId).sorted("repliedAt", ascending: false)
+            return store.commentsForNewsId(newsId).sorted(self.commentsSortDescriptors)
         }
     }
 
@@ -142,6 +146,8 @@ extension RealmCommentViewController: UITableViewDelegate {
                 header.avatarImageView.hnk_cancelSetImage()
                 header.avatarImageView.image = nil
             }
+
+            header.longCommentIndicator.hidden = comment.isShortComment
 
             header.avatarImageView.hnk_setImageFromURL(comment.avatarURL)
 
