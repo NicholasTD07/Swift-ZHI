@@ -12,6 +12,7 @@ class CommentSectionHeaderView: UITableViewHeaderFooterView {
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var repliedAtLabel: UILabel!
+    @IBOutlet weak var longCommentIndicator: UILabel!
 
     var avatarURL: NSURL?
 }
