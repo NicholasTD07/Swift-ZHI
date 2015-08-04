@@ -36,7 +36,7 @@ extension RealmNewsViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showComments/Realm" {
             if let commentsVC = segue.destinationViewController as? RealmCommentViewController {
-                commentsVC.newsId = newsId
+                commentsVC.newsId = newsId ?? preferences.lastReadNewsId
             }
         }
     }
