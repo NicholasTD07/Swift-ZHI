@@ -91,9 +91,9 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Vue-dk-8lr" secondAttribute="trailing" constant="-16" id="d3V-Dd-GgX"/>
+                            <constraint firstAttribute="trailing" secondItem="Vue-dk-8lr" secondAttribute="trailing" id="d3V-Dd-GgX"/>
                             <constraint firstItem="Vue-dk-8lr" firstAttribute="top" secondItem="zaX-ga-b3c" secondAttribute="bottom" id="fBl-lo-BPV"/>
-                            <constraint firstItem="Vue-dk-8lr" firstAttribute="leading" secondItem="8Wz-GP-50q" secondAttribute="leadingMargin" constant="-16" id="qNu-VA-aa9"/>
+                            <constraint firstItem="Vue-dk-8lr" firstAttribute="leading" secondItem="8Wz-GP-50q" secondAttribute="leading" id="qNu-VA-aa9"/>
                             <constraint firstItem="aM3-nY-ibz" firstAttribute="top" secondItem="Vue-dk-8lr" secondAttribute="bottom" id="v9A-CX-iJ0"/>
                         </constraints>
                     </view>
@@ -181,8 +181,8 @@
                             <constraint firstItem="Cn8-VY-bcJ" firstAttribute="top" secondItem="zi4-3w-F0M" secondAttribute="bottom" id="10P-g6-pBZ"/>
                             <constraint firstItem="UU3-xc-oC9" firstAttribute="top" secondItem="Cn8-VY-bcJ" secondAttribute="bottom" id="9Kp-pw-jtD"/>
                             <constraint firstItem="ERg-xu-EGE" firstAttribute="centerY" secondItem="Cn8-VY-bcJ" secondAttribute="centerY" id="BUn-gh-8Fo"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="Cn8-VY-bcJ" secondAttribute="leading" constant="16" id="OFz-gf-EXf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Cn8-VY-bcJ" secondAttribute="trailing" constant="-16" id="OUP-sn-OER"/>
+                            <constraint firstAttribute="leading" secondItem="Cn8-VY-bcJ" secondAttribute="leading" id="OFz-gf-EXf"/>
+                            <constraint firstAttribute="trailing" secondItem="Cn8-VY-bcJ" secondAttribute="trailing" id="OUP-sn-OER"/>
                             <constraint firstItem="ERg-xu-EGE" firstAttribute="centerX" secondItem="Cn8-VY-bcJ" secondAttribute="centerX" id="w8p-g8-WmD"/>
                         </constraints>
                     </view>
@@ -252,8 +252,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ycc-DR-PVe" firstAttribute="top" secondItem="cDC-3u-Xg6" secondAttribute="topMargin" id="Pql-Wb-BSe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ycc-DR-PVe" secondAttribute="trailing" constant="-16" id="SOh-9Y-D3k"/>
-                            <constraint firstItem="ycc-DR-PVe" firstAttribute="leading" secondItem="cDC-3u-Xg6" secondAttribute="leadingMargin" constant="-16" id="fZz-8C-xI2"/>
+                            <constraint firstAttribute="trailing" secondItem="ycc-DR-PVe" secondAttribute="trailing" id="SOh-9Y-D3k"/>
+                            <constraint firstItem="ycc-DR-PVe" firstAttribute="leading" secondItem="cDC-3u-Xg6" secondAttribute="leading" id="fZz-8C-xI2"/>
                             <constraint firstItem="CID-w4-EDT" firstAttribute="top" secondItem="ycc-DR-PVe" secondAttribute="bottom" id="w1E-gG-GSm"/>
                         </constraints>
                     </view>
