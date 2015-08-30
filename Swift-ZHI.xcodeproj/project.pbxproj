@@ -20,7 +20,6 @@
 		7571839E1B4418ED00E345B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757183A01B4418ED00E345B3 /* Main.storyboard */; };
 		757183A51B441CDA00E345B3 /* HideNavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757183A41B441CDA00E345B3 /* HideNavBarViewController.swift */; };
 		757FEB891B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEB881B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift */; };
-		757FEB941B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEB931B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift */; };
 		757FEBC91B3ACFE200B4F327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA51B3ACFE100B4F327 /* AppDelegate.swift */; };
 		757FEBCB1B3ACFE200B4F327 /* HidesHairLineUnderNavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA71B3ACFE100B4F327 /* HidesHairLineUnderNavBarViewController.swift */; };
 		757FEBCD1B3ACFE200B4F327 /* RealmDailyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA91B3ACFE100B4F327 /* RealmDailyTableViewController.swift */; };
@@ -52,20 +51,12 @@
 		75CDD20C1B3BBB4A00343CAA /* DailyRealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CDD20B1B3BBB4A00343CAA /* DailyRealmStore.swift */; };
 		75CDD20E1B3BBD3900343CAA /* RealmHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CDD20D1B3BBD3900343CAA /* RealmHelpers.swift */; };
 		75D98CAB1B44B93C001B4F9C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75D98CAD1B44B93C001B4F9C /* InfoPlist.strings */; };
-		75D98CB01B44B93C001B4F9C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75D98CB21B44B93C001B4F9C /* InfoPlist.strings */; };
 		75EDD0C91B55340300C3DC41 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EDD0C81B55340300C3DC41 /* UserPreferences.swift */; };
 		75EF90F61B50E2D4006D008B /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EF90F51B50E2D4006D008B /* Delay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		757FEB851B3ACF5600B4F327 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 757FEB681B3ACF5600B4F327 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 757FEB6F1B3ACF5600B4F327;
-			remoteInfo = "SwiftDaily-ZhiHu";
-		};
-		757FEB901B3ACF5600B4F327 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 757FEB681B3ACF5600B4F327 /* Project object */;
 			proxyType = 1;
@@ -109,7 +100,6 @@
 		757FEB841B3ACF5600B4F327 /* Swift-ZHITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift-ZHITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		757FEB881B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDaily_ZhiHuTests.swift; sourceTree = "<group>"; };
 		757FEB8A1B3ACF5600B4F327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		757FEB8F1B3ACF5600B4F327 /* Swift-ZHITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift-ZHITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		757FEB931B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDaily_ZhiHuUITests.swift; sourceTree = "<group>"; };
 		757FEB951B3ACF5600B4F327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		757FEBA51B3ACFE100B4F327 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -178,13 +168,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		757FEB8C1B3ACF5600B4F327 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -204,7 +187,6 @@
 			children = (
 				757FEB701B3ACF5600B4F327 /* Swift-ZHI.app */,
 				757FEB841B3ACF5600B4F327 /* Swift-ZHITests.xctest */,
-				757FEB8F1B3ACF5600B4F327 /* Swift-ZHITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -418,24 +400,6 @@
 			productReference = 757FEB841B3ACF5600B4F327 /* Swift-ZHITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		757FEB8E1B3ACF5600B4F327 /* Swift-ZHIUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 757FEB9E1B3ACF5600B4F327 /* Build configuration list for PBXNativeTarget "Swift-ZHIUITests" */;
-			buildPhases = (
-				757FEB8B1B3ACF5600B4F327 /* Sources */,
-				757FEB8C1B3ACF5600B4F327 /* Frameworks */,
-				757FEB8D1B3ACF5600B4F327 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				757FEB911B3ACF5600B4F327 /* PBXTargetDependency */,
-			);
-			name = "Swift-ZHIUITests";
-			productName = "SwiftDaily-ZhiHuUITests";
-			productReference = 757FEB8F1B3ACF5600B4F327 /* Swift-ZHITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -450,10 +414,6 @@
 						CreatedOnToolsVersion = 7.0;
 					};
 					757FEB831B3ACF5600B4F327 = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = 757FEB6F1B3ACF5600B4F327;
-					};
-					757FEB8E1B3ACF5600B4F327 = {
 						CreatedOnToolsVersion = 7.0;
 						TestTargetID = 757FEB6F1B3ACF5600B4F327;
 					};
@@ -476,7 +436,6 @@
 			targets = (
 				757FEB6F1B3ACF5600B4F327 /* Swift-ZHI */,
 				757FEB831B3ACF5600B4F327 /* Swift-ZHITests */,
-				757FEB8E1B3ACF5600B4F327 /* Swift-ZHIUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -502,14 +461,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				75D98CAB1B44B93C001B4F9C /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		757FEB8D1B3ACF5600B4F327 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				75D98CB01B44B93C001B4F9C /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,14 +540,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		757FEB8B1B3ACF5600B4F327 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				757FEB941B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -604,11 +547,6 @@
 			isa = PBXTargetDependency;
 			target = 757FEB6F1B3ACF5600B4F327 /* Swift-ZHI */;
 			targetProxy = 757FEB851B3ACF5600B4F327 /* PBXContainerItemProxy */;
-		};
-		757FEB911B3ACF5600B4F327 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 757FEB6F1B3ACF5600B4F327 /* Swift-ZHI */;
-			targetProxy = 757FEB901B3ACF5600B4F327 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -821,30 +759,6 @@
 			};
 			name = Release;
 		};
-		757FEB9F1B3ACF5600B4F327 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "SwiftDaily-ZhiHuUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nickTD.SwiftDaily-ZhiHuUITests";
-				PRODUCT_NAME = "Swift-ZHITests";
-				TEST_TARGET_NAME = "SwiftDaily-ZhiHu";
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		757FEBA01B3ACF5600B4F327 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "SwiftDaily-ZhiHuUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nickTD.SwiftDaily-ZhiHuUITests";
-				PRODUCT_NAME = "Swift-ZHITests";
-				TEST_TARGET_NAME = "SwiftDaily-ZhiHu";
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -871,15 +785,6 @@
 			buildConfigurations = (
 				757FEB9C1B3ACF5600B4F327 /* Debug */,
 				757FEB9D1B3ACF5600B4F327 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		757FEB9E1B3ACF5600B4F327 /* Build configuration list for PBXNativeTarget "Swift-ZHIUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				757FEB9F1B3ACF5600B4F327 /* Debug */,
-				757FEBA01B3ACF5600B4F327 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
