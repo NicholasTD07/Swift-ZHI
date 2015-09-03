@@ -8,7 +8,7 @@
 
 import UIKit
 import SwiftDailyAPI
-import Haneke
+import WebImage
 import RealmSwift
 
 class RealmCommentViewController: UIViewController {
@@ -142,14 +142,9 @@ extension RealmCommentViewController: UITableViewDelegate {
             header.usernameLabel.text = comment.authorName
             header.repliedAtLabel.text = dateFormatter.stringFromDate(comment.repliedAt)
 
-            if let url = header.avatarURL where url != comment.avatarURL {
-                header.avatarImageView.hnk_cancelSetImage()
-                header.avatarImageView.image = nil
-            }
-
             header.longCommentIndicator.hidden = comment.isShortComment
 
-            header.avatarImageView.hnk_setImageFromURL(comment.avatarURL)
+            header.avatarImageView.sd_setImageWithURL(comment.avatarURL)
 
             return header
         } else {

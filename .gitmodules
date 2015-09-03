@@ -21,3 +21,6 @@
 	url = ssh://git@github.com/robrix/Box.git
 [submodule "Carthage/Checkouts/HanekeSwift"]
 	url = ssh://git@github.com/Haneke/HanekeSwift.git
+[submodule "Carthage/Checkouts/SDWebImage"]
+	path = Carthage/Checkouts/SDWebImage
+	url = ssh://git@github.com/rs/SDWebImage.git
