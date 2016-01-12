@@ -29,6 +29,7 @@ build/
 Pods
 
 # Carthage
+Carthage/Checkouts
 Carthage/Build
 
 # AppCode specific files

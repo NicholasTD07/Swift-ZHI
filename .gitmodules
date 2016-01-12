@@ -1,6 +1,6 @@
 [submodule "Carthage/Checkouts/Alamofire"]
 	path = Carthage/Checkouts/Alamofire
-	url = ssh://git@github.com/Alamofire/Alamofire.git
+	url = https://github.com/Alamofire/Alamofire.git
 [submodule "Carthage/Checkouts/Runes"]
 	path = Carthage/Checkouts/Runes
 	url = ssh://git@github.com/thoughtbot/Runes.git
@@ -12,13 +12,13 @@
 	url = ssh://git@github.com/NicholasTD07/SwiftDailyAPI.git
 [submodule "Carthage/Checkouts/AMScrollingNavbar"]
 	path = Carthage/Checkouts/AMScrollingNavbar
-	url = ssh://git@github.com/andreamazz/AMScrollingNavbar.git
+	url = https://github.com/andreamazz/AMScrollingNavbar.git
 [submodule "Carthage/Checkouts/realm-cocoa"]
 	path = Carthage/Checkouts/realm-cocoa
 	url = ssh://git@github.com/realm/realm-cocoa.git
 [submodule "Carthage/Checkouts/Box"]
 	path = Carthage/Checkouts/Box
-	url = ssh://git@github.com/robrix/Box.git
+	url = https://github.com/robrix/Box.git
 [submodule "Carthage/Checkouts/HanekeSwift"]
 	url = ssh://git@github.com/Haneke/HanekeSwift.git
 [submodule "Carthage/Checkouts/SDWebImage"]
