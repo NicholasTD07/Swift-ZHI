@@ -3,4 +3,4 @@
 # To minimize changes to git's commit graph, when merge new changes into both branch.
 
 git fetch --all
-git checkout -b $* `git merge-base develop remotes/origin/release/Xcode-6.3.2-Swift-1.2`
+git checkout -b $* `git merge-base remotes/origin/develop remotes/origin/release/Xcode-6.3.2-Swift-1.2`

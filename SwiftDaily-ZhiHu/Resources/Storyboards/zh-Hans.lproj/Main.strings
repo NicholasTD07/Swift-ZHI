@@ -1,9 +1,9 @@
-/* Class = "UINavigationItem"; title = "Swift ZHI"; ObjectID = "6iy-EE-vdL"; */
-"6iy-EE-vdL.title" = "速知";
+/* Class = "UIBarButtonItem"; title = "Swift ZHI"; ObjectID = "Sz8-Ml-p5c"; */
+"Sz8-Ml-p5c.title" = "速知";
 
-/* Class = "UIBarButtonItem"; title = "Swift ZHI"; ObjectID = "ROh-Y2-yuO"; */
-"ROh-Y2-yuO.title" = "速知";
+/* Class = "UIBarButtonItem"; title = "Comments"; ObjectID = "qMw-ph-xNh"; */
+"qMw-ph-xNh.title" = "评论";
 
-/* Class = "UILabel"; text = "Title"; ObjectID = "t3t-UQ-hRR"; */
-"t3t-UQ-hRR.text" = "";
+/* Class = "UINavigationItem"; title = "Swift ZHI"; ObjectID = "u84-IW-9ED"; */
+"u84-IW-9ED.title" = "速知";
 

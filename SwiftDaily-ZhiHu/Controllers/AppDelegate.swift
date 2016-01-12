@@ -12,8 +12,9 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        let splitViewController = window!.rootViewController as! UISplitViewController
-        setUpSplitViewController(splitViewController)
+        if let splitViewController = window!.rootViewController as? UISplitViewController {
+            setUpSplitViewController(splitViewController)
+        }
 
         UserPreferences.registerDefaults()
 
@@ -23,6 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     private func setUpSplitViewController(svc: UISplitViewController) {
+        // TODO: Check whether next two lines is needed.
+        let navigationController = svc.viewControllers[svc.viewControllers.count-1] as! UINavigationController
+        navigationController.topViewController!.navigationItem.leftBarButtonItem = svc.displayModeButtonItem()
+
         svc.preferredDisplayMode = .AllVisible
         svc.delegate = self
     }
@@ -31,14 +36,15 @@ extension AppDelegate {
 // MARK: - Split View Delegate
 extension AppDelegate: UISplitViewControllerDelegate {
     func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController:UIViewController, ontoPrimaryViewController primaryViewController:UIViewController) -> Bool {
-        guard let secondaryAsNavController = secondaryViewController as? UINavigationController else { return false }
-        guard let topAsDetailController = secondaryAsNavController.topViewController as? RealmNewsViewController else { return false }
-        if topAsDetailController.newsId == nil {
-            // Without this, RealmNewsViewController is first shown when on iPhone.
-            return true
+        if let secondaryAsNavController = secondaryViewController as? UINavigationController {
+            if let topAsDetailController = secondaryAsNavController.topViewController as? RealmNewsViewController {
+                if topAsDetailController.newsId == nil {
+                    // Without this, RealmNewsViewController is first shown when on iPhone.
+                    return true
+                }
+            }
         }
 
         return false
     }
 }
-

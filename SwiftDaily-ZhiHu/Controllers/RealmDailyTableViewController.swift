@@ -22,9 +22,11 @@ class RealmDailyTableViewController: DailyTableViewController {
 
     private func newsMetaAtIndexPath(indexPath: NSIndexPath) -> NewsMetaObject? {
         let date = dailyDates.dateAtIndex(indexPath.section)
-        guard let daily = dailyAtDate(date) else { return nil }
-
-        return daily.news[indexPath.row]
+        if let daily = dailyAtDate(date) {
+            return daily.news[indexPath.row]
+        } else {
+            return nil
+        }
     }
 
     private func hasNewsWithId(newsId: Int) -> Bool {
@@ -45,9 +47,11 @@ extension RealmDailyTableViewController {
     }
 
     override func hasNewsAtIndexPath(indexPath: NSIndexPath) -> Bool {
-        guard let newsMeta = newsMetaAtIndexPath(indexPath) else { return false }
-
-        return store.newsWithId(newsMeta.newsId) != nil
+        if let newsMeta = newsMetaAtIndexPath(indexPath) {
+            return store.newsWithId(newsMeta.newsId) != nil
+        } else {
+            return false
+        }
     }
 
     override func dateStringAtSection(section: Int) -> String {
@@ -64,22 +68,24 @@ extension RealmDailyTableViewController {
     }
 
     override func loadNewsAtIndexPath(indexPath: NSIndexPath) {
-        guard let newsMeta = self.newsMetaAtIndexPath(indexPath) else { return }
-
-        self.store.news(newsMeta.newsId)
+        if let newsMeta = self.newsMetaAtIndexPath(indexPath) {
+            self.store.news(newsMeta.newsId)
+        } else {
+            return
+        }
     }
 
     override func deleteNewsAtIndexPath(indexPath: NSIndexPath) {
-        guard let newsMeta = newsMetaAtIndexPath(indexPath) else { return }
-
-        store.deleteNewsWithId(newsMeta.newsId)
+        if let newsMeta = newsMetaAtIndexPath(indexPath) {
+            store.deleteNewsWithId(newsMeta.newsId)
+        }
     }
 
     override func cellAtIndexPath(indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("NewsMetaCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("NewsMetaCell", forIndexPath: indexPath) as! UITableViewCell
         let newsMeta = newsMetaAtIndexPath(indexPath)!
 
-        cell.textLabel?.text = newsMeta.title
+        cell.textLabel!.text = newsMeta.title
 
         if hasNewsWithId(newsMeta.newsId) {
             cell.accessoryType = .Checkmark
@@ -119,14 +125,14 @@ extension RealmDailyTableViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showNews/Realm" {
-            guard let indexPath = tableView.indexPathForSelectedRow else { return }
-            guard let newsMeta = newsMetaAtIndexPath(indexPath) else { return }
-            guard let nvc = segue.destinationViewController as? UINavigationController else { return }
-            guard let vc = nvc.topViewController as? RealmNewsViewController else { return }
-
-            vc.newsId = newsMeta.newsId
-            vc.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem()
-            vc.navigationItem.leftItemsSupplementBackButton = true
+            if let indexPath = tableView.indexPathForSelectedRow(),
+                let newsMeta = newsMetaAtIndexPath(indexPath),
+                let nvc = segue.destinationViewController as? UINavigationController,
+                let vc = nvc.topViewController as? RealmNewsViewController {
+                    vc.newsId = newsMeta.newsId
+                    vc.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem()
+                    vc.navigationItem.leftItemsSupplementBackButton = true
+            }
         }
     }
 }
@@ -139,9 +145,11 @@ extension RealmDailyTableViewController: UITableViewDataSource {
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let date = dailyDates.dateAtIndex(section)
-        guard let daily = dailyAtDate(date) else { return 1 }
-
-        return daily.news.count
+        if let daily = dailyAtDate(date) {
+            return daily.news.count
+        } else {
+            return 1
+        }
     }
 
 }

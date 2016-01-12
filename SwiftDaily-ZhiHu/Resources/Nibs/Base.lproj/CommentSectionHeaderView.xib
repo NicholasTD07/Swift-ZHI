@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="15A226f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CommentSectionHeaderView" customModule="Swift_ZHI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="88"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="loo-5v-Kci">
+                    <rect key="frame" x="20" y="8" width="72" height="72"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="loo-5v-Kci" secondAttribute="height" multiplier="1:1" id="m4f-bx-4EX"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="9"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qD9-Ly-Dbj">
+                    <rect key="frame" x="100" y="8" width="38.5" height="17"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lac-36-zzP">
+                    <rect key="frame" x="559" y="8" width="33" height="16"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long comment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXd-Hz-Wc1">
+                    <rect key="frame" x="521.5" y="32" width="70.5" height="12"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.51784205436706543" green="0.58159953355789185" blue="0.58617168664932251" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <animations/>
+            <constraints>
+                <constraint firstItem="qD9-Ly-Dbj" firstAttribute="leading" secondItem="loo-5v-Kci" secondAttribute="trailing" constant="8" id="9Te-RH-G5B"/>
+                <constraint firstAttribute="trailing" secondItem="Lac-36-zzP" secondAttribute="trailing" constant="8" id="HpI-wd-Kom"/>
+                <constraint firstItem="Lac-36-zzP" firstAttribute="top" secondItem="loo-5v-Kci" secondAttribute="top" id="JmH-1n-51n"/>
+                <constraint firstAttribute="centerY" secondItem="qD9-Ly-Dbj" secondAttribute="centerY" id="Vbz-r7-a01"/>
+                <constraint firstItem="loo-5v-Kci" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="Wbm-dG-ioD"/>
+                <constraint firstAttribute="bottom" secondItem="loo-5v-Kci" secondAttribute="bottom" constant="8" id="fsm-kl-elb"/>
+                <constraint firstItem="gXd-Hz-Wc1" firstAttribute="trailing" secondItem="Lac-36-zzP" secondAttribute="trailing" id="hox-GG-1nK"/>
+                <constraint firstAttribute="centerY" secondItem="Lac-36-zzP" secondAttribute="centerY" id="k0X-1i-lgJ"/>
+                <constraint firstItem="loo-5v-Kci" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="mmw-Hr-i0S"/>
+                <constraint firstItem="Lac-36-zzP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qD9-Ly-Dbj" secondAttribute="trailing" constant="20" id="o32-2b-Sok"/>
+                <constraint firstItem="gXd-Hz-Wc1" firstAttribute="top" secondItem="Lac-36-zzP" secondAttribute="bottom" constant="8" id="rcY-oc-yD0"/>
+                <constraint firstItem="qD9-Ly-Dbj" firstAttribute="top" secondItem="loo-5v-Kci" secondAttribute="top" id="xhj-mU-5Lz"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Vbz-r7-a01"/>
+                    <exclude reference="k0X-1i-lgJ"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="avatarImageView" destination="loo-5v-Kci" id="vJe-fv-hQv"/>
+                <outlet property="longCommentIndicator" destination="gXd-Hz-Wc1" id="EPG-MB-BPp"/>
+                <outlet property="repliedAtLabel" destination="Lac-36-zzP" id="lha-W2-j6R"/>
+                <outlet property="usernameLabel" destination="qD9-Ly-Dbj" id="U3B-bN-9he"/>
+            </connections>
+            <point key="canvasLocation" x="440" y="379"/>
+        </view>
+    </objects>
+</document>

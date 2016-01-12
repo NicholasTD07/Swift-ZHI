@@ -1,3 +1,4 @@
-github "NicholasTD07/SwiftDailyAPI" "develop"
+github "NicholasTD07/SwiftDailyAPI" "9ce09b5061d4aa22188541de202f9427c16b6ec4"
 github "andreamazz/AMScrollingNavbar" ~> 1.5
-github "realm/realm-cocoa" "5a23299889e561397d2bc572c3963b3e2f28984c"
+github "realm/realm-cocoa" ~> 0.93.2
+github "rs/SDWebImage" ~> 3.7.3
