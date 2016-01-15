@@ -28,27 +28,17 @@ Basic functionality that the official App offers.
  * News list items - [`NewsMetaObject`](./SwiftDaily-ZhiHu/Models/RealmModels.swift)
  * News content    - [`NewsObject`](./SwiftDaily-ZhiHu/Models/RealmModels.swift)
 
-### Planned
-
-#### Features I would like to add:
-
-* Show info about News in DailyView
- * Author's name
- * Total number of likes
- * Total number of comments
-* Show contributors(author + recommenders) in NewsView
-
 ## Setup
 
 ```sh
-brew install carthage
-bin/setup
+gem install cocoapods
+pod install
 ```
 
 ### Minimum Requirement for Build Environment
 
-* Xcode 7.0 beta
-* Swift 2.0
+* Xcode 7.2
+* Swift 2.1
 
 ## Frameworks
 
