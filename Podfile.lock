@@ -1,0 +1,32 @@
+PODS:
+  - Alamofire (3.1.4)
+  - AMScrollingNavbar (1.5.1)
+  - Argo (2.2.0)
+  - Realm (0.97.0):
+    - Realm/Headers (= 0.97.0)
+  - Realm/Headers (0.97.0)
+  - RealmSwift (0.97.0):
+    - Realm (= 0.97.0)
+  - SDWebImage (3.7.4):
+    - SDWebImage/Core (= 3.7.4)
+  - SDWebImage/Core (3.7.4)
+  - SwiftDailyAPI (2.0.1):
+    - Alamofire (~> 3.0)
+    - Argo (~> 2.2.0)
+
+DEPENDENCIES:
+  - AMScrollingNavbar (~> 1.5)
+  - RealmSwift (~> 0.97)
+  - SDWebImage (~> 3.7.3)
+  - SwiftDailyAPI (~> 2.0)
+
+SPEC CHECKSUMS:
+  Alamofire: fbc829692f351fa1d8a31dd75fd7f7f56fea31fb
+  AMScrollingNavbar: 767ed2db60d927a809bddff5d01b739b7020b12b
+  Argo: 4f52a32b4cd913c204e5a45f420b3fccad3e3f24
+  Realm: b498a6fb9d288b171ff98d0e2d4384c295be8990
+  RealmSwift: d014810dec75c9a3f1a33926d2dabfed855c582c
+  SDWebImage: 247edd7dd80dd6124197b0d6a17846fe9d1df968
+  SwiftDailyAPI: 0ea377af335824d17564dc5972331c045095de86
+
+COCOAPODS: 0.39.0
