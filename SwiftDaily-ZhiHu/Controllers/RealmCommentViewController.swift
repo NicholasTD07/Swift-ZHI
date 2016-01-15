@@ -8,7 +8,7 @@
 
 import UIKit
 import SwiftDailyAPI
-import WebImage
+import SDWebImage
 import RealmSwift
 
 class RealmCommentViewController: UIViewController {
