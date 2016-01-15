@@ -39,7 +39,7 @@ public class DailyObject: Object {
     }
 
     override public static func indexedProperties() -> [String] {
-        return ["date", "dateHash"]
+        return ["dateHash"]
     }
 
     convenience public init(date: NSDate, news: [NewsMeta]) {
