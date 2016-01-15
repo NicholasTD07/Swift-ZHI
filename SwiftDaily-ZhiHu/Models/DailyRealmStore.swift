@@ -65,7 +65,7 @@ extension DailyRealmStore {
     // MARK: Deletion
     public func deleteNewsWithId(newsId: Int, inRealm realm: Realm = defaultRealm()) {
         if let news = newsWithId(newsId) {
-            realm.write { realm.delete(news) }
+            try! realm.write { realm.delete(news) }
         }
     }
 }
@@ -106,6 +106,6 @@ extension DailyRealmStore {
     }
 
     private func addObject(object: Object, toRealm realm: Realm = defaultRealm()) {
-        realm.write { realm.add(object, update: true) }
+        try! realm.write { realm.add(object, update: true) }
     }
 }

@@ -114,7 +114,7 @@ extension RealmCommentViewController: UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CommentCell/TextOnly") as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("CommentCell/TextOnly")!
 
         let comment = commentInSection(indexPath.section)
 

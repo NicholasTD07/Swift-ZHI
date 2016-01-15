@@ -82,7 +82,7 @@ extension RealmDailyTableViewController {
     }
 
     override func cellAtIndexPath(indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("NewsMetaCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("NewsMetaCell", forIndexPath: indexPath) 
         let newsMeta = newsMetaAtIndexPath(indexPath)!
 
         cell.textLabel!.text = newsMeta.title
@@ -125,7 +125,7 @@ extension RealmDailyTableViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showNews/Realm" {
-            if let indexPath = tableView.indexPathForSelectedRow(),
+            if let indexPath = tableView.indexPathForSelectedRow,
                 let newsMeta = newsMetaAtIndexPath(indexPath),
                 let nvc = segue.destinationViewController as? UINavigationController,
                 let vc = nvc.topViewController as? RealmNewsViewController {
