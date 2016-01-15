@@ -1,5 +1,7 @@
 # SwiftDaily-ZhiHu
 
+[![Build Status](https://travis-ci.org/NicholasTD07/Swift-ZHI.svg?branch=develop)](https://travis-ci.org/NicholasTD07/Swift-ZHI)
+
 iOS ZhiHuDaily client, implemented in Swift.
 
 No need to wait for the loading screen of any News you'd like to read. You can
