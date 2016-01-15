@@ -7,16 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D96E2C2697856C72E2AD083 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4879E42D2BF192538AA36F94 /* Pods.framework */; };
 		751788E91B3D47E700526889 /* DailyDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751788E81B3D47E700526889 /* DailyDates.swift */; };
 		7529FA421B3E5EF5007D54A8 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7529FA411B3E5EF5007D54A8 /* NewsViewController.swift */; };
 		7529FA441B3E6B68007D54A8 /* RealmNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7529FA431B3E6B68007D54A8 /* RealmNewsViewController.swift */; };
 		7530F3FD1B3D53D10035AD7A /* DailyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7530F3FC1B3D53D10035AD7A /* DailyTableViewController.swift */; };
-		75656D031B46549E007D11EA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75656D011B46549E007D11EA /* Realm.framework */; };
-		75656D061B4654A7007D11EA /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75656D011B46549E007D11EA /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		75656D071B4654A7007D11EA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75656D021B46549E007D11EA /* RealmSwift.framework */; };
-		75656D081B4654A7007D11EA /* RealmSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75656D021B46549E007D11EA /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		75656D0A1B4659B4007D11EA /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75656D091B4659B4007D11EA /* Box.framework */; };
-		75656D0B1B4659B4007D11EA /* Box.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75656D091B4659B4007D11EA /* Box.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7571839E1B4418ED00E345B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757183A01B4418ED00E345B3 /* Main.storyboard */; };
 		757183A51B441CDA00E345B3 /* HideNavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757183A41B441CDA00E345B3 /* HideNavBarViewController.swift */; };
 		757FEB891B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEB881B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift */; };
@@ -29,22 +24,10 @@
 		757FEBDA1B3ACFE200B4F327 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBBD1B3ACFE200B4F327 /* Settings.bundle */; };
 		757FEBDF1B3ACFE200B4F327 /* DailySectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBC51B3ACFE200B4F327 /* DailySectionHeaderView.swift */; };
 		757FEBE01B3ACFE200B4F327 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBC61B3ACFE200B4F327 /* LoadingCell.swift */; };
-		757FEBE61B3AD0C800B4F327 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBE11B3AD0C800B4F327 /* Alamofire.framework */; };
-		757FEBE71B3AD0C800B4F327 /* AMScrollingNavbar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBE21B3AD0C800B4F327 /* AMScrollingNavbar.framework */; };
-		757FEBE81B3AD0C800B4F327 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBE31B3AD0C800B4F327 /* Argo.framework */; };
-		757FEBE91B3AD0C800B4F327 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBE41B3AD0C800B4F327 /* Runes.framework */; };
-		757FEBEA1B3AD0C800B4F327 /* SwiftDailyAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBE51B3AD0C800B4F327 /* SwiftDailyAPI.framework */; };
-		757FEBED1B3AD16C00B4F327 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBE11B3AD0C800B4F327 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		757FEBEE1B3AD16C00B4F327 /* AMScrollingNavbar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBE21B3AD0C800B4F327 /* AMScrollingNavbar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		757FEBEF1B3AD16C00B4F327 /* Argo.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBE31B3AD0C800B4F327 /* Argo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		757FEBF01B3AD16C00B4F327 /* Runes.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBE41B3AD0C800B4F327 /* Runes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		757FEBF11B3AD16D00B4F327 /* SwiftDailyAPI.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBE51B3AD0C800B4F327 /* SwiftDailyAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		758872E91B6A12FC006ECF61 /* CommentSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758872E81B6A12FC006ECF61 /* CommentSectionHeaderView.swift */; };
 		758872EE1B6B1026006ECF61 /* CommentContentFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758872ED1B6B1026006ECF61 /* CommentContentFormatter.swift */; };
 		758872FD1B70AE8B006ECF61 /* DailySectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBB81B3ACFE200B4F327 /* DailySectionHeaderView.xib */; };
 		758872FE1B70AE94006ECF61 /* CommentSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758872F41B70ACF5006ECF61 /* CommentSectionHeaderView.xib */; };
-		758F0B941B9888CB006B6842 /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758F0B921B9888C8006B6842 /* WebImage.framework */; };
-		758F0B951B9888CB006B6842 /* WebImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 758F0B921B9888C8006B6842 /* WebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75AE08F21B65B12000462941 /* RealmCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AE08F11B65B12000462941 /* RealmCommentViewController.swift */; };
 		75B5F5FC1B44BA18001E1461 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75D98CA81B44B93B001B4F9C /* InfoPlist.strings */; };
 		75B5F60A1B44BF2C001E1461 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75B5F6081B44BF2C001E1461 /* Localizable.strings */; };
@@ -65,28 +48,9 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		757FEBEC1B3AD15F00B4F327 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				75656D061B4654A7007D11EA /* Realm.framework in CopyFiles */,
-				757FEBED1B3AD16C00B4F327 /* Alamofire.framework in CopyFiles */,
-				75656D0B1B4659B4007D11EA /* Box.framework in CopyFiles */,
-				758F0B951B9888CB006B6842 /* WebImage.framework in CopyFiles */,
-				75656D081B4654A7007D11EA /* RealmSwift.framework in CopyFiles */,
-				757FEBEE1B3AD16C00B4F327 /* AMScrollingNavbar.framework in CopyFiles */,
-				757FEBEF1B3AD16C00B4F327 /* Argo.framework in CopyFiles */,
-				757FEBF01B3AD16C00B4F327 /* Runes.framework in CopyFiles */,
-				757FEBF11B3AD16D00B4F327 /* SwiftDailyAPI.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		4879E42D2BF192538AA36F94 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6115B445073C89C047AB9EBB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		751788E81B3D47E700526889 /* DailyDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyDates.swift; sourceTree = "<group>"; };
 		7529FA411B3E5EF5007D54A8 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		7529FA431B3E6B68007D54A8 /* RealmNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmNewsViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +106,7 @@
 		75E2E5AF1B46B24200E26DD0 /* zh-Hant.xliff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "zh-Hant.xliff"; sourceTree = "<group>"; };
 		75EDD0C81B55340300C3DC41 /* UserPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		75EF90F51B50E2D4006D008B /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
+		83EB994A3DBD56F213E19F2B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,15 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75656D031B46549E007D11EA /* Realm.framework in Frameworks */,
-				758F0B941B9888CB006B6842 /* WebImage.framework in Frameworks */,
-				75656D071B4654A7007D11EA /* RealmSwift.framework in Frameworks */,
-				757FEBE61B3AD0C800B4F327 /* Alamofire.framework in Frameworks */,
-				757FEBE71B3AD0C800B4F327 /* AMScrollingNavbar.framework in Frameworks */,
-				757FEBE81B3AD0C800B4F327 /* Argo.framework in Frameworks */,
-				757FEBE91B3AD0C800B4F327 /* Runes.framework in Frameworks */,
-				75656D0A1B4659B4007D11EA /* Box.framework in Frameworks */,
-				757FEBEA1B3AD0C800B4F327 /* SwiftDailyAPI.framework in Frameworks */,
+				2D96E2C2697856C72E2AD083 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +136,7 @@
 				757FEB921B3ACF5600B4F327 /* SwiftDaily-ZhiHuUITests */,
 				757FEBEB1B3AD0D300B4F327 /* Frameworks */,
 				757FEB711B3ACF5600B4F327 /* Products */,
+				CC2923247F366A7C2E322078 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -336,6 +294,7 @@
 				757FEBE21B3AD0C800B4F327 /* AMScrollingNavbar.framework */,
 				757FEBE41B3AD0C800B4F327 /* Runes.framework */,
 				757FEBE51B3AD0C800B4F327 /* SwiftDailyAPI.framework */,
+				4879E42D2BF192538AA36F94 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -359,6 +318,15 @@
 			path = "Swift-ZHI";
 			sourceTree = "<group>";
 		};
+		CC2923247F366A7C2E322078 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83EB994A3DBD56F213E19F2B /* Pods.debug.xcconfig */,
+				6115B445073C89C047AB9EBB /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -366,12 +334,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 757FEB981B3ACF5600B4F327 /* Build configuration list for PBXNativeTarget "Swift-ZHI" */;
 			buildPhases = (
+				DBD108EAE0BDD61F51EDD061 /* Check Pods Manifest.lock */,
 				757FEB6C1B3ACF5600B4F327 /* Sources */,
 				757FEB6D1B3ACF5600B4F327 /* Frameworks */,
 				757FEB6E1B3ACF5600B4F327 /* Resources */,
-				757FEBEC1B3AD15F00B4F327 /* CopyFiles */,
 				75B5F60D1B44BF70001E1461 /* genstrings */,
-				75656D0C1B466A7D007D11EA /* Carthage - Copy Frameworks */,
+				D95A75E2DF6A4894F1E2968D /* Embed Pods Frameworks */,
+				8CA5F546ECEC4BDE500DFC3E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -406,6 +375,7 @@
 		757FEB681B3ACF5600B4F327 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0730;
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = nickTD;
@@ -467,29 +437,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		75656D0C1B466A7D007D11EA /* Carthage - Copy Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Box.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/AMScrollingNavbar.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftDailyAPI.framework",
-				"$(SRCROOT)/Carthage/Checkouts/realm-cocoa/build/ios/swift/Realm.framework",
-				"$(SRCROOT)/Carthage/Checkouts/realm-cocoa/build/ios/swift/RealmSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/WebImage.framework",
-			);
-			name = "Carthage - Copy Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
 		75B5F60D1B44BF70001E1461 /* genstrings */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -503,6 +450,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "cd $PROJECT_DIR && find ./SwiftDaily-Zhihu -name \\*.swift | xargs genstrings -o SwiftDaily-ZhiHu/Resources/Base.lproj/";
+		};
+		8CA5F546ECEC4BDE500DFC3E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D95A75E2DF6A4894F1E2968D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBD108EAE0BDD61F51EDD061 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -634,7 +626,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS/";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -679,7 +671,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS/";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -697,15 +689,11 @@
 		};
 		757FEB991B3ACF5600B4F327 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83EB994A3DBD56F213E19F2B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/Carthage/Build/iOS/",
-					"$(PROJECT_DIR)/Carthage/Checkouts/realm-cocoa/build/ios/swift/",
-					"$(PROJECT_DIR)/Carthage/Checkouts/realm-cocoa/build/ios/swift",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftDaily-ZhiHu/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -717,15 +705,11 @@
 		};
 		757FEB9A1B3ACF5600B4F327 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6115B445073C89C047AB9EBB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/Carthage/Build/iOS/",
-					"$(PROJECT_DIR)/Carthage/Checkouts/realm-cocoa/build/ios/swift/",
-					"$(PROJECT_DIR)/Carthage/Checkouts/realm-cocoa/build/ios/swift",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftDaily-ZhiHu/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

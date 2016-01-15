@@ -8,7 +8,7 @@
 
 import UIKit
 import SwiftDailyAPI
-import WebImage
+import SDWebImage
 import RealmSwift
 
 class RealmCommentViewController: UIViewController {
@@ -114,7 +114,7 @@ extension RealmCommentViewController: UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CommentCell/TextOnly") as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("CommentCell/TextOnly")!
 
         let comment = commentInSection(indexPath.section)
 

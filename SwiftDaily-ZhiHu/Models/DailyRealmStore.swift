@@ -44,7 +44,7 @@ extension DailyRealmStore {
 
     public func longComments(forNewsId newsId: Int) {
         dailyAPI.longComments(newsId) {
-            $0.comments.map {
+            $0.comments.forEach {
                 self.addObject(CommentObject.from($0, forNewsId: newsId, isShortComment: false))
             }
         }
@@ -65,7 +65,7 @@ extension DailyRealmStore {
     // MARK: Deletion
     public func deleteNewsWithId(newsId: Int, inRealm realm: Realm = defaultRealm()) {
         if let news = newsWithId(newsId) {
-            realm.write { realm.delete(news) }
+            try! realm.write { realm.delete(news) }
         }
     }
 }
@@ -96,7 +96,7 @@ extension DailyRealmStore {
 // MARK: Private methods
 extension DailyRealmStore {
     private func addShortComments(fromComments comments: Comments, forNewsId newsId: Int) {
-        comments.comments.map {
+        comments.comments.forEach {
             self.addObject(CommentObject.from($0, forNewsId: newsId, isShortComment: true))
         }
     }
@@ -106,6 +106,6 @@ extension DailyRealmStore {
     }
 
     private func addObject(object: Object, toRealm realm: Realm = defaultRealm()) {
-        realm.write { realm.add(object, update: true) }
+        try! realm.write { realm.add(object, update: true) }
     }
 }

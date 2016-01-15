@@ -19,11 +19,11 @@ class DailyDates {
     }
 
     func dateAtIndex(index: Int) -> NSDate {
-        return calendar.dateByAddingUnit(.CalendarUnitDay, value: -index, toDate: endDate, options: nil)!
+        return calendar.dateByAddingUnit(.Day, value: -index, toDate: endDate, options: [])!
     }
 
     func days() -> Int {
-        return calendar.components(.CalendarUnitDay, fromDate: startDate, toDate: endDate, options: nil).day + 1
+        return calendar.components(.Day, fromDate: startDate, toDate: endDate, options: []).day + 1
     }
 
 }
