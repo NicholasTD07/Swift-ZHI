@@ -6,6 +6,8 @@ env:
   - LANG=en_US.UTF-8
 install:
   - gem install cocoapods --pre
+  - gem install xcpretty
+  - pod install
 script:
   - set -o pipefail
   - xcodebuild -version
