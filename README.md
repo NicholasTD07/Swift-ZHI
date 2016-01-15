@@ -41,14 +41,14 @@ Basic functionality that the official App offers.
 ## Setup
 
 ```sh
-brew install carthage
-bin/setup
+gem install cocoapods
+pod install
 ```
 
 ### Minimum Requirement for Build Environment
 
-* Xcode 7.0 beta
-* Swift 2.0
+* Xcode 7.2
+* Swift 2.1
 
 ## Frameworks
 
