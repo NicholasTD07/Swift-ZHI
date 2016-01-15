@@ -44,7 +44,7 @@ extension DailyRealmStore {
 
     public func longComments(forNewsId newsId: Int) {
         dailyAPI.longComments(newsId) {
-            $0.comments.map {
+            $0.comments.forEach {
                 self.addObject(CommentObject.from($0, forNewsId: newsId, isShortComment: false))
             }
         }
@@ -96,7 +96,7 @@ extension DailyRealmStore {
 // MARK: Private methods
 extension DailyRealmStore {
     private func addShortComments(fromComments comments: Comments, forNewsId newsId: Int) {
-        comments.comments.map {
+        comments.comments.forEach {
             self.addObject(CommentObject.from($0, forNewsId: newsId, isShortComment: true))
         }
     }
