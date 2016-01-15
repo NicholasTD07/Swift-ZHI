@@ -101,13 +101,13 @@ extension DailyTableViewController {
 // MARK: Data Source
 extension DailyTableViewController {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        guard hasNewsMetaAtIndexPath(indexPath) else {
+        if hasNewsMetaAtIndexPath(indexPath) {
+            return cellAtIndexPath(indexPath)
+        } else {
             let loadingCell = tableView.dequeueReusableCellWithIdentifier("LoadingCell", forIndexPath: indexPath) as! LoadingCell
             loadingCell.activityIndicator.startAnimating()
             return loadingCell
         }
-
-        return cellAtIndexPath(indexPath)
     }
 
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -121,24 +121,24 @@ extension DailyTableViewController {
 // MARK: Delegate
 extension DailyTableViewController {
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let header = tableView.dequeueReusableHeaderFooterViewWithIdentifier("DailySectionHeaderView") as? DailySectionHeaderView else { return nil }
+        if let header = tableView.dequeueReusableHeaderFooterViewWithIdentifier("DailySectionHeaderView") as? DailySectionHeaderView {
+            header.backgroundView = {
+                let view = UIView(frame: header.bounds)
+                // HACK: To put color in Storyboard, not in code
+                view.backgroundColor = header.titleLabel.highlightedTextColor
+                return view
+                }()
 
-        header.backgroundView = {
-            let view = UIView(frame: header.bounds)
-            // HACK: To put color in Storyboard, not in code
-            view.backgroundColor = header.titleLabel.highlightedTextColor
-            return view
-            }()
+            header.titleLabel.text = self.dateStringAtSection(section)
 
-        header.titleLabel.text = self.dateStringAtSection(section)
-
-        return header
+            return header
+        } else {
+            return nil
+        }
     }
 
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        guard let _ = cell as? LoadingCell else { return }
-
-        if !hasDailyAtIndexPath(indexPath) {
+        if let _ = cell as? LoadingCell where  !hasDailyAtIndexPath(indexPath) {
             loadDailyAtIndexPath(indexPath)
         }
     }

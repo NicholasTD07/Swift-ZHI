@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-bundle install
-carthage bootstrap  --platform all --use-ssh --use-submodules --no-use-binaries
-(cd ./Carthage/Checkouts/realm-cocoa/ && ./build.sh ios-swift)

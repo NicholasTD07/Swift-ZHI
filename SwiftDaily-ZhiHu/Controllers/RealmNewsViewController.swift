@@ -19,16 +19,24 @@ class RealmNewsViewController: NewsViewController {
     private var token: NotificationToken?
 }
 
+// MARK: UI methods
 extension RealmNewsViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
         token = defaultRealm().addNotificationBlock { (_, _) in
-            guard let newsId = self.newsId else { return }
-
-            if let news = self.store.newsWithId(newsId) where newsId != self.loadedNewsId {
+            if let newsId = self.newsId,
+                let news = self.store.newsWithId(newsId) where newsId != self.loadedNewsId {
                 self.loadNews(news)
                 self.stopIndicator()
+            }
+        }
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showComments/Realm" {
+            if let commentsVC = segue.destinationViewController as? RealmCommentViewController {
+                commentsVC.newsId = newsId ?? preferences.lastReadNewsId
             }
         }
     }
@@ -58,7 +66,7 @@ extension RealmNewsViewController {
         let css = news.cssURLStrings.map { "<link rel='stylesheet' type='text/css' href='\($0.value)'>" }
         var newsBody = css.reduce(news.body) { $0 + $1 }
         // hide 200px #div.img-place-holder in css
-        newsBody.extend("<style>.headline .img-place-holder {\n height: 0px;\n}</style>")
+        newsBody += "<style>.headline .img-place-holder {\n height: 0px;\n}</style>"
 
         webView.loadHTMLString(newsBody, baseURL: nil)
     }

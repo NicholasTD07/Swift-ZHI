@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D96E2C2697856C72E2AD083 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4879E42D2BF192538AA36F94 /* Pods.framework */; };
 		751788E91B3D47E700526889 /* DailyDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751788E81B3D47E700526889 /* DailyDates.swift */; };
 		7529FA421B3E5EF5007D54A8 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7529FA411B3E5EF5007D54A8 /* NewsViewController.swift */; };
 		7529FA441B3E6B68007D54A8 /* RealmNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7529FA431B3E6B68007D54A8 /* RealmNewsViewController.swift */; };
@@ -14,7 +15,6 @@
 		7571839E1B4418ED00E345B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757183A01B4418ED00E345B3 /* Main.storyboard */; };
 		757183A51B441CDA00E345B3 /* HideNavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757183A41B441CDA00E345B3 /* HideNavBarViewController.swift */; };
 		757FEB891B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEB881B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift */; };
-		757FEB941B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEB931B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift */; };
 		757FEBC91B3ACFE200B4F327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA51B3ACFE100B4F327 /* AppDelegate.swift */; };
 		757FEBCB1B3ACFE200B4F327 /* HidesHairLineUnderNavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA71B3ACFE100B4F327 /* HidesHairLineUnderNavBarViewController.swift */; };
 		757FEBCD1B3ACFE200B4F327 /* RealmDailyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBA91B3ACFE100B4F327 /* RealmDailyTableViewController.swift */; };
@@ -24,27 +24,16 @@
 		757FEBDA1B3ACFE200B4F327 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBBD1B3ACFE200B4F327 /* Settings.bundle */; };
 		757FEBDF1B3ACFE200B4F327 /* DailySectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBC51B3ACFE200B4F327 /* DailySectionHeaderView.swift */; };
 		757FEBE01B3ACFE200B4F327 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757FEBC61B3ACFE200B4F327 /* LoadingCell.swift */; };
-		757FEBE61B3AD0C800B4F327 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBE11B3AD0C800B4F327 /* Alamofire.framework */; };
-		757FEBE71B3AD0C800B4F327 /* AMScrollingNavbar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBE21B3AD0C800B4F327 /* AMScrollingNavbar.framework */; };
-		757FEBE81B3AD0C800B4F327 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBE31B3AD0C800B4F327 /* Argo.framework */; };
-		757FEBE91B3AD0C800B4F327 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBE41B3AD0C800B4F327 /* Runes.framework */; };
-		757FEBEA1B3AD0C800B4F327 /* SwiftDailyAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBE51B3AD0C800B4F327 /* SwiftDailyAPI.framework */; };
-		757FEBED1B3AD16C00B4F327 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBE11B3AD0C800B4F327 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		757FEBEE1B3AD16C00B4F327 /* AMScrollingNavbar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBE21B3AD0C800B4F327 /* AMScrollingNavbar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		757FEBEF1B3AD16C00B4F327 /* Argo.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBE31B3AD0C800B4F327 /* Argo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		757FEBF01B3AD16C00B4F327 /* Runes.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBE41B3AD0C800B4F327 /* Runes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		757FEBF11B3AD16D00B4F327 /* SwiftDailyAPI.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBE51B3AD0C800B4F327 /* SwiftDailyAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		757FEBF41B3AD1D400B4F327 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBF21B3AD1D400B4F327 /* Realm.framework */; };
-		757FEBF51B3AD1D400B4F327 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757FEBF31B3AD1D400B4F327 /* RealmSwift.framework */; };
-		757FEBF61B3AD1E400B4F327 /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBF21B3AD1D400B4F327 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		757FEBF71B3AD1E400B4F327 /* RealmSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 757FEBF31B3AD1D400B4F327 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		758872E91B6A12FC006ECF61 /* CommentSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758872E81B6A12FC006ECF61 /* CommentSectionHeaderView.swift */; };
+		758872EE1B6B1026006ECF61 /* CommentContentFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758872ED1B6B1026006ECF61 /* CommentContentFormatter.swift */; };
+		758872FD1B70AE8B006ECF61 /* DailySectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBB81B3ACFE200B4F327 /* DailySectionHeaderView.xib */; };
+		758872FE1B70AE94006ECF61 /* CommentSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758872F41B70ACF5006ECF61 /* CommentSectionHeaderView.xib */; };
+		75AE08F21B65B12000462941 /* RealmCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AE08F11B65B12000462941 /* RealmCommentViewController.swift */; };
 		75B5F5FC1B44BA18001E1461 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75D98CA81B44B93B001B4F9C /* InfoPlist.strings */; };
-		75B5F5FD1B44BA8A001E1461 /* DailySectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757FEBB81B3ACFE200B4F327 /* DailySectionHeaderView.xib */; };
 		75B5F60A1B44BF2C001E1461 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75B5F6081B44BF2C001E1461 /* Localizable.strings */; };
 		75CDD20C1B3BBB4A00343CAA /* DailyRealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CDD20B1B3BBB4A00343CAA /* DailyRealmStore.swift */; };
 		75CDD20E1B3BBD3900343CAA /* RealmHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CDD20D1B3BBD3900343CAA /* RealmHelpers.swift */; };
 		75D98CAB1B44B93C001B4F9C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75D98CAD1B44B93C001B4F9C /* InfoPlist.strings */; };
-		75D98CB01B44B93C001B4F9C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75D98CB21B44B93C001B4F9C /* InfoPlist.strings */; };
 		75EDD0C91B55340300C3DC41 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EDD0C81B55340300C3DC41 /* UserPreferences.swift */; };
 		75EF90F61B50E2D4006D008B /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EF90F51B50E2D4006D008B /* Delay.swift */; };
 /* End PBXBuildFile section */
@@ -57,48 +46,24 @@
 			remoteGlobalIDString = 757FEB6F1B3ACF5600B4F327;
 			remoteInfo = "SwiftDaily-ZhiHu";
 		};
-		757FEB901B3ACF5600B4F327 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 757FEB681B3ACF5600B4F327 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 757FEB6F1B3ACF5600B4F327;
-			remoteInfo = "SwiftDaily-ZhiHu";
-		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		757FEBEC1B3AD15F00B4F327 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				757FEBF61B3AD1E400B4F327 /* Realm.framework in CopyFiles */,
-				757FEBF71B3AD1E400B4F327 /* RealmSwift.framework in CopyFiles */,
-				757FEBED1B3AD16C00B4F327 /* Alamofire.framework in CopyFiles */,
-				757FEBEE1B3AD16C00B4F327 /* AMScrollingNavbar.framework in CopyFiles */,
-				757FEBEF1B3AD16C00B4F327 /* Argo.framework in CopyFiles */,
-				757FEBF01B3AD16C00B4F327 /* Runes.framework in CopyFiles */,
-				757FEBF11B3AD16D00B4F327 /* SwiftDailyAPI.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		4879E42D2BF192538AA36F94 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6115B445073C89C047AB9EBB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		751788E81B3D47E700526889 /* DailyDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyDates.swift; sourceTree = "<group>"; };
 		7529FA411B3E5EF5007D54A8 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		7529FA431B3E6B68007D54A8 /* RealmNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmNewsViewController.swift; sourceTree = "<group>"; };
 		7530F3FC1B3D53D10035AD7A /* DailyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTableViewController.swift; sourceTree = "<group>"; };
+		75656D011B46549E007D11EA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Carthage/Checkouts/realm-cocoa/build/ios/swift/Realm.framework"; sourceTree = "<group>"; };
+		75656D021B46549E007D11EA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Carthage/Checkouts/realm-cocoa/build/ios/swift/RealmSwift.framework"; sourceTree = "<group>"; };
+		75656D091B4659B4007D11EA /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Carthage/Build/iOS/Box.framework; sourceTree = "<group>"; };
 		757183A11B4418F300E345B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		757183A21B44190000E345B3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
-		757183A31B44190300E345B3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		757183A41B441CDA00E345B3 /* HideNavBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideNavBarViewController.swift; sourceTree = "<group>"; };
 		757FEB701B3ACF5600B4F327 /* Swift-ZHI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-ZHI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		757FEB841B3ACF5600B4F327 /* Swift-ZHITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift-ZHITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		757FEB881B3ACF5600B4F327 /* SwiftDaily_ZhiHuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDaily_ZhiHuTests.swift; sourceTree = "<group>"; };
 		757FEB8A1B3ACF5600B4F327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		757FEB8F1B3ACF5600B4F327 /* Swift-ZHITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift-ZHITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		757FEB931B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDaily_ZhiHuUITests.swift; sourceTree = "<group>"; };
 		757FEB951B3ACF5600B4F327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		757FEBA51B3ACFE100B4F327 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,8 +81,15 @@
 		757FEBE31B3AD0C800B4F327 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
 		757FEBE41B3AD0C800B4F327 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		757FEBE51B3AD0C800B4F327 /* SwiftDailyAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDailyAPI.framework; path = Carthage/Build/iOS/SwiftDailyAPI.framework; sourceTree = "<group>"; };
-		757FEBF21B3AD1D400B4F327 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Carthage/Checkouts/realm-cocoa/build/ios/swift/Realm.framework"; sourceTree = "<group>"; };
-		757FEBF31B3AD1D400B4F327 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Carthage/Checkouts/realm-cocoa/build/ios/swift/RealmSwift.framework"; sourceTree = "<group>"; };
+		758872E81B6A12FC006ECF61 /* CommentSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentSectionHeaderView.swift; sourceTree = "<group>"; };
+		758872ED1B6B1026006ECF61 /* CommentContentFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentContentFormatter.swift; sourceTree = "<group>"; };
+		758872F31B70ACF5006ECF61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CommentSectionHeaderView.xib; sourceTree = "<group>"; };
+		758872F61B70AD04006ECF61 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/CommentSectionHeaderView.strings"; sourceTree = "<group>"; };
+		758872F81B70AD05006ECF61 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/CommentSectionHeaderView.strings"; sourceTree = "<group>"; };
+		758872FA1B70AD6A006ECF61 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		758872FC1B70AD71006ECF61 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		758F0B921B9888C8006B6842 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
+		75AE08F11B65B12000462941 /* RealmCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmCommentViewController.swift; sourceTree = "<group>"; };
 		75B5F5F71B44B97D001E1461 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		75B5F5F81B44B97D001E1461 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		75B5F5F91B44B97E001E1461 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -134,6 +106,7 @@
 		75E2E5AF1B46B24200E26DD0 /* zh-Hant.xliff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "zh-Hant.xliff"; sourceTree = "<group>"; };
 		75EDD0C81B55340300C3DC41 /* UserPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		75EF90F51B50E2D4006D008B /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
+		83EB994A3DBD56F213E19F2B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,24 +114,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				757FEBF41B3AD1D400B4F327 /* Realm.framework in Frameworks */,
-				757FEBF51B3AD1D400B4F327 /* RealmSwift.framework in Frameworks */,
-				757FEBE61B3AD0C800B4F327 /* Alamofire.framework in Frameworks */,
-				757FEBE71B3AD0C800B4F327 /* AMScrollingNavbar.framework in Frameworks */,
-				757FEBE81B3AD0C800B4F327 /* Argo.framework in Frameworks */,
-				757FEBE91B3AD0C800B4F327 /* Runes.framework in Frameworks */,
-				757FEBEA1B3AD0C800B4F327 /* SwiftDailyAPI.framework in Frameworks */,
+				2D96E2C2697856C72E2AD083 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		757FEB811B3ACF5600B4F327 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		757FEB8C1B3ACF5600B4F327 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -176,6 +136,7 @@
 				757FEB921B3ACF5600B4F327 /* SwiftDaily-ZhiHuUITests */,
 				757FEBEB1B3AD0D300B4F327 /* Frameworks */,
 				757FEB711B3ACF5600B4F327 /* Products */,
+				CC2923247F366A7C2E322078 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,7 +145,6 @@
 			children = (
 				757FEB701B3ACF5600B4F327 /* Swift-ZHI.app */,
 				757FEB841B3ACF5600B4F327 /* Swift-ZHITests.xctest */,
-				757FEB8F1B3ACF5600B4F327 /* Swift-ZHITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -234,6 +194,7 @@
 				7529FA411B3E5EF5007D54A8 /* NewsViewController.swift */,
 				757FEBA91B3ACFE100B4F327 /* RealmDailyTableViewController.swift */,
 				7529FA431B3E6B68007D54A8 /* RealmNewsViewController.swift */,
+				75AE08F11B65B12000462941 /* RealmCommentViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -251,6 +212,7 @@
 				751788E81B3D47E700526889 /* DailyDates.swift */,
 				75CDD20D1B3BBD3900343CAA /* RealmHelpers.swift */,
 				75EF90F51B50E2D4006D008B /* Delay.swift */,
+				758872ED1B6B1026006ECF61 /* CommentContentFormatter.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -290,6 +252,7 @@
 			children = (
 				757FEBB81B3ACFE200B4F327 /* DailySectionHeaderView.xib */,
 				757FEBB91B3ACFE200B4F327 /* LaunchScreen.xib */,
+				758872F41B70ACF5006ECF61 /* CommentSectionHeaderView.xib */,
 			);
 			path = Nibs;
 			sourceTree = "<group>";
@@ -314,6 +277,7 @@
 			children = (
 				757FEBC51B3ACFE200B4F327 /* DailySectionHeaderView.swift */,
 				757FEBC61B3ACFE200B4F327 /* LoadingCell.swift */,
+				758872E81B6A12FC006ECF61 /* CommentSectionHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -321,13 +285,16 @@
 		757FEBEB1B3AD0D300B4F327 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				757FEBF21B3AD1D400B4F327 /* Realm.framework */,
-				757FEBF31B3AD1D400B4F327 /* RealmSwift.framework */,
+				758F0B921B9888C8006B6842 /* WebImage.framework */,
+				757FEBE31B3AD0C800B4F327 /* Argo.framework */,
+				75656D091B4659B4007D11EA /* Box.framework */,
+				75656D011B46549E007D11EA /* Realm.framework */,
+				75656D021B46549E007D11EA /* RealmSwift.framework */,
 				757FEBE11B3AD0C800B4F327 /* Alamofire.framework */,
 				757FEBE21B3AD0C800B4F327 /* AMScrollingNavbar.framework */,
-				757FEBE31B3AD0C800B4F327 /* Argo.framework */,
 				757FEBE41B3AD0C800B4F327 /* Runes.framework */,
 				757FEBE51B3AD0C800B4F327 /* SwiftDailyAPI.framework */,
+				4879E42D2BF192538AA36F94 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -351,6 +318,15 @@
 			path = "Swift-ZHI";
 			sourceTree = "<group>";
 		};
+		CC2923247F366A7C2E322078 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83EB994A3DBD56F213E19F2B /* Pods.debug.xcconfig */,
+				6115B445073C89C047AB9EBB /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -358,11 +334,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 757FEB981B3ACF5600B4F327 /* Build configuration list for PBXNativeTarget "Swift-ZHI" */;
 			buildPhases = (
+				DBD108EAE0BDD61F51EDD061 /* Check Pods Manifest.lock */,
 				757FEB6C1B3ACF5600B4F327 /* Sources */,
 				757FEB6D1B3ACF5600B4F327 /* Frameworks */,
 				757FEB6E1B3ACF5600B4F327 /* Resources */,
-				757FEBEC1B3AD15F00B4F327 /* CopyFiles */,
 				75B5F60D1B44BF70001E1461 /* genstrings */,
+				D95A75E2DF6A4894F1E2968D /* Embed Pods Frameworks */,
+				8CA5F546ECEC4BDE500DFC3E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -391,30 +369,13 @@
 			productReference = 757FEB841B3ACF5600B4F327 /* Swift-ZHITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		757FEB8E1B3ACF5600B4F327 /* Swift-ZHIUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 757FEB9E1B3ACF5600B4F327 /* Build configuration list for PBXNativeTarget "Swift-ZHIUITests" */;
-			buildPhases = (
-				757FEB8B1B3ACF5600B4F327 /* Sources */,
-				757FEB8C1B3ACF5600B4F327 /* Frameworks */,
-				757FEB8D1B3ACF5600B4F327 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				757FEB911B3ACF5600B4F327 /* PBXTargetDependency */,
-			);
-			name = "Swift-ZHIUITests";
-			productName = "SwiftDaily-ZhiHuUITests";
-			productReference = 757FEB8F1B3ACF5600B4F327 /* Swift-ZHITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		757FEB681B3ACF5600B4F327 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0730;
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = nickTD;
@@ -423,10 +384,6 @@
 						CreatedOnToolsVersion = 7.0;
 					};
 					757FEB831B3ACF5600B4F327 = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = 757FEB6F1B3ACF5600B4F327;
-					};
-					757FEB8E1B3ACF5600B4F327 = {
 						CreatedOnToolsVersion = 7.0;
 						TestTargetID = 757FEB6F1B3ACF5600B4F327;
 					};
@@ -449,7 +406,6 @@
 			targets = (
 				757FEB6F1B3ACF5600B4F327 /* Swift-ZHI */,
 				757FEB831B3ACF5600B4F327 /* Swift-ZHITests */,
-				757FEB8E1B3ACF5600B4F327 /* Swift-ZHIUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -459,7 +415,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75B5F5FD1B44BA8A001E1461 /* DailySectionHeaderView.xib in Resources */,
+				758872FE1B70AE94006ECF61 /* CommentSectionHeaderView.xib in Resources */,
+				758872FD1B70AE8B006ECF61 /* DailySectionHeaderView.xib in Resources */,
 				75B5F5FC1B44BA18001E1461 /* InfoPlist.strings in Resources */,
 				757FEBD41B3ACFE200B4F327 /* Images.xcassets in Resources */,
 				75B5F60A1B44BF2C001E1461 /* Localizable.strings in Resources */,
@@ -474,14 +431,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				75D98CAB1B44B93C001B4F9C /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		757FEB8D1B3ACF5600B4F327 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				75D98CB01B44B93C001B4F9C /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,7 +449,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd $PROJECT_DIR && find . -name \\*.swift | xargs genstrings -o SwiftDaily-ZhiHu/Resources/Base.lproj/";
+			shellScript = "cd $PROJECT_DIR && find ./SwiftDaily-Zhihu -name \\*.swift | xargs genstrings -o SwiftDaily-ZhiHu/Resources/Base.lproj/";
+		};
+		8CA5F546ECEC4BDE500DFC3E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D95A75E2DF6A4894F1E2968D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBD108EAE0BDD61F51EDD061 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -517,10 +511,13 @@
 				75CDD20C1B3BBB4A00343CAA /* DailyRealmStore.swift in Sources */,
 				757FEBC91B3ACFE200B4F327 /* AppDelegate.swift in Sources */,
 				7529FA421B3E5EF5007D54A8 /* NewsViewController.swift in Sources */,
+				758872E91B6A12FC006ECF61 /* CommentSectionHeaderView.swift in Sources */,
 				75CDD20E1B3BBD3900343CAA /* RealmHelpers.swift in Sources */,
 				757FEBD11B3ACFE200B4F327 /* RealmModels.swift in Sources */,
 				75EDD0C91B55340300C3DC41 /* UserPreferences.swift in Sources */,
+				758872EE1B6B1026006ECF61 /* CommentContentFormatter.swift in Sources */,
 				757FEBDF1B3ACFE200B4F327 /* DailySectionHeaderView.swift in Sources */,
+				75AE08F21B65B12000462941 /* RealmCommentViewController.swift in Sources */,
 				75EF90F61B50E2D4006D008B /* Delay.swift in Sources */,
 				757183A51B441CDA00E345B3 /* HideNavBarViewController.swift in Sources */,
 				7530F3FD1B3D53D10035AD7A /* DailyTableViewController.swift in Sources */,
@@ -535,14 +532,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		757FEB8B1B3ACF5600B4F327 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				757FEB941B3ACF5600B4F327 /* SwiftDaily_ZhiHuUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -551,11 +540,6 @@
 			target = 757FEB6F1B3ACF5600B4F327 /* Swift-ZHI */;
 			targetProxy = 757FEB851B3ACF5600B4F327 /* PBXContainerItemProxy */;
 		};
-		757FEB911B3ACF5600B4F327 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 757FEB6F1B3ACF5600B4F327 /* Swift-ZHI */;
-			targetProxy = 757FEB901B3ACF5600B4F327 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -563,10 +547,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				757183A11B4418F300E345B3 /* Base */,
-				757183A21B44190000E345B3 /* zh-Hans */,
-				757183A31B44190300E345B3 /* zh-Hant */,
+				758872FA1B70AD6A006ECF61 /* zh-Hans */,
+				758872FC1B70AD71006ECF61 /* zh-Hant */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		758872F41B70ACF5006ECF61 /* CommentSectionHeaderView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				758872F31B70ACF5006ECF61 /* Base */,
+				758872F61B70AD04006ECF61 /* zh-Hans */,
+				758872F81B70AD05006ECF61 /* zh-Hant */,
+			);
+			name = CommentSectionHeaderView.xib;
 			sourceTree = "<group>";
 		};
 		75B5F6081B44BF2C001E1461 /* Localizable.strings */ = {
@@ -632,7 +626,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS/";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -677,7 +671,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS/";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -695,13 +689,11 @@
 		};
 		757FEB991B3ACF5600B4F327 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83EB994A3DBD56F213E19F2B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/Carthage/Build/iOS/",
-					"$(PROJECT_DIR)/Carthage/Checkouts/realm-cocoa/build/ios/swift/",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftDaily-ZhiHu/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -713,13 +705,11 @@
 		};
 		757FEB9A1B3ACF5600B4F327 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6115B445073C89C047AB9EBB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/Carthage/Build/iOS/",
-					"$(PROJECT_DIR)/Carthage/Checkouts/realm-cocoa/build/ios/swift/",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftDaily-ZhiHu/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -753,30 +743,6 @@
 			};
 			name = Release;
 		};
-		757FEB9F1B3ACF5600B4F327 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "SwiftDaily-ZhiHuUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nickTD.SwiftDaily-ZhiHuUITests";
-				PRODUCT_NAME = "Swift-ZHITests";
-				TEST_TARGET_NAME = "SwiftDaily-ZhiHu";
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		757FEBA01B3ACF5600B4F327 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "SwiftDaily-ZhiHuUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nickTD.SwiftDaily-ZhiHuUITests";
-				PRODUCT_NAME = "Swift-ZHITests";
-				TEST_TARGET_NAME = "SwiftDaily-ZhiHu";
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -803,15 +769,6 @@
 			buildConfigurations = (
 				757FEB9C1B3ACF5600B4F327 /* Debug */,
 				757FEB9D1B3ACF5600B4F327 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		757FEB9E1B3ACF5600B4F327 /* Build configuration list for PBXNativeTarget "Swift-ZHIUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				757FEB9F1B3ACF5600B4F327 /* Debug */,
-				757FEBA01B3ACF5600B4F327 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
